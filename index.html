@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador AJ PF91</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      text-align: center;
+      padding: 20px;
+    }
+    .pregunta {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .opcion {
+      margin: 10px;
+      padding: 10px;
+      background-color: #1f1f1f;
+      border: 1px solid #333;
+      cursor: pointer;
+    }
+    .opcion:hover {
+      background-color: #333;
+    }
+    .respuesta {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simulador Academia Judicial</h1>
+  <p id="puntaje"></p>
+  <div class="pregunta" id="pregunta"></div>
+  <div id="opciones"></div>
+  <div class="respuesta" id="respuesta"></div>
+  <button onclick="siguientePregunta()">Siguiente pregunta</button>
+  <button onclick="reiniciarSimulador()">Reiniciar</button>
+
+  <script src="preguntas.js"></script>
+  <script>
+    let indiceActual = 0;
+    let preguntasDisponibles = [...preguntas_multiples];
+    let puntaje = 0;
+
+    function cargarPregunta() {
+      if (preguntasDisponibles.length === 0) {
+        document.getElementById("pregunta").innerText = "Simulador finalizado.";
+        document.getElementById("opciones").innerHTML = "";
+        document.getElementById("respuesta").innerText = "";
+        return;
+      }
+
+      indiceActual = Math.floor(Math.random() * preguntasDisponibles.length);
+      const pregunta = preguntasDisponibles[indiceActual];
+
+      document.getElementById("pregunta").innerText = pregunta.pregunta;
+      const opcionesDiv = document.getElementById("opciones");
+      opcionesDiv.innerHTML = "";
+      pregunta.opciones.forEach((op, index) => {
+        const btn = document.createElement("div");
+        btn.className = "opcion";
+        btn.innerText = op;
+        btn.onclick = () => verificarRespuesta(index, pregunta.respuesta);
+        opcionesDiv.appendChild(btn);
+      });
+    }
+
+    function verificarRespuesta(seleccionado, correcto) {
+      const respuesta = document.getElementById("respuesta");
+      if (seleccionado === correcto) {
+        respuesta.innerText = "✅ Correcto";
+        respuesta.style.color = "lightgreen";
+        puntaje++;
+      } else {
+        respuesta.innerText = `❌ Incorrecto. Respuesta correcta: ${preguntasDisponibles[indiceActual].opciones[correcto]}`;
+        respuesta.style.color = "red";
+      }
+      document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
+    }
+
+    function siguientePregunta() {
+      preguntasDisponibles.splice(indiceActual, 1);
+      document.getElementById("respuesta").innerText = "";
+      cargarPregunta();
+    }
+
+    function reiniciarSimulador() {
+      puntaje = 0;
+      preguntasDisponibles = [...preguntas_multiples];
+      document.getElementById("respuesta").innerText = "";
+      cargarPregunta();
+    }
+
+    window.onload = cargarPregunta;
+  </script>
+</body>
+</html>
