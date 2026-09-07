@@ -186,6 +186,7 @@
       function siguientePregunta() {
         if (!preguntaActual || !respondidas.has(preguntaActual.id)) return;
         preguntasDisponibles = preguntasDisponibles.filter(p => p.id !== preguntaActual.id);
+        guardarSesion();
         preguntaActual = null;
         $("revision").hidden = true;
         cargarPregunta();
