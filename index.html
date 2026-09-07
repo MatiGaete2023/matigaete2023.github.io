@@ -110,7 +110,8 @@
   const SESSION_VERSION = 5;
   const BANK = preguntas_banco.slice();
   const BY_ID = new Map(BANK.map(q => [q.id, q]));
-  const ACTIVE = BANK.filter(q => q.estado !== 'bloqueada' && q.estado !== 'retirada');
+  const EXCLUDED_FLAGS = new Set(['texto_incompleto', 'enunciado_repetido', 'relleno_en_alternativa', 'correcta_mas_larga']);
+  const ACTIVE = BANK.filter(q => q.estado !== 'bloqueada' && q.estado !== 'retirada' && !q.pistas.some(flag => EXCLUDED_FLAGS.has(flag)));
   const $ = id => document.getElementById(id);
   let store = { schema: SESSION_VERSION, favorites: [], history: [], current: null };
   let session = null;
