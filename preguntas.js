@@ -4,7 +4,7 @@
  * Las bases PF92 oficiales deben prevalecer sobre cualquier configuración local.
  */
 const BANCO_VERSION = "2026-09-07-pf92-v1";
-const BANCO_HASH = "1ebe8bfc1ed6469e427ce2a3a68782eb7c180638927f66a9acf4eb93c3da231f";
+const BANCO_HASH = "e286c8370b0477e3805637bd438a085e334eb2f1446fadd64164bb52752598f0";
 const preguntas_banco = [
   {
     "id": "pf92-001",
@@ -44,7 +44,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez se niega a fallar un recurso de proteccion argumenta",
+    "familia": "original-2d83e6023cf8960ec80670f3693b1eff91c7354f",
     "pistas": []
   },
   {
@@ -85,7 +85,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la corte suprema puede dictar instrucciones sobre la inversi",
+    "familia": "original-a35f5ce5847e044e9491f8649e10993941f3f6a9",
     "pistas": []
   },
   {
@@ -126,7 +126,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual de los siguientes no es un principio fundamental de la",
+    "familia": "original-7ebeab399f740cd901aa78fbe9d2187c198cdc2f",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -170,7 +170,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-segun el articulo 76 de la cpr, la facultad de conocer causa",
+    "familia": "original-d51893ad5a781d7617f2f73d5de4c5046feacc14",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -213,7 +213,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el principio de inamovilidad judicial garantiza que los juec",
+    "familia": "original-d93a86a01fc6ebc1e0c5c4cd4dc403067a9c92b9",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -258,7 +258,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la responsabilidad ministerial de los jueces, segun la const",
+    "familia": "original-12fc1b3c17ce67e165fc303e2896eea90b2bb705",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -301,7 +301,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-los juzgados de cobranza laboral y previsional forman parte ",
+    "familia": "original-e7bbf4115b4d172e8dd8b1b49eb82b87b4ac2a69",
     "pistas": []
   },
   {
@@ -342,7 +342,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es la composicion actual de la corte suprema de justic",
+    "familia": "original-6dc0814cd467863cc6dbd98357e96eb1c6597b4f",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -386,7 +386,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el principio de territorialidad en la funcion jurisdiccional",
+    "familia": "original-71f9e10b42702b617c20b7a03a587ea28fb0c3d5",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -429,7 +429,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-las facultades conservadoras de las cortes de apelaciones in",
+    "familia": "original-36f7bde670fc2fabdbb45779ea3b669e86c94ff8",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -472,7 +472,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual de los siguientes tribunales no forma parte del poder ",
+    "familia": "original-bd81d7fbe4c8fbd6dde533f603bbadc4af2a6782",
     "pistas": []
   },
   {
@@ -513,7 +513,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la inamovilidad judicial cesa, entre otras causales, cuando ",
+    "familia": "original-091a69c7be6003f64e66b823954c245c6b2c25cf",
     "pistas": []
   },
   {
@@ -554,7 +554,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-segun el articulo 76 de la cpr, ¿quien no puede ejercer func",
+    "familia": "original-75ebc9907b55fd59709cb24244ee5f866dd8b9b0",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -597,7 +597,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el principio de responsabilidad judicial implica que los jue",
+    "familia": "original-2c7d9d3d6571112d1024639281a505c4317f54ea",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -642,7 +642,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿que tribunal ejerce la superintendencia directiva, correcci",
+    "familia": "original-9e39ff287c09fbd430d4e8f55d4530659c354757",
     "pistas": []
   },
   {
@@ -683,7 +683,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la competencia territorial de un tribunal se determina:",
+    "familia": "original-062c9903f83a5241a91c6b616a7319a372a9ea4f",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -728,7 +728,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el principio de publicidad de los actos judiciales admite ex",
+    "familia": "original-8cf09c5512cfae6879d9b112ab3241e520215abe",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -773,7 +773,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la corte suprema se compone de:",
+    "familia": "original-dbc66a039cedd66a7583cd63310005d23e7a4be2",
     "pistas": [
       "relleno_en_alternativa"
     ]
@@ -816,7 +816,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual de los siguientes es un tribunal ordinario?",
+    "familia": "original-ec7fb702bbccad2077cacb9e4205a2c0fa5b919b",
     "pistas": []
   },
   {
@@ -857,7 +857,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el principio de pasividad procesal significa que:",
+    "familia": "original-b2ec3e794c548f6a48567ca7a2462b23ac1f02bc",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -900,7 +900,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandado es notificado en valdivia de una demanda presen",
+    "familia": "original-86cbcc554b37fd3ed7aacaaf70fe65dc5a04dd06",
     "pistas": []
   },
   {
@@ -941,7 +941,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-19",
-    "familia": "original-en un juicio ejecutivo, el acreedor presenta un pagare no re",
+    "familia": "original-4f02f7df9892bf1e7ffed6c47b10be3f047d1fb8",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -984,7 +984,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-02",
-    "familia": "original-en un procedimiento sumario, el tribunal dicta sentencia 15 ",
+    "familia": "original-62af4417eff9532f0c4c09f5086fc66e2870a35c",
     "pistas": []
   },
   {
@@ -1025,7 +1025,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-las excepciones dilatorias en el juicio ordinario civil debe",
+    "familia": "original-d586cd9ce9ff1c12e22d5dc1d515b524bdcefcb8",
     "pistas": []
   },
   {
@@ -1066,7 +1066,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-03",
-    "familia": "original-un fiscal formaliza la investigacion el 10 de enero de 2024.",
+    "familia": "original-952a589a9ad74d622a98090b44929df3539e6524",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1109,7 +1109,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-26",
-    "familia": "original-un imputado cumple integramente las condiciones de la suspen",
+    "familia": "original-51209c866e4237ba8e1f0441469099b5fa496be3",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1152,7 +1152,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-para decretar la prision preventiva, el juez debe verificar ",
+    "familia": "original-59a40316decc6f501a0007ef9fcf665e05c9c95b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1195,7 +1195,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual de las siguientes es una salida alternativa en el proc",
+    "familia": "original-5c4ca1ebf8e37bdce22ade2a6166c2247a39e2b9",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1238,7 +1238,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en un juicio de alimentos, el tribunal fija una pension prov",
+    "familia": "original-ef54df5792fc51aa46b61a6cab39afac32d0fa00",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1281,7 +1281,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia de cuidado personal es apelada. ¿en que efecto",
+    "familia": "original-ae35683fc46ab0cba938d848d114eeaf41e4fc1b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1324,7 +1324,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la mediacion previa es obligatoria en las siguientes materia",
+    "familia": "original-19c467f8eb00cf43a46d1f13e8d183c53f667087",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1367,7 +1367,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-35",
-    "familia": "original-en el procedimiento de medidas de proteccion, el juez puede ",
+    "familia": "original-7213647a57b87739c65f81da122eb27e003487ed",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1410,7 +1410,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-14",
-    "familia": "original-un trabajador es despedido y presenta demanda el dia 65 desp",
+    "familia": "original-0f978965cc45ad8c1a62023955d534c88fbe6d09",
     "pistas": []
   },
   {
@@ -1451,7 +1451,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-15",
-    "familia": "original-en un procedimiento monitorio laboral, el trabajador no acom",
+    "familia": "original-1166a234149b307c149a3a3738266603b36be4db",
     "pistas": []
   },
   {
@@ -1492,7 +1492,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de nulidad laboral debe interponerse dentro de:",
+    "familia": "original-29883c07a166af10b5d6f0ee3b60c2265bd7448c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1535,7 +1535,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la ejecucion de la sentencia en materia laboral se inicia:",
+    "familia": "original-ab5bfde27d936d45e10a8902c1fc80c5b3a90801",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1578,7 +1578,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es el quorum para que funcione el pleno de una corte d",
+    "familia": "original-b971657243913007775e2ed6d0c3ef09c2e7421d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1621,7 +1621,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-¿cuantos ministros componen, como minimo, una sala de corte ",
+    "familia": "original-14afef8906ef8f9d97339f1be2fbdd28afc84b79",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -1666,7 +1666,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el presidente de la corte de apelaciones dura en su cargo:",
+    "familia": "original-9753bfb2edd97cb7475aded081cd01da14daa827",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -1710,7 +1710,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-cuando un asunto se conoce en cuenta por la corte de apelaci",
+    "familia": "original-340d264cc00cc12dad8e3697333d44ae05bd1333",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1753,7 +1753,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante interpone recurso de casacion en la forma sin h",
+    "familia": "original-4159351356d96bfe1157fb206d105643bbb8d37a",
     "pistas": []
   },
   {
@@ -1794,7 +1794,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia laboral es impugnada mediante recurso de nulid",
+    "familia": "original-13c26e41d73d16367b3eaec91f51625a7637dbf7",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1837,7 +1837,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de apelacion en el procedimiento civil debe conte",
+    "familia": "original-e53f143dc11652264235798b6ec50d4d87a2ab42",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -1880,7 +1880,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de casacion en el fondo se concede exclusivamente",
+    "familia": "original-cf185f08d98ffd66f76de3717e7c4fb860f3513a",
     "pistas": []
   },
   {
@@ -1921,7 +1921,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es el plazo para interponer el recurso de queja?",
+    "familia": "original-6decfcf297b25e8bfe21e1c1d0196c2690c9a0a6",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -1966,7 +1966,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un receptor notifica una demanda de alimentos mediante cedul",
+    "familia": "original-c23a70f2c825b862125606e62a3e104452e10b73",
     "pistas": []
   },
   {
@@ -2007,7 +2007,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-10",
-    "familia": "original-una parte designa domicilio electronico para notificaciones.",
+    "familia": "original-c32d0f2a0e1e050bcc83b582a8c0bf344ce0b8e3",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2050,7 +2050,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion personal de la demanda debe practicarse entr",
+    "familia": "original-45453f3ccd5df6c887f378f0de7eeb6f7c93a9c2",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2093,7 +2093,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion personal subsidiaria del articulo 44 del cpc",
+    "familia": "original-c24df47393fc7051bee675bfbb696b9d22dc9e50",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -2138,7 +2138,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-20",
-    "familia": "original-un acreedor tiene una sentencia civil firme que condena al d",
+    "familia": "original-cac9df5c09f576a4dbd77c7c569f244781bf60b1",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2181,7 +2181,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un alimentante adeuda 6 meses de pension. el tribunal decret",
+    "familia": "original-19deb0edbe6b8d47d9e49b96911aab6177c563bb",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -2224,7 +2224,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el juicio ejecutivo civil, el embargo se traba sobre bien",
+    "familia": "original-658c95eeffd1573426a729ef8b132c41905df50c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2267,7 +2267,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-21",
-    "familia": "original-la terceria de dominio en el juicio ejecutivo tiene por obje",
+    "familia": "original-f7f82e16a1cfc35c4aa6891c526978e4d046db5a",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -2311,7 +2311,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-12",
-    "familia": "original-un juez dicta una sentencia y la firma con su clave unica. ¿",
+    "familia": "original-4590e1023973964dc7952e91da1d98de48048ced",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2354,7 +2354,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una persona sin acceso a internet desea presentar una demand",
+    "familia": "original-cf4bb0cc45f0eaa4acaf9cee7fcd9f9f51d18b22",
     "pistas": [
       "enunciado_repetido",
       "relleno_en_alternativa",
@@ -2399,7 +2399,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-los receptores judiciales, al notificar, requerir o embargar",
+    "familia": "original-f6c3d5fed3c1c306d274539832b7b25a90eb0cc4",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2442,7 +2442,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es el horario de funcionamiento de la oficina judicial",
+    "familia": "original-8e7031d504ecf6c13b01c399d9a07b33838d1974",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -2486,7 +2486,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-09",
-    "familia": "original-un abogado tiene un cliente que fue notificado de una demand",
+    "familia": "original-5c3a745ee165e02381b8e52efadad223de4f8594",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2529,7 +2529,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-24",
-    "familia": "original-un imputado esta en prision preventiva. su defensor descubre",
+    "familia": "original-d1f7ec70bc1ac47801c71d599f4d740e6abe5f86",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -2573,7 +2573,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-34",
-    "familia": "original-un padre que no tiene el cuidado personal desea solicitar la",
+    "familia": "original-ec6e4c6e21e5dde29b89dc689a5baada8f8cd110",
     "pistas": []
   },
   {
@@ -2614,7 +2614,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-32",
-    "familia": "original-un trabajador es despedido verbalmente, sin carta de despido",
+    "familia": "original-a1d18de64024e64df6350fcd7cfc19d96e6b4309",
     "pistas": []
   },
   {
@@ -2655,7 +2655,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal dicta sentencia definitiva sin haber citado a la",
+    "familia": "original-a8fc2a2a75c819b819da43f7ccb751a3779cefbc",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2698,7 +2698,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de juicio oral dicta sentencia condenatoria firm",
+    "familia": "original-626827d0a3433eea6dcd45ec069ecdd1e761fc44",
     "pistas": []
   },
   {
@@ -2739,7 +2739,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos provisorios y orden",
+    "familia": "original-a9cddd4babe4bf4c7da728f533dfe23f536f7ea9",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2782,7 +2782,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal laboral admite a tramitacion una demanda de tute",
+    "familia": "original-7dead595b7c38e08f8c5d0008dbcaa6c560e1804",
     "pistas": []
   },
   {
@@ -2823,7 +2823,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandado en juicio ejecutivo opone excepcion de prescrip",
+    "familia": "original-5d506a846f61d080e1134bc438c4ad87a9a9d9c6",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2866,7 +2866,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un imputado cumple la pena privativa de libertad, pero la in",
+    "familia": "original-5ba6c15843a070f333e5a3d3733e33fb7947aa02",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2909,7 +2909,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia de familia que fija alimentos es modificada po",
+    "familia": "original-380dc77a9ab489ebf43351466e88ffabe5637844",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2952,7 +2952,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador interpone demanda de nulidad del despido por f",
+    "familia": "original-10aa034d83c4a6da6418e27ea8d54fa889023019",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -2995,7 +2995,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un acreedor tiene un pagare vencido hace 2 anos. la accion e",
+    "familia": "original-7e1605b47d6215edf0400e8025700f621ee59b01",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3038,7 +3038,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-04",
-    "familia": "original-un imputado es condenado en procedimiento abreviado. la vict",
+    "familia": "original-6a5880c14104e6be699bc866a7fdc59c5dbe818f",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -3082,7 +3082,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta una medida de proteccion para",
+    "familia": "original-309473050bb76adfd66b7bf47c7b8d76ae378130",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -3128,7 +3128,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador con fuero sindical es despedido sin autorizaci",
+    "familia": "original-c7a905c2160d78a6f40be15e1ed6d44e2802a5e2",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -3172,7 +3172,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandado en juicio ejecutivo es notificado el 10 de abri",
+    "familia": "original-4ba7aea189892ce60af08eacd272c7f2af07f55a",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -3216,7 +3216,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-42",
-    "familia": "original-un imputado es condenado a una pena de presidio. la sentenci",
+    "familia": "original-3c503b04fad3848c67e7899a94415a02f2d45a75",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3259,7 +3259,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-13",
-    "familia": "original-un litigante interpone recurso de queja contra un juez de le",
+    "familia": "original-1c11fd7cbfa3ede6aafee62626a5dc813664fb60",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3302,7 +3302,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-07",
-    "familia": "original-un litigante obtiene sentencia favorable contra el fisco. tr",
+    "familia": "original-438e8978d9a137ac4df7f299ff7f1affe6f394c0",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -3348,7 +3348,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita obtener una copia autorizada de una sent",
+    "familia": "original-924fc045f68d9f1e9f62599a2356e5fd10bb0e6a",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -3393,7 +3393,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un consumidor compra un producto defectuoso que le causa dan",
+    "familia": "original-ea7e3f8af79b3dd432febf25484e9be232ac397e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3436,7 +3436,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador con fuero maternal es despedido sin autorizaci",
+    "familia": "original-7cf6fe76ab72e88a4a1a1ba548c7a47eff8a1786",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -3481,7 +3481,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-38",
-    "familia": "original-un demandante obtiene sentencia favorable que ordena la rest",
+    "familia": "original-3c88de922e43dc761249827005eb8eb7e0c4e33a",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -3525,7 +3525,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-03",
-    "familia": "original-un fiscal formaliza la investigacion. transcurren 2 anos sin",
+    "familia": "original-3dc920155e1c4b89acbbb78cd2027e9525fc70e9",
     "pistas": []
   },
   {
@@ -3566,7 +3566,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia de familia que fija un regimen comunicacional ",
+    "familia": "original-6cbfa594f0a1a364b49eacb3b5ba3d1cfe2200a2",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3609,7 +3609,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-41",
-    "familia": "original-un trabajador firma un finiquito con reserva de derechos y l",
+    "familia": "original-c381067ff6b5100aa27ce39ca50428e8d09f2e21",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -3654,7 +3654,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante interpone recurso de casacion en el fondo, pero",
+    "familia": "original-fbb1671b1ca36bcf2922f537e2153057ae0c679a",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -3697,7 +3697,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en un juicio ejecutivo, el tribunal ordena el embargo de un ",
+    "familia": "original-447ec2d38fb063a9098b8791d7f5d45768257451",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3740,7 +3740,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandado en juicio ordinario contesta extemporaneamente.",
+    "familia": "original-0e9d6dfd3c75e6b7f842629850144982b3d3bd3b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3783,7 +3783,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia penal condenatoria impone la pena de inhabilit",
+    "familia": "original-f2502ad13292c40c73bb0ddf7d9fe80212d85bcb",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3826,7 +3826,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-35",
-    "familia": "original-un tribunal de familia decreta una medida de proteccion para",
+    "familia": "original-572d51f4bcdfaef813e856dc0f3f6b762c52ecd7",
     "pistas": []
   },
   {
@@ -3867,7 +3867,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un empleador retiene las remuneraciones de un trabajador par",
+    "familia": "original-159280ce7e7bf308392e0abef505af8c7fe76cd0",
     "pistas": []
   },
   {
@@ -3908,7 +3908,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandado en juicio ejecutivo es notificado el 10 de abri",
+    "familia": "original-4ba7aea189892ce60af08eacd272c7f2af07f55a",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -3952,7 +3952,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-42",
-    "familia": "original-un tercero alega que los bienes decomisados en una sentencia",
+    "familia": "original-30731813b80b92ae176ecf8f138f5b6152270a15",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -3995,7 +3995,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos en favor de un nino",
+    "familia": "original-17117fe28fd0781cfaa71ad6745db882f016b36c",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -4040,7 +4040,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-13",
-    "familia": "original-un litigante interpone recurso de queja contra un juez de le",
+    "familia": "original-e78c30c7d6c0fac551b7f5ed6e285015f4509e75",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -4083,7 +4083,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado notifica una demanda de alimentos por correo elec",
+    "familia": "original-e517b2ee393ab2ce9d92fb534e664885647d94c9",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -4127,7 +4127,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador es despedido durante una licencia medica. pres",
+    "familia": "original-e74562b3e1e5272fd42cf9d37f51a20667525a42",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -4172,7 +4172,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-08",
-    "familia": "original-un acreedor tiene una sentencia civil que condena al deudor ",
+    "familia": "original-42e529c0131a94b630882505c16b3d483365e896",
     "pistas": []
   },
   {
@@ -4213,7 +4213,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un consumidor compra un paquete turistico y la agencia incum",
+    "familia": "original-e436f53f142431bf4c642283188fab03e82bb83f",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -4256,7 +4256,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el estado diario electronico se forma:",
+    "familia": "original-7bda74c47732a638a9759b51905b65b25f71641a",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -4301,7 +4301,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-01",
-    "familia": "original-en el juicio ordinario civil de mayor cuantia, ¿cual es el p",
+    "familia": "original-baf23f1f85d23f873e58a7581570f15a2c7e8cfa",
     "pistas": []
   },
   {
@@ -4342,7 +4342,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-19",
-    "familia": "original-para que proceda la ejecucion forzada en el juicio ejecutivo",
+    "familia": "original-fdd4bedaadeff77ca8c5747db42497e6c2d1b6cf",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -4386,7 +4386,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-40",
-    "familia": "original-en el juicio ejecutivo, si el deudor no opone excepciones de",
+    "familia": "original-51987a3b0648ab4bd80e6721ea9e0cc5ba7cf4e1",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -4429,7 +4429,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el procedimiento sumario se aplica, entre otros casos, cuand",
+    "familia": "original-6af888629e2fa9e56f879d7a68bfb392b1b7e1c4",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -4473,7 +4473,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la resolucion que recibe la causa a prueba en el juicio ordi",
+    "familia": "original-8a206fd4a15040c226b0f0d00775407424e6a19b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -4516,7 +4516,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el termino probatorio ordinario en el juicio civil de mayor ",
+    "familia": "original-5360d8ef130ed0c956aed50fb742c3d784e62e4e",
     "pistas": []
   },
   {
@@ -4557,7 +4557,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un acreedor tiene un pagare vencido hace 11 meses. desea int",
+    "familia": "original-6f7e3e73a6f2e08c4ff55f8fdca0ecba04599421",
     "pistas": []
   },
   {
@@ -4598,7 +4598,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en un juicio ejecutivo, el tribunal ordena el remate de un i",
+    "familia": "original-2578b16d1d37b70eec49c836be661cffe5b635c4",
     "pistas": []
   },
   {
@@ -4639,7 +4639,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante en juicio ejecutivo obtiene sentencia de remat",
+    "familia": "original-22d8a0f4c95dca267b0850a6274fff9a0468a457",
     "pistas": []
   },
   {
@@ -4680,7 +4680,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-07",
-    "familia": "original-un litigante obtiene sentencia favorable en un juicio de hac",
+    "familia": "original-754afceb1ece35f22c5fa7b3571c3e0ff9cb62e7",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -4725,7 +4725,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la formalizacion de la investigacion en el proceso penal es:",
+    "familia": "original-d2406e54d9ba856c560527c96ca52be5d7f8c223",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -4768,7 +4768,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el juicio oral en materia penal se desarrolla ante:",
+    "familia": "original-00082f267cb8f7b9ad1a960a2ec98883c83de3ea",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -4811,7 +4811,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-03",
-    "familia": "original-¿cual es el plazo maximo de la investigacion penal una vez f",
+    "familia": "original-dff6a015af505254685d80b5713e869382826502",
     "pistas": []
   },
   {
@@ -4852,7 +4852,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el sobreseimiento definitivo en un proceso penal es una reso",
+    "familia": "original-bd299df57e3e386013844d10d774c8a30303059d",
     "pistas": []
   },
   {
@@ -4893,7 +4893,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-27",
-    "familia": "original-en el procedimiento abreviado penal, el imputado debe:",
+    "familia": "original-c7a32c9b3c5fd84d9a5008a5f663e0676ba560be",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -4936,7 +4936,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la audiencia de control de detencion debe realizarse dentro ",
+    "familia": "original-87184b0c2679134e0731539f001069a22a359543",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -4979,7 +4979,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-26",
-    "familia": "original-un fiscal ofrece suspension condicional del procedimiento a ",
+    "familia": "original-775fef00ec58bd513627a023a4d14f4e618a3d7d",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -5024,7 +5024,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-11",
-    "familia": "original-un juez de garantia decreta prision preventiva sin que exist",
+    "familia": "original-8adc6ecabe08ea09d1f957aafdf102214cdea71f",
     "pistas": []
   },
   {
@@ -5065,7 +5065,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un imputado es condenado a una pena de presidio menor. cumpl",
+    "familia": "original-7459ea8422f8b083309880d0b6d93dae17c6671c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -5108,7 +5108,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-04",
-    "familia": "original-un imputado es condenado en procedimiento abreviado. la vict",
+    "familia": "original-6a5880c14104e6be699bc866a7fdc59c5dbe818f",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -5152,7 +5152,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-en el procedimiento ordinario de familia, la audiencia prepa",
+    "familia": "original-854621d9565471c1948d90043ee7467c7a13dea8",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -5197,7 +5197,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en materia de alimentos, si el alimentante no cumple con el ",
+    "familia": "original-bfd191a54806065663d41b67670f1d4c552ff506",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -5240,7 +5240,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la mediacion previa es un tramite obligatorio en el procedim",
+    "familia": "original-80fc8db5fcb89db6158fda617c4b034aad8013f0",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -5283,7 +5283,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la primera notificacion en el procedimiento de familia se pr",
+    "familia": "original-eb2c38115e8a26c5e6838cd8ef217021f25af86b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -5326,7 +5326,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-en materia de familia, ¿contra que resoluciones procede excl",
+    "familia": "original-33dc64ba9b36c5b0644483fb2afcc0442e5c30b2",
     "pistas": [
       "texto_incompleto"
     ]
@@ -5369,7 +5369,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-34",
-    "familia": "original-un padre que no tiene el cuidado personal desea solicitar la",
+    "familia": "original-5c72564bab03385ef2dfec88d6744fc93c547f0b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -5412,7 +5412,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta una medida de proteccion para",
+    "familia": "original-9cea37cfdb1549dd71e31279a114744a7b694dfa",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -5455,7 +5455,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia de familia que fija un regimen comunicacional ",
+    "familia": "original-a35b61a564d116fac9f88f80a87178ee844aa33f",
     "pistas": [
       "texto_incompleto"
     ]
@@ -5498,7 +5498,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos en favor de un nino",
+    "familia": "original-c9a9e67c2fca59365ad3047cca052eca781162f9",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -5543,7 +5543,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta una medida de proteccion para",
+    "familia": "original-309473050bb76adfd66b7bf47c7b8d76ae378130",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -5589,7 +5589,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el procedimiento ordinario laboral, la contestacion de la",
+    "familia": "original-324dd1e5fe167a13d6abe1ede1fbfa234aa5d407",
     "pistas": []
   },
   {
@@ -5630,7 +5630,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-15",
-    "familia": "original-el procedimiento monitorio laboral se aplica a contiendas cu",
+    "familia": "original-2293578087f16c5b949cd44a327e7d265f5452da",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -5674,7 +5674,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la audiencia preparatoria en el procedimiento laboral debe r",
+    "familia": "original-84788d50b949b4e03672c28894344b5c8af92001",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -5717,7 +5717,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-en el procedimiento de tutela laboral, la denuncia por vulne",
+    "familia": "original-2a5c971b76cd38eedb96b27e91e30c18431d53cb",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -5762,7 +5762,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-¿cual de las siguientes resoluciones es apelable en el proce",
+    "familia": "original-8605c8b27ee9f91301cf4f75b5648ab140a7dffa",
     "pistas": [
       "texto_incompleto"
     ]
@@ -5805,7 +5805,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el juicio laboral, la sentencia definitiva se dicta:",
+    "familia": "original-066406f13d145c5c7d081cef177cee0e92b89d1b",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -5849,7 +5849,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-33",
-    "familia": "original-un trabajador es despedido por necesidades de la empresa. la",
+    "familia": "original-6d0072580e962e146b9af8a3fd73c4a8b4f854b9",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -5892,7 +5892,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal laboral admite a tramitacion una demanda de tute",
+    "familia": "original-707cfe78ac94cd5e90563dbda584f730bbdc8157",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -5935,7 +5935,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-41",
-    "familia": "original-un trabajador firma un finiquito con reserva de derechos y l",
+    "familia": "original-c381067ff6b5100aa27ce39ca50428e8d09f2e21",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -5980,7 +5980,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador con fuero maternal es despedido sin autorizaci",
+    "familia": "original-8b06994ff3e4440fe81fcd07353260801ea598c4",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -6025,7 +6025,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-las cortes de apelaciones conocen de los recursos de amparo ",
+    "familia": "original-8cc6477683bee184ee2f1c1ef42508756302f7b2",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -6068,7 +6068,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el secretario de la corte de apelaciones es:",
+    "familia": "original-24f383fd6ba1d2d501525ed411b908cb5940c487",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6111,7 +6111,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-para la constitucion de las diversas salas en que se dividen",
+    "familia": "original-b267c7a9ed496043170881354d6922129c56a639",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6154,7 +6154,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en las cortes divididas en mas de una sala, la tramitacion d",
+    "familia": "original-3833edf1de14cdecaadb1ad87f476d0c964b612e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6197,7 +6197,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es el numero total de cortes de apelaciones que existe",
+    "familia": "original-242dd92931f7f6127d331181fd9fc497fb3f9c8b",
     "pistas": []
   },
   {
@@ -6238,7 +6238,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una corte de apelaciones conoce un recurso de apelacion en c",
+    "familia": "original-ea97a63c36ac69dffdeab7a114a7bd9bb4247c46",
     "pistas": []
   },
   {
@@ -6279,7 +6279,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de reposicion en materia civil debe interponerse,",
+    "familia": "original-df88ff262936585ddfebca0b85528818e9ecaf72",
     "pistas": []
   },
   {
@@ -6320,7 +6320,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-39",
-    "familia": "original-la orden de no innovar (oni) solo procede cuando:",
+    "familia": "original-9ac969ce14d86386fbc4fa0dc32e980085f803d0",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6363,7 +6363,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de hecho verdadero se interpone ante el tribunal ",
+    "familia": "original-b1207c82f607166b40ea6428e12eaca1725facc8",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6406,7 +6406,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la adhesion a la apelacion puede formularse en segunda insta",
+    "familia": "original-468a9ff575e3e2d3bb561ae7eaa8f84cbf1c6684",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6449,7 +6449,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante interpone recurso de casacion en el fondo, pero",
+    "familia": "original-fbb1671b1ca36bcf2922f537e2153057ae0c679a",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -6492,7 +6492,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-13",
-    "familia": "original-un litigante interpone recurso de queja contra un juez. la c",
+    "familia": "original-ee26f599d09164622c507ada7949832d8f43e229",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6535,7 +6535,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion personal de la demanda en el procedimiento c",
+    "familia": "original-b236cc004d55634b6f5a9204de3c089aad94ca9d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6578,7 +6578,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion tacita en el procedimiento civil se configur",
+    "familia": "original-7be6ec7b36369f028ce98ced2d490cfa1490f2e1",
     "pistas": [
       "texto_incompleto"
     ]
@@ -6621,7 +6621,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿que tipo de notificacion se utiliza cuando se desconoce la ",
+    "familia": "original-bdecd6699ff056325a5fe435357bf99a59a89a16",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6664,7 +6664,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-10",
-    "familia": "original-la notificacion de la sentencia definitiva de primera instan",
+    "familia": "original-8b78237469bb5bab15b4f7c2bbd9deac4ea5eb56",
     "pistas": []
   },
   {
@@ -6705,7 +6705,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado notifica una demanda de alimentos por correo elec",
+    "familia": "original-e517b2ee393ab2ce9d92fb534e664885647d94c9",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -6749,7 +6749,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-20",
-    "familia": "original-el cumplimiento de una sentencia civil que ordena el pago de",
+    "familia": "original-57c5ae39dbd2300beaa53501aace178c5e178082",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6792,7 +6792,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-20",
-    "familia": "original-transcurrido mas de un ano desde que la ejecucion de la sent",
+    "familia": "original-03dba055a0674962f6a235fae85407e44c34eeed",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -6836,7 +6836,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-los bienes inembargables, segun el articulo 445 del cpc, inc",
+    "familia": "original-904fcb9ba5059252d717ab66763201ac3109d145",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -6879,7 +6879,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en la ejecucion de la sentencia penal, ¿quien controla el cu",
+    "familia": "original-c75c6d030c1e1635436d45df87e04a887ccc02dc",
     "pistas": []
   },
   {
@@ -6920,7 +6920,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-20",
-    "familia": "original-un acreedor tiene una sentencia civil firme que condena al d",
+    "familia": "original-14d86986674637f3a3db5de27360ee5be2794850",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -6965,7 +6965,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el procedimiento de apremio civil, si no se presentan pos",
+    "familia": "original-91fe236fe904a5bde01792e7d6b6be7188b345ff",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7008,7 +7008,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-07",
-    "familia": "original-un litigante obtiene sentencia favorable contra el fisco. tr",
+    "familia": "original-438e8978d9a137ac4df7f299ff7f1affe6f394c0",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -7054,7 +7054,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿que principio de la ley 20.886 asegura que los actos proces",
+    "familia": "original-1bc4df76f8aa722e435b2cf8898b543d2f3c3a66",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -7098,7 +7098,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el uso del sistema informatico de tramitacion es obligatorio",
+    "familia": "original-10b5cd9876be087c789be6d520a6819c36289a71",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -7144,7 +7144,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el patrocinio y el mandato judicial pueden constituirse medi",
+    "familia": "original-281ccb9e0d91574eba7f6be95a25727f8325477d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7187,7 +7187,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-los receptores judiciales, al practicar notificaciones, requ",
+    "familia": "original-ce9c8c0f6450c7f402fb2d5235f4853ba558f570",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7230,7 +7230,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita obtener una copia autorizada de una sent",
+    "familia": "original-acabb25013f30511d78b74a73f1d5274d9838eed",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7273,7 +7273,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-12",
-    "familia": "original-un juez dicta una sentencia y la firma utilizando su clave u",
+    "familia": "original-e793e11cb3324014b4af812f3f278854a1394748",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7316,7 +7316,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una persona sin acceso a internet desea presentar una demand",
+    "familia": "original-cf4bb0cc45f0eaa4acaf9cee7fcd9f9f51d18b22",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -7360,7 +7360,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado notifica una demanda de alimentos por correo elec",
+    "familia": "original-0d1f008fd3a5b91a686e98790f31ca1daadb6d75",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7403,7 +7403,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un consumidor compra un producto defectuoso que le causa dan",
+    "familia": "original-00405b0a14589cc383620583489523d37cbc61a6",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -7448,7 +7448,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-42",
-    "familia": "original-un imputado es condenado y la sentencia ordena el decomiso d",
+    "familia": "original-62d3d7164747a44af911847ae1acab8715483b69",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7491,7 +7491,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal laboral acoge una demanda de despido injustifica",
+    "familia": "original-aed8c832ebfcdfa9672ba7e5a4fd9349382c1298",
     "pistas": [
       "texto_incompleto"
     ]
@@ -7534,7 +7534,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-38",
-    "familia": "original-un demandante en un juicio civil obtiene sentencia favorable",
+    "familia": "original-30d8ab8eb2be8e6374c2a29d7d6b7fdc531ae249",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7577,7 +7577,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un imputado es condenado a una pena de prestacion de servici",
+    "familia": "original-4c3e3b88ed8bd008b054ce13dc5e4fd2e823fda0",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -7622,7 +7622,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-35",
-    "familia": "original-un tribunal de familia decreta una medida de proteccion para",
+    "familia": "original-69a04a78b5af2a8dd2fa091e7b4f3fe751d451a8",
     "pistas": []
   },
   {
@@ -7663,7 +7663,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador es despedido sin carta de despido. interpone d",
+    "familia": "original-6ce6286a3e98ba1aad7863285172b5c80f05e27c",
     "pistas": []
   },
   {
@@ -7704,7 +7704,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante presenta una demanda de indemnizacion de perjui",
+    "familia": "original-999fc5e5faf05e2b4e3022c8c1d80898ac83efa6",
     "pistas": []
   },
   {
@@ -7745,7 +7745,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-25",
-    "familia": "original-un imputado es detenido por flagrancia. el fiscal lo present",
+    "familia": "original-d69d4bda7d4cd693078dc2efcebe00b148d60c45",
     "pistas": []
   },
   {
@@ -7786,7 +7786,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia de divorcio unilateral se notifica por cedula ",
+    "familia": "original-3ce82550e65e4f4e337d67aed744f8fd1737ee53",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7829,7 +7829,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador interpone demanda de nulidad del despido por f",
+    "familia": "original-d694bd9a565b9b344fda29123c1ce76b3d6c60fe",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -7872,7 +7872,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante interpone recurso de casacion en la forma contr",
+    "familia": "original-3f8f30f91669b9a5ea57fa8c12d589dff6ab46be",
     "pistas": []
   },
   {
@@ -7913,7 +7913,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion de la resolucion que recibe la causa a prueb",
+    "familia": "original-e14f4e394961e542b3146043f3fe3e5fa59d80a3",
     "pistas": []
   },
   {
@@ -7954,7 +7954,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-en el cumplimiento de una sentencia que ordena una obligacio",
+    "familia": "original-00526e7b0b6f2ff68a1230f6f4d559b020057448",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -7999,7 +7999,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una resolucion judicial es notificada por el estado diario e",
+    "familia": "original-3364dc1943232a18c035766fad6104842374f891",
     "pistas": []
   },
   {
@@ -8040,7 +8040,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-07",
-    "familia": "original-un litigante obtiene una sentencia favorable en un juicio de",
+    "familia": "original-70044e225f35e191a3a2f6d970c693be8e1a307e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8083,7 +8083,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-06",
-    "familia": "original-un imputado es condenado en un procedimiento abreviado por u",
+    "familia": "original-bfe5177d31a227a25a06319ef6c8c9b3c1ae8684",
     "pistas": []
   },
   {
@@ -8124,7 +8124,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos en favor de un nino",
+    "familia": "original-949d058dc8e96c7560b8ed55bf556bbd70c1d80f",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8167,7 +8167,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-14",
-    "familia": "original-un trabajador demanda por despido injustificado. el empleado",
+    "familia": "original-b46ae0c735851b71e71135ae4f062aec7e356bf7",
     "pistas": []
   },
   {
@@ -8208,7 +8208,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia de familia sobre cuidado personal es apelada. ",
+    "familia": "original-f7c19d497d3d84f221ac795197c37e1be27fc334",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8251,7 +8251,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un receptor notifica una demanda de alimentos mediante cedul",
+    "familia": "original-ef235be728c3d639a3238c5af4e7a847536557b4",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8294,7 +8294,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal laboral acoge una demanda de despido injustifica",
+    "familia": "original-f8f184ed8a1ee6ca14076be1f68e8463d38b1048",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8337,7 +8337,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita obtener copia autorizada de una sentenci",
+    "familia": "original-ceb7df5f30c3991ec8eac0fff2f9116ee8c7ca8e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8380,7 +8380,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es el fundamento constitucional del principio de inexc",
+    "familia": "original-6eac262ca5893279d531b3c0e1f7209cec1612c3",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8423,7 +8423,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-10",
-    "familia": "original-en el juicio ordinario civil, la resolucion que recibe la ca",
+    "familia": "original-52cd4064d47531cef17f2db9ef3829af7fd19fa1",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -8467,7 +8467,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el proceso penal chileno, la investigacion esta a cargo d",
+    "familia": "original-ed6f4ed70a09181bf71f23806a436c5955e5af90",
     "pistas": []
   },
   {
@@ -8508,7 +8508,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la sentencia definitiva en el procedimiento de familia se di",
+    "familia": "original-128b9b0491108c7f2469f116e99b938692c8539a",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8551,7 +8551,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de unificacion de jurisprudencia laboral procede ",
+    "familia": "original-5638a1771f884fdbacba0e9ef850936b91660322",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -8595,7 +8595,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿que son los abogados integrantes?",
+    "familia": "original-bdfdde51333d73c445df1373fa11efb36bc2ed18",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8638,7 +8638,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-¿ante que tribunal se interpone el recurso de casacion en la",
+    "familia": "original-32abf4aefbc7610b0454dc0809d2c21a09169241",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -8683,7 +8683,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el procedimiento de familia, la primera notificacion al d",
+    "familia": "original-0f91836e25a0437cc73e129f5851e7a972b1481a",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8726,7 +8726,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la ejecucion provisional de una sentencia civil es posible c",
+    "familia": "original-9d98dcb212b6dd9d24e8f52e9d2dd3142777c0c1",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -8770,7 +8770,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la oficina judicial virtual (ojv) permite a los usuarios del",
+    "familia": "original-eaeb3a3a0225502bf8f1e6f19b8c774909abb2c4",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -8814,7 +8814,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-19",
-    "familia": "original-un demandante en juicio ejecutivo tiene un pagare no reconoc",
+    "familia": "original-c988dcbf575b7b6f93a229cda0a44a1aa1112844",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8857,7 +8857,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un defensor tiene cliente detenido por hurto falta. fiscal p",
+    "familia": "original-c5fe89e945d12ba38e46766b575b869971c47b06",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8900,7 +8900,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una madre solicita el cuidado personal de su hijo, pero el p",
+    "familia": "original-28ff2b96c147711656da88b2700cb6aa183a2ed3",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8943,7 +8943,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una empresa es condenada en un juicio laboral. la sentencia ",
+    "familia": "original-1c661e0d1f8d505293f85193bc577b7e58e11d16",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -8986,7 +8986,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal civil recibe la causa a prueba fijando hechos su",
+    "familia": "original-f44bc8e96dd4b7653f59619fba777e1b5f99fecb",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9029,7 +9029,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-16",
-    "familia": "original-un fiscal formaliza la investigacion sin que existan anteced",
+    "familia": "original-0c49af4505760c479164064cfa10adf453c6d333",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -9073,7 +9073,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos provisorios. la res",
+    "familia": "original-a6b701936b0bc0e929a3ccc1422cd4bd602176c6",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9116,7 +9116,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal laboral dicta sentencia fuera del plazo de 15 di",
+    "familia": "original-635ecc8d87e7a0d42b12ef4fdc5c37ea21f7ef5d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9159,7 +9159,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante en un juicio civil abandona el procedimiento d",
+    "familia": "original-f95dbffbe7e05286ef2bc4d9e05c73a2f96d7700",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9202,7 +9202,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-42",
-    "familia": "original-un imputado es condenado a una pena de presidio menor. la se",
+    "familia": "original-0a7885851a1a43dd96cbc79b0baac6a8d7107d2f",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9245,7 +9245,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia de familia regula el regimen comunicacional. e",
+    "familia": "original-4dfdd71b18973f1bc582badcd0f95c5e26f076a0",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9288,7 +9288,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante interpone recurso de casacion en la forma por u",
+    "familia": "original-776eeed185d9d198eee781096018dac8bc1c4aa3",
     "pistas": []
   },
   {
@@ -9329,7 +9329,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-37",
-    "familia": "original-un receptor notifica una demanda en dia inhabil. ¿que efecto",
+    "familia": "original-1effc6303b6ff5bc7c4dcbc95f3864270d05927a",
     "pistas": [
       "texto_incompleto"
     ]
@@ -9372,7 +9372,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador interpone demanda de despido injustificado. el",
+    "familia": "original-3c43df0801aa608cd674f6ce349519714591c7f9",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -9417,7 +9417,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado presenta un escrito a traves de la ojv fuera del ",
+    "familia": "original-ee63e24de8a779e5c8a4adbbece8e8b03167a99f",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9460,7 +9460,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-38",
-    "familia": "original-un litigante obtiene sentencia favorable que ordena la resti",
+    "familia": "original-576f166d12548dcbe7447b738f4ae9f79048e0aa",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9503,7 +9503,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-42",
-    "familia": "original-un imputado es condenado y la sentencia ordena el decomiso d",
+    "familia": "original-55770959732d6e032adbd5767ba6d7338df2160a",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9546,7 +9546,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta una medida de proteccion para",
+    "familia": "original-3eeffaec242ea433314e2a857f0fd67d1fbce5cd",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9589,7 +9589,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador interpone demanda de tutela laboral por vulner",
+    "familia": "original-75d7cd5764689162bd014cf81688ca8517b32c45",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9632,7 +9632,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-13",
-    "familia": "original-un litigante interpone recurso de queja contra un juez de le",
+    "familia": "original-a1f2e9ce5d5c9c619a027107194a0bad235e1dc2",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9675,7 +9675,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un receptor notifica una demanda de alimentos por correo ele",
+    "familia": "original-96f52b44fbc9e43a3942b633b956fb5aa86dc9a4",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9718,7 +9718,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-07",
-    "familia": "original-un litigante obtiene sentencia favorable contra el fisco. tr",
+    "familia": "original-a25d2424d4fdf24609911b27293f0fcc467ec416",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -9762,7 +9762,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita presentar un escrito de plazo. la ojv pr",
+    "familia": "original-000a975e570f550879ae398772f24b0cf2315f1d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9805,7 +9805,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la superintendencia directiva, correccional y economica de l",
+    "familia": "original-300504822895c2bddf28cd88a09c36feef1a6624",
     "pistas": []
   },
   {
@@ -9846,7 +9846,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-01",
-    "familia": "original-¿cual es el plazo para contestar la demanda en el juicio ord",
+    "familia": "original-d694d0a04f01574acd31716d658fec8b91ca4dec",
     "pistas": []
   },
   {
@@ -9887,7 +9887,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la mediacion previa es obligatoria en familia para:",
+    "familia": "original-3cf8804b01056a8fce75b61b838d575a146dcbc4",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -9931,7 +9931,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es el plazo para interponer el recurso de nulidad labo",
+    "familia": "original-522416bdaec37d00bb1fa363e5e42713ab964330",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -9974,7 +9974,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es el numero de cortes de apelaciones que existen en c",
+    "familia": "original-4f8297c7f83071c917809c34f3cd09b1b9ea5446",
     "pistas": []
   },
   {
@@ -10015,7 +10015,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion por avisos procede cuando:",
+    "familia": "original-8810efbd110b6810f91c8d13445b9e00d978a9b0",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -10060,7 +10060,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-21",
-    "familia": "original-la terceria de dominio en el juicio ejecutivo tiene por obje",
+    "familia": "original-f7f82e16a1cfc35c4aa6891c526978e4d046db5a",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -10104,7 +10104,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el patrocinio y mandato judicial pueden constituirse mediant",
+    "familia": "original-6fea8f7f7a41eb0367ca1dff8cc9cab026fc3a06",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -10148,7 +10148,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el principio de independencia judicial en su aspecto funcion",
+    "familia": "original-c77e7831fd76761ebddbdac2c12b01f3f2889791",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -10191,7 +10191,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el juicio ejecutivo, el requerimiento de pago se practica",
+    "familia": "original-e6804cd765a21dcded14b94c5dba7a7387d73c2f",
     "pistas": []
   },
   {
@@ -10232,7 +10232,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-09",
-    "familia": "original-las excepciones que puede oponer el ejecutado en el juicio e",
+    "familia": "original-8c68cda27e2e23da7cb86a1f526a410cb335b923",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -10275,7 +10275,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la confesion judicial provocada en el juicio civil puede sol",
+    "familia": "original-8298dfc4c70f471dfc28171a4aad04050f0221a3",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -10319,7 +10319,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la acumulacion de autos procede cuando:",
+    "familia": "original-cef86e89a64ea52394c730d7685264393f289701",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -10365,7 +10365,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la medida cautelar de prohibicion de celebrar actos y contra",
+    "familia": "original-673ad4cc4f0d9cecf5e1aee8fab6802f6655a85d",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -10410,7 +10410,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-23",
-    "familia": "original-un demandado en juicio ejecutivo es requerido de pago el 5 d",
+    "familia": "original-f3e397aeebb8663ea118d6877485c0164adb13d7",
     "pistas": []
   },
   {
@@ -10451,7 +10451,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en un juicio ejecutivo, el tribunal ordena el embargo de un ",
+    "familia": "original-685538bc1261d20a6169ab82ade2b7ab0bcab29a",
     "pistas": []
   },
   {
@@ -10492,7 +10492,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante en un juicio civil abandona el procedimiento d",
+    "familia": "original-fd6c41c258daa1436b482c0c695f1b73f43adc76",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -10535,7 +10535,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-07",
-    "familia": "original-un litigante obtiene sentencia favorable en un juicio de hac",
+    "familia": "original-cea398961e83bd9dcb4ef7e4610b6b3d94849ec2",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -10578,7 +10578,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de nulidad penal procede, entre otras causales, c",
+    "familia": "original-d8558dcce2e2c5965d55495dba4138f6f23956ba",
     "pistas": []
   },
   {
@@ -10619,7 +10619,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el acuerdo reparatorio procede en delitos que:",
+    "familia": "original-91a0ad20c18f13d0026ce5e6f292d7dab834f38f",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -10663,7 +10663,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-24",
-    "familia": "original-un imputado esta en prision preventiva por un delito de robo",
+    "familia": "original-758a94649598af38d2acc876619ae2952248cc0e",
     "pistas": []
   },
   {
@@ -10704,7 +10704,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de juicio oral dicta sentencia absolutoria. al r",
+    "familia": "original-a57358a5e173a995d146e994f1e0c81f9caf0691",
     "pistas": []
   },
   {
@@ -10745,7 +10745,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-05",
-    "familia": "original-un imputado es condenado a una pena de presidio menor. la se",
+    "familia": "original-77eb7cbab7ccfe6519acf7ef99614320b3978b47",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -10788,7 +10788,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-04",
-    "familia": "original-un imputado es condenado en procedimiento abreviado. la vict",
+    "familia": "original-78995028a0a4b8e3199a611ed1c252e4c1c4cac5",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -10833,7 +10833,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el procedimiento de violencia intrafamiliar, las medidas ",
+    "familia": "original-4843ffb305b389bfc23e20fe15389b97b463cb22",
     "pistas": []
   },
   {
@@ -10874,7 +10874,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la sentencia de alimentos que fija una pension provisoria ca",
+    "familia": "original-325a775d9f8f3408664b59fb1b5d24648f181e25",
     "pistas": []
   },
   {
@@ -10915,7 +10915,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en un juicio de divorcio unilateral, el demandante alega ces",
+    "familia": "original-3fbe80bdfc431c2cbee64421607fb52f90409bbe",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -10958,7 +10958,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-35",
-    "familia": "original-un tribunal de familia decreta una medida de proteccion. la ",
+    "familia": "original-d10ea28d9b1161f1213355c87526ee24ad57fc2e",
     "pistas": []
   },
   {
@@ -10999,7 +10999,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-35",
-    "familia": "original-un tribunal de familia decreta una medida de proteccion por ",
+    "familia": "original-cfbae67e8e6b6812c58715c6e4c74fc9baeb7ef5",
     "pistas": []
   },
   {
@@ -11040,7 +11040,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos provisorios y orden",
+    "familia": "original-ca8bb666c0dd041e3c23c5c5d17ef0b0650c81a1",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -11084,7 +11084,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en la ejecucion laboral, el ejecutado solo puede oponer las ",
+    "familia": "original-3c1f1059d55f58e4eb9f777ba6d59d0abedc9cfc",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -11127,7 +11127,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-14",
-    "familia": "original-¿cual es el plazo de caducidad de la accion laboral por desp",
+    "familia": "original-cd778c73d2d09f899f215d58ac5c23b91b340975",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -11171,7 +11171,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-33",
-    "familia": "original-un trabajador es despedido verbalmente, sin carta de despido",
+    "familia": "original-f572c43b5e09b307e3c217b075876e9acab6e207",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -11216,7 +11216,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal laboral admite a tramitacion una demanda de tute",
+    "familia": "original-707cfe78ac94cd5e90563dbda584f730bbdc8157",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -11260,7 +11260,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-41",
-    "familia": "original-un trabajador firma un finiquito sin reserva de derechos y l",
+    "familia": "original-030509d69a90ab13e4dbab3ca3d62be70b6ff5c0",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -11303,7 +11303,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador con fuero sindical es despedido sin autorizaci",
+    "familia": "original-5cdc1bd7d10775985d740d0874f061ff71fdff61",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -11346,7 +11346,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la funcion del relator en una corte de apelaciones incluye:",
+    "familia": "original-7f1bffb9047bcb0f1a67880e9214df03708f7a36",
     "pistas": [
       "enunciado_repetido",
       "relleno_en_alternativa",
@@ -11391,7 +11391,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el acuerdo en una corte de apelaciones se forma cuando:",
+    "familia": "original-9be14b7602708bf26fe4eeff0ad3486d341c420c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -11434,7 +11434,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-¿que ocurre si en una sala de corte de apelaciones hay empat",
+    "familia": "original-5748c588a0e427615ecac96d011fbfd82c46657e",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -11479,7 +11479,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-las cortes de apelaciones conocen de los recursos de protecc",
+    "familia": "original-a5b15f901a2f24ea0998abfc8e6279495a61ae19",
     "pistas": []
   },
   {
@@ -11520,7 +11520,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-39",
-    "familia": "original-un litigante interpone un recurso de apelacion ante la corte",
+    "familia": "original-879fd8ab3aa20956762263d5ce16f95721b3fcd0",
     "pistas": [
       "relleno_en_alternativa"
     ]
@@ -11563,7 +11563,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una corte de apelaciones conoce un recurso de apelacion en c",
+    "familia": "original-f980018c13f16bd34048d9d5431d1b0fb9d991ef",
     "pistas": []
   },
   {
@@ -11604,7 +11604,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sala de corte de apelaciones queda sin el numero de juec",
+    "familia": "original-6c30e9822c1d501d7d3fcf432a716f2f225458fc",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -11647,7 +11647,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-39",
-    "familia": "original-una corte de apelaciones conoce un recurso de apelacion cont",
+    "familia": "original-390f7f3e979b6779ddf27fc11e901580804e4b6b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -11690,7 +11690,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-contra la resolucion que declara inadmisible un recurso de c",
+    "familia": "original-03e53c7f9fb95cea6f059996b93d68c30a9c86fe",
     "pistas": []
   },
   {
@@ -11731,7 +11731,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de apelacion en el procedimiento civil, contra se",
+    "familia": "original-54543390061c1cc54912206e7427c3fcb19edad5",
     "pistas": []
   },
   {
@@ -11772,7 +11772,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-22",
-    "familia": "original-un litigante fue notificado de una sentencia civil adversa e",
+    "familia": "original-87a9c80772e8e546229dd153b3b74eae839a0866",
     "pistas": []
   },
   {
@@ -11813,7 +11813,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante interpone recurso de casacion en el fondo sin e",
+    "familia": "original-88507acd46f303c290c501df5d46434bb4a58942",
     "pistas": []
   },
   {
@@ -11854,7 +11854,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante interpone recurso de casacion en la forma sin h",
+    "familia": "original-77616f38cd60e2fdfdac95532e577d1dd1466cb2",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -11897,7 +11897,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-13",
-    "familia": "original-un litigante interpone recurso de queja contra un juez. la c",
+    "familia": "original-9c2a6f8b77cc3397f126b2f4296b731ca20dcbf6",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -11940,7 +11940,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion por el estado diario electronico se forma:",
+    "familia": "original-8df26f3728595a01feaa83596083bc4254c3ff41",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -11985,7 +11985,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante necesita notificar a una persona juridica extr",
+    "familia": "original-36cda96ed32751244152bdc5138f89bbb241304c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12028,7 +12028,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un receptor notifica una demanda por cedula entregada a un v",
+    "familia": "original-f75d9dfafe234ae4df0d23896e810c0d41bc9176",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12071,7 +12071,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-10",
-    "familia": "original-una parte designa domicilio electronico. el tribunal notific",
+    "familia": "original-8e75b9ef05aa4c9bb48e09a753e9c6c6b8d6990f",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12114,7 +12114,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un abogado notifica una demanda de alimentos por correo elec",
+    "familia": "original-b689018cb192b68d30211d712c4cd968b3882221",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -12159,7 +12159,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la ejecucion provisional de una sentencia civil procede cuan",
+    "familia": "original-e01c5d18b897c4d2656c962738feb44dbfa85ddf",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -12204,7 +12204,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en la ejecucion de la sentencia penal, ¿quien controla el cu",
+    "familia": "original-6a94f5e069a35ec97a9da8b842df7e76a6da9f81",
     "pistas": []
   },
   {
@@ -12245,7 +12245,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-08",
-    "familia": "original-un acreedor tiene una sentencia civil firme contra un deudor",
+    "familia": "original-6852856883ff7ca361c0a852e605b533e9a4b35e",
     "pistas": []
   },
   {
@@ -12286,7 +12286,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-21",
-    "familia": "original-en un juicio ejecutivo, se embarga un bien que es de propied",
+    "familia": "original-f2bb47141285403964ae5123250b2f7e67461ed8",
     "pistas": []
   },
   {
@@ -12327,7 +12327,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un alimentante adeuda 6 meses de pension alimenticia. el tri",
+    "familia": "original-02ff2935c8771eab06a5e32a425738b767a7178d",
     "pistas": []
   },
   {
@@ -12368,7 +12368,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-07",
-    "familia": "original-un litigante obtiene sentencia favorable contra el fisco. tr",
+    "familia": "original-26347b1588c53f5417b55dfae108db8ab2ae0e97",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -12413,7 +12413,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-12",
-    "familia": "original-¿que tipo de firma electronica se exige a los jueces para su",
+    "familia": "original-42410e2b4d2315e96ffd3141d11e978dc5399745",
     "pistas": []
   },
   {
@@ -12454,7 +12454,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la interconexion entre el poder judicial y otras institucion",
+    "familia": "original-2a4328d873e9d02018a4aad62437723a94e0fd14",
     "pistas": []
   },
   {
@@ -12495,7 +12495,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita presentar un escrito de apelacion de pla",
+    "familia": "original-d67d47218776e15ef8b8aa70b277e5043bf6e45d",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -12541,7 +12541,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-12",
-    "familia": "original-un juez firma una sentencia con su clave unica, sin usar fir",
+    "familia": "original-9ecb22ee593f3ba37ac217389d31c9fb21fadc3c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12584,7 +12584,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante presenta un escrito a traves de la ojv un dia s",
+    "familia": "original-a786cb546c538bece0438e5b6e3a4f0ed48b9b75",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12627,7 +12627,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita presentar una demanda con documentos adj",
+    "familia": "original-a697d466fdd3d9da903ba81121fa06cc0526e6a7",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12670,7 +12670,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el principio de legalidad en la funcion jurisdiccional impli",
+    "familia": "original-ad5048e815a48a7bc5e5f64e6334d0fb15391e50",
     "pistas": []
   },
   {
@@ -12711,7 +12711,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el plazo para dictar sentencia definitiva de primera instanc",
+    "familia": "original-2c4b93e1b28080380bbb2b105a1cf02326df033d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12754,7 +12754,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado patrocina a un cliente que fue demandado ejecutiv",
+    "familia": "original-d67dcf03a991e0c62772920d33095e7a973b6a86",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12797,7 +12797,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-21",
-    "familia": "original-en un juicio ejecutivo, se embarga un bien inmueble que no p",
+    "familia": "original-31d0657d56d1b183dcaf36a8d1dd35febd48c941",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -12841,7 +12841,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-26",
-    "familia": "original-la suspension condicional del procedimiento no puede decreta",
+    "familia": "original-6e4d795c4891a04e1ed7daadd5921685786f46ce",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -12886,7 +12886,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-27",
-    "familia": "original-un fiscal ofrece un procedimiento abreviado a un imputado, c",
+    "familia": "original-c47be003800d4ec493c440a51036ae55ff781e5b",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -12930,7 +12930,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-11",
-    "familia": "original-un juez de garantia decreta prision preventiva sin que exist",
+    "familia": "original-4df063e9b4611f99679e5e4e197373a33eabe270",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -12973,7 +12973,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-en los juicios de alimentos, ¿quien puede solicitar la desig",
+    "familia": "original-f6ccc1b73efe64d6b3f0b597c178f11aefea786d",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -13018,7 +13018,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-34",
-    "familia": "original-un padre solicita la custodia compartida de su hijo. la madr",
+    "familia": "original-7f2a79f8cf8bca6218da01176584dcc982607743",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -13061,7 +13061,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-35",
-    "familia": "original-un tribunal de familia decreta una medida de proteccion sin ",
+    "familia": "original-ee9a90eb0ee9366ef16c263cec70a29d6765b821",
     "pistas": []
   },
   {
@@ -13102,7 +13102,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en materia laboral, el tribunal puede ordenar la retencion d",
+    "familia": "original-ad8ef032ebd49502b0b546bbc83d6e265b1fc3e4",
     "pistas": []
   },
   {
@@ -13143,7 +13143,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-32",
-    "familia": "original-un trabajador es despedido por necesidades de la empresa. la",
+    "familia": "original-c2683fd4aca97c1533df950f2e99f84b61e02132",
     "pistas": []
   },
   {
@@ -13184,7 +13184,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal laboral dicta sentencia fuera del plazo de 15 di",
+    "familia": "original-c43a4446a7468bdd864dafab62aa28eba6bcdd26",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -13229,7 +13229,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la duracion de los alegatos ante las cortes de apelaciones e",
+    "familia": "original-c4ce180a2489ec4b1e87ddaedf94084be7e3c914",
     "pistas": [
       "relleno_en_alternativa"
     ]
@@ -13272,7 +13272,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-39",
-    "familia": "original-un litigante desea que la corte de apelaciones suspenda los ",
+    "familia": "original-ffd1a47a09cfe963bfc3f39bcd6b9985e500e488",
     "pistas": []
   },
   {
@@ -13313,7 +13313,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en materia de familia, el recurso de apelacion se concede:",
+    "familia": "original-e243fda8ac5db2dd6cbb67e6aacda16403355db7",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -13357,7 +13357,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-22",
-    "familia": "original-un litigante fue notificado de una sentencia civil adversa e",
+    "familia": "original-0c1d317f5ee1e79929b987dc838628d68e9f3b73",
     "pistas": []
   },
   {
@@ -13398,7 +13398,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-segun la ley de tramitacion electronica, los receptores judi",
+    "familia": "original-09cb46c979692170b3699cec30fa0daff3fed35a",
     "pistas": [
       "relleno_en_alternativa"
     ]
@@ -13441,7 +13441,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante necesita notificar a un demandado que se encue",
+    "familia": "original-0000116c2e8fb05fe3ba74538230993ea8bd208a",
     "pistas": []
   },
   {
@@ -13482,7 +13482,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-40",
-    "familia": "original-en el juicio ejecutivo civil, si el deudor no opone excepcio",
+    "familia": "original-4ef44229290dd7fd95bf8ace7c4b36ade6434315",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -13526,7 +13526,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-08",
-    "familia": "original-un acreedor tiene una sentencia firme contra un deudor que e",
+    "familia": "original-d8e84c8a8a31c01aff1bc512d07d3558109dc046",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -13569,7 +13569,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en un juicio ejecutivo, el tribunal ordena el remate de un i",
+    "familia": "original-aea72c47896f7e8575f33f2b2d4c8da93e428c23",
     "pistas": []
   },
   {
@@ -13610,7 +13610,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el principio de equivalencia funcional del soporte electroni",
+    "familia": "original-5b5b6f9e2b0076c848b4f04a16ccb45fec2c969e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -13653,7 +13653,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita presentar un escrito de apelacion de pla",
+    "familia": "original-d67d47218776e15ef8b8aa70b277e5043bf6e45d",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -13699,7 +13699,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-12",
-    "familia": "original-un juez firma una resolucion con su clave unica del estado. ",
+    "familia": "original-9add475721ad0f634902d36dfa22f7231a7f8842",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -13742,7 +13742,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual de las siguientes es una caracteristica de los tribuna",
+    "familia": "original-91546dd7ffef699eda7f868ba46a665c14458e96",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -13786,7 +13786,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-las medidas para mejor resolver pueden decretarse:",
+    "familia": "original-91218e30a15c077d72b5c9550b46a20032a4177d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -13829,7 +13829,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-38",
-    "familia": "original-un demandante obtiene sentencia favorable en un juicio ordin",
+    "familia": "original-e1bc0c09386c612e726673bcbe37aaebadf8d230",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -13872,7 +13872,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el principio de congruencia en el proceso penal implica que:",
+    "familia": "original-7aca1f658d784644f869d6c8f8b7fad17cd54ffa",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -13915,7 +13915,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-24",
-    "familia": "original-un defensor tiene un cliente detenido por hurto. el fiscal p",
+    "familia": "original-31f2de22ee93ae2fa4a3903a54a734aaddf00842",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -13959,7 +13959,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-en materia de familia, ¿contra que resoluciones procede el r",
+    "familia": "original-779d34fdbc311a674ff9b05aaee33c310a9e53a0",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -14004,7 +14004,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos provisorios. el ali",
+    "familia": "original-e20b99e84c6dfbf06596e605d68ea98a1206938e",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -14048,7 +14048,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el juicio laboral, la sentencia definitiva se dicta:",
+    "familia": "original-066406f13d145c5c7d081cef177cee0e92b89d1b",
     "pistas": [
       "enunciado_repetido",
       "relleno_en_alternativa",
@@ -14093,7 +14093,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-33",
-    "familia": "original-un trabajador es despedido sin carta de despido. ¿que estrat",
+    "familia": "original-dca261abe68e7d0fd9a02cdf1f222605075dc73f",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -14136,7 +14136,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-las cortes de apelaciones conocen de los recursos de amparo ",
+    "familia": "original-8cc6477683bee184ee2f1c1ef42508756302f7b2",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -14179,7 +14179,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-39",
-    "familia": "original-un litigante interpone un recurso de apelacion. desea que la",
+    "familia": "original-ccbafc7452d1686cee7951fd7f6f20807395900a",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -14222,7 +14222,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de hecho verdadero se interpone cuando:",
+    "familia": "original-153a3837e01726bd9823a3e139db23c831495b4e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -14265,7 +14265,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-22",
-    "familia": "original-un litigante fue notificado de una sentencia adversa el lune",
+    "familia": "original-9d2c5d8f490f3026c316d4b52cecfb69699af712",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -14308,7 +14308,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion por cedula se practica:",
+    "familia": "original-b7093f9ae3414699932d3e8e67404a7ccc2c0e44",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -14353,7 +14353,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante necesita notificar a un demandado que se encue",
+    "familia": "original-54e64898d0eb5e13d5c6774cb6613e91ca20bbfb",
     "pistas": []
   },
   {
@@ -14394,7 +14394,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en materia de alimentos, si el alimentante no paga, el tribu",
+    "familia": "original-88832ed3619e887bb97854c95030465fef1451dc",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -14438,7 +14438,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-08",
-    "familia": "original-un acreedor tiene una sentencia firme contra un deudor que e",
+    "familia": "original-d8e84c8a8a31c01aff1bc512d07d3558109dc046",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -14481,7 +14481,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el principio de fidelidad de la carpeta electronica implica ",
+    "familia": "original-ad80dca8ab3dcb65cc1d3f7814b1fe99f8763554",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -14525,7 +14525,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita presentar un escrito de plazo. la ojv pr",
+    "familia": "original-13351d9d2545e9c3396e5488b4abbe983e68eae5",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -14570,7 +14570,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿que organo tiene a su cargo la administracion de recursos d",
+    "familia": "original-7e2c4e3fb60126d39358a7adf0fbef8759ed633f",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -14613,7 +14613,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual de las siguientes es una excepcion dilatoria en el jui",
+    "familia": "original-f7a59dd5a54139ef3cf4e34f69d192189748b580",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -14656,7 +14656,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-23",
-    "familia": "original-un demandado en juicio ejecutivo es requerido de pago el 5 d",
+    "familia": "original-9b5dc475a38a4a2d3c2185d7ae865a726c78a212",
     "pistas": []
   },
   {
@@ -14697,7 +14697,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la flagrancia delictiva se configura cuando:",
+    "familia": "original-080e0256eda2ca7c0d18f149ddba06b100ea5d7a",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -14742,7 +14742,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-26",
-    "familia": "original-un fiscal ofrece suspension condicional a un imputado sin co",
+    "familia": "original-475d95b656514338dcec86fc68a75cb87b6332e6",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -14788,7 +14788,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en materia de relacion directa y regular, si el titular obst",
+    "familia": "original-01a438ff7fca5dd2bbb2808d7529a59457075b41",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -14832,7 +14832,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-34",
-    "familia": "original-un padre solicita la custodia compartida. la madre se opone ",
+    "familia": "original-16ca355b349a428ce8fe46bc43165acc665ffb97",
     "pistas": []
   },
   {
@@ -14873,7 +14873,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-14",
-    "familia": "original-la caducidad de la accion laboral por despido injustificado ",
+    "familia": "original-74766126388c4f581b2e16557b7c4960372b9308",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -14917,7 +14917,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-32",
-    "familia": "original-un trabajador es despedido sin carta de despido. ¿que estrat",
+    "familia": "original-75f0d25264d925b2b8e524d611d98a4c7669c939",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -14960,7 +14960,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-39",
-    "familia": "original-un litigante interpone un recurso de apelacion. desea que la",
+    "familia": "original-ccbafc7452d1686cee7951fd7f6f20807395900a",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -15003,7 +15003,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la adhesion a la apelacion puede formularse:",
+    "familia": "original-8f86bf9817eba2f9d11f314613de5f1e6770958e",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -15048,7 +15048,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-22",
-    "familia": "original-un litigante fue notificado de una sentencia adversa el vier",
+    "familia": "original-66e478b1423b38124ed1be8236c7d2a6b28235ca",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -15091,7 +15091,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion personal subsidiaria exige que el ministro d",
+    "familia": "original-e81f3d64672dc7000dcffa04aa60d2f6f01a779a",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -15134,7 +15134,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante necesita notificar a una empresa extranjera si",
+    "familia": "original-e9b8d88720520ecf052ee81ede3cf40175e8e307",
     "pistas": []
   },
   {
@@ -15175,7 +15175,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-20",
-    "familia": "original-transcurrido mas de un ano desde la ejecutoria, la sentencia",
+    "familia": "original-1a6cfa506b9e947257ae6bd23a9c62f3ad8ab246",
     "pistas": []
   },
   {
@@ -15216,7 +15216,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-08",
-    "familia": "original-un acreedor tiene una sentencia contra un deudor funcionario",
+    "familia": "original-d85c764d5d230ff343bbc8ba7da3508b43044a6e",
     "pistas": [
       "relleno_en_alternativa"
     ]
@@ -15259,7 +15259,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el uso del sistema informatico de tramitacion es obligatorio",
+    "familia": "original-10b5cd9876be087c789be6d520a6819c36289a71",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -15305,7 +15305,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita presentar un escrito de apelacion de pla",
+    "familia": "original-b32d6b06f034e757b8956ff9e7ba24c7dbbcbd56",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -15350,7 +15350,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la funcion del relator en una corte de apelaciones incluye:",
+    "familia": "original-7f1bffb9047bcb0f1a67880e9214df03708f7a36",
     "pistas": [
       "enunciado_repetido",
       "relleno_en_alternativa",
@@ -15395,7 +15395,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la excepcion de cosa juzgada puede oponerse:",
+    "familia": "original-13dfc84576ce0b0f0f539875a1305b4b7e7255d0",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -15438,7 +15438,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-23",
-    "familia": "original-un demandado en juicio ejecutivo es requerido de pago el 10 ",
+    "familia": "original-354e2e61e8455ac06f206d0a8107eca86d31cc96",
     "pistas": []
   },
   {
@@ -15479,7 +15479,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en el juicio oral, ¿en que momento se rinde la prueba del qu",
+    "familia": "original-fe5142a48260d050018358fce46957a5a3aa73b6",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -15523,7 +15523,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-24",
-    "familia": "original-un defensor tiene un cliente detenido por hurto. el fiscal p",
+    "familia": "original-038066706f90f215633526be710f0bcf830fc5b3",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -15567,7 +15567,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-en el procedimiento de familia, las partes deben comparecer:",
+    "familia": "original-f4e1f565509da3e98d7ad9eb6c76d2930bcf5c00",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -15612,7 +15612,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos provisorios. el ali",
+    "familia": "original-e20b99e84c6dfbf06596e605d68ea98a1206938e",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -15656,7 +15656,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-en la ejecucion laboral, el ejecutado solo puede oponer:",
+    "familia": "original-5f394cb5ec8f6b0803f4fb878c4f7245a21dc2f2",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -15701,7 +15701,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-32",
-    "familia": "original-un trabajador es despedido sin carta de despido. ¿que estrat",
+    "familia": "original-75f0d25264d925b2b8e524d611d98a4c7669c939",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -15744,7 +15744,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la tabla de causas se forma con los asuntos que:",
+    "familia": "original-a80b7488801891fe82ede1da9665bf157ce92abd",
     "pistas": []
   },
   {
@@ -15785,7 +15785,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-39",
-    "familia": "original-un litigante interpone un recurso de apelacion. desea que la",
+    "familia": "original-ccbafc7452d1686cee7951fd7f6f20807395900a",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -15828,7 +15828,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-contra la sentencia definitiva del juicio oral penal procede",
+    "familia": "original-89cb9da65ddeb8b1a5fcd032bebeb7d430190397",
     "pistas": [
       "relleno_en_alternativa"
     ]
@@ -15871,7 +15871,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-22",
-    "familia": "original-un litigante fue notificado de una sentencia adversa el lune",
+    "familia": "original-9d2c5d8f490f3026c316d4b52cecfb69699af712",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -15914,7 +15914,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion tacita se configura cuando:",
+    "familia": "original-cc592ee99945361424eefc494e95134d761fe763",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -15959,7 +15959,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante necesita notificar a un demandado en el extran",
+    "familia": "original-1e2767f0e8146bde60a5832f74347c2bba5bc148",
     "pistas": []
   },
   {
@@ -16000,7 +16000,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-08",
-    "familia": "original-un acreedor tiene sentencia contra un deudor funcionario pub",
+    "familia": "original-94f707f8dab7ab97c650c6f4e58b849d657ffd3c",
     "pistas": [
       "relleno_en_alternativa"
     ]
@@ -16043,7 +16043,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la presentacion de escritos materialmente, en soporte papel,",
+    "familia": "original-a5055b73a013d9b8be3bf2b9a164243135bcd6d2",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -16088,7 +16088,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado necesita obtener copia autorizada de una sentenci",
+    "familia": "original-6ff56ecdab9a421fde98a7b3ab2564bf2a9c6c58",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -16131,7 +16131,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la acumulacion de autos procede cuando:",
+    "familia": "original-cef86e89a64ea52394c730d7685264393f289701",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -16177,7 +16177,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-38",
-    "familia": "original-un demandante obtiene sentencia favorable. la sentencia es a",
+    "familia": "original-815f3b7977d426f464da3ae8008f16e266d7b48a",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -16220,7 +16220,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-la detencion por flagrancia puede ser realizada por:",
+    "familia": "original-e981d4b063ff8f8c45474ea70d505b716a24f52d",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -16264,7 +16264,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-26",
-    "familia": "original-un fiscal ofrece suspension condicional a un imputado sin co",
+    "familia": "original-475d95b656514338dcec86fc68a75cb87b6332e6",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -16310,7 +16310,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en materia de familia, ¿como se notifican las sentencias def",
+    "familia": "original-4ceaef7a72b724257b2adcb8f0be39f4969ea90c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -16353,7 +16353,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal de familia decreta alimentos provisorios. el ali",
+    "familia": "original-364e031ec54b64153273d684ca9995d5a4684de1",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -16396,7 +16396,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-el recurso de unificacion de jurisprudencia laboral procede ",
+    "familia": "original-5638a1771f884fdbacba0e9ef850936b91660322",
     "pistas": [
       "texto_incompleto",
       "enunciado_repetido",
@@ -16442,7 +16442,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-33",
-    "familia": "original-un trabajador es despedido sin carta de despido. ¿que estrat",
+    "familia": "original-dca261abe68e7d0fd9a02cdf1f222605075dc73f",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -16485,7 +16485,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-cuando una sala de corte de apelaciones queda sin el numero ",
+    "familia": "original-b7fab15e065681cda293b433113f3bee077f1510",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -16529,7 +16529,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-39",
-    "familia": "original-un litigante interpone un recurso de apelacion. desea que la",
+    "familia": "original-ccbafc7452d1686cee7951fd7f6f20807395900a",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -16572,7 +16572,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-en materia de familia, el recurso de apelacion se concede:",
+    "familia": "original-e243fda8ac5db2dd6cbb67e6aacda16403355db7",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -16616,7 +16616,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-22",
-    "familia": "original-un litigante fue notificado de una sentencia adversa el vier",
+    "familia": "original-66e478b1423b38124ed1be8236c7d2a6b28235ca",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -16659,7 +16659,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-la notificacion personal subsidiaria del art. 44 cpc procede",
+    "familia": "original-89d2a4b1c284d54de873e7cf411365cb6628ba4c",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -16704,7 +16704,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un demandante necesita notificar a un demandado que esta fue",
+    "familia": "original-f9c60697392929b588d0d18e4e069e8ce5cd738d",
     "pistas": []
   },
   {
@@ -16745,7 +16745,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-los bienes inembargables incluyen:",
+    "familia": "original-18eae381272318d4be255a500f07ab54c038b059",
     "pistas": [
       "relleno_en_alternativa",
       "correcta_mas_larga"
@@ -16789,7 +16789,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un alimentante adeuda 6 meses de pension. el tribunal decret",
+    "familia": "original-19deb0edbe6b8d47d9e49b96911aab6177c563bb",
     "pistas": [
       "enunciado_repetido"
     ]
@@ -16832,7 +16832,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-¿cual es el horario de funcionamiento de la oficina judicial",
+    "familia": "original-8e7031d504ecf6c13b01c399d9a07b33838d1974",
     "pistas": [
       "enunciado_repetido",
       "correcta_mas_larga"
@@ -16876,7 +16876,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez de letras recibe una demanda en la que el demandante",
+    "familia": "original-93454cd202be13934a130ef0ea6210cc6a277496",
     "pistas": []
   },
   {
@@ -16917,7 +16917,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un abogado integrante de una corte de apelaciones descubre q",
+    "familia": "original-06de95754b693e2f8f8a69aa17aae6bf35264dda",
     "pistas": []
   },
   {
@@ -16958,7 +16958,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez esta redactando una sentencia y descubre que la ley ",
+    "familia": "original-602c88e86c3dc7906d2d9c47d5f87e05e5cbf513",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17001,7 +17001,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-29",
-    "familia": "original-un juez es propietario de acciones en una sociedad anonima q",
+    "familia": "original-78cbbf099163b8fa5effbea051c0e6283bda4653",
     "pistas": []
   },
   {
@@ -17042,7 +17042,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-30",
-    "familia": "original-un juez de garantia mantiene una amistad estrecha con el fis",
+    "familia": "original-5027a1d949dcdba948b61e54797227895b1370d2",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17085,7 +17085,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez dicta sentencia en un caso complejo. dos meses despu",
+    "familia": "original-9ba7bfe939f9dc2a741e71ffb24e1a6b2e873663",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17128,7 +17128,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un alumno en practica profesional en un tribunal presencia u",
+    "familia": "original-9544a7d83a6996f088239503cd4879244c6c950c",
     "pistas": []
   },
   {
@@ -17169,7 +17169,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez es invitado a un seminario organizado por un estudio",
+    "familia": "original-30dd074ff6f8f54deffbe37a90aa38dc51fd824c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17212,7 +17212,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-30",
-    "familia": "original-un juez de familia debe resolver un caso de cuidado personal",
+    "familia": "original-1650c7446f259a051cf89dfa8d49ab3a52f6d5e0",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17255,7 +17255,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un juez esta redactando una sentencia y recibe una llamada t",
+    "familia": "original-bd9718bd815844d6afc81af4efc3944215d71100",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -17299,7 +17299,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un juez de letras tiene un hijo que postula a un cargo en un",
+    "familia": "original-89fe39c125f84998b96a2796b834d81ffdb3aa71",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa"
@@ -17343,7 +17343,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez dicta una sentencia que genera gran controversia med",
+    "familia": "original-8fba215a93c9c651cc1b0667114696dcbbd7eb28",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17386,7 +17386,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez de garantia esta conociendo un caso de alta compleji",
+    "familia": "original-259c1a96d6c407e893012316dcffc46e27b811fc",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17429,7 +17429,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-28",
-    "familia": "original-un juez civil descubre que el abogado demandante ha incurrid",
+    "familia": "original-867663d683262130ec1e0974fd34fb5eebf0f3d5",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17472,7 +17472,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez de familia debe resolver un caso de violencia intraf",
+    "familia": "original-a0dc3d93b71a7050e9ef187b8390fd5a7649e110",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17515,7 +17515,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-36",
-    "familia": "original-un juez debe aplicar una ley que utiliza el termino \"domicil",
+    "familia": "original-6699ba454b23664e099501d08f673bf877c2a78f",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17558,7 +17558,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-dos normas del codigo procesal penal parecen contradictorias",
+    "familia": "original-49b1064079d6985bace2d338c4ed8daff88b47bc",
     "pistas": []
   },
   {
@@ -17599,7 +17599,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez se enfrenta a un caso donde no existe ley exactament",
+    "familia": "original-6fb5d2ee372f7e84d11304701fc518825834620e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17642,7 +17642,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una sentencia debe motivarse adecuadamente. segun la jurispr",
+    "familia": "original-ce6ddfd9cf66412685a8dfa84adc85921b8e94ce",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17685,7 +17685,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez debe aplicar una ley penal que sanciona \"el hurto de",
+    "familia": "original-14e5157c5eefd3dbd4e74ecf87384e962a6a612e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17728,7 +17728,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-36",
-    "familia": "original-un juez laboral debe interpretar una clausula de un contrato",
+    "familia": "original-4a67a751820e008d27eb3c05cde31240b713335d",
     "pistas": []
   },
   {
@@ -17769,7 +17769,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-37",
-    "familia": "original-una ley procesal establece que el recurso de apelacion debe ",
+    "familia": "original-622d96ada27e10e9636a76d8dada59ba8c916f5d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17812,7 +17812,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un juez debe resolver un caso sobre responsabilidad civil. n",
+    "familia": "original-f2ce338cb262f07873e98101690cfca9e9b59720",
     "pistas": [
       "texto_incompleto"
     ]
@@ -17855,7 +17855,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un juez de familia debe interpretar el concepto de \"interes ",
+    "familia": "original-a381d13b9deaa92e658d46d6e686acac0ef9356c",
     "pistas": [
       "texto_incompleto"
     ]
@@ -17898,7 +17898,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": "pf92-r-36",
-    "familia": "original-un tribunal de alzada revisa una sentencia de primera instan",
+    "familia": "original-840d287ab7769ca1b012b782ae71ff2f9ff6bd9a",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -17943,7 +17943,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una ley procesal establece que \"el juez podra decretar medid",
+    "familia": "original-6248e3a6098bb59a40f9a98c620308e20e5fa57d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -17986,7 +17986,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez debe resolver un caso de colision entre el derecho a",
+    "familia": "original-3828830b3916b926b61967a6732fa3fb1e3bc430",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18029,7 +18029,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez esta redactando una sentencia y quiere citar jurispr",
+    "familia": "original-a91aebfdcca9bfff4a254b0b48f9350163cbc34b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18072,7 +18072,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-43",
-    "familia": "original-un juez debe aplicar una norma de un tratado internacional d",
+    "familia": "original-80131a40dee4a83efb353878a4d25f30b115663b",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18115,7 +18115,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un juez penal debe aplicar una norma que sanciona la \"violen",
+    "familia": "original-08f9b6ff0135fef8d6f10dac323bf4b5f2134069",
     "pistas": [
       "texto_incompleto"
     ]
@@ -18158,7 +18158,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un particular interpone recurso de proteccion contra una emp",
+    "familia": "original-42be3261924337f398383b8823a520737b60b71c",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18201,7 +18201,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una persona es detenida por carabineros sin orden judicial y",
+    "familia": "original-11563f8f83bb2c126469351c247bd11c8db6cac6",
     "pistas": []
   },
   {
@@ -18242,7 +18242,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un juez de garantia decreta prision preventiva sin fundament",
+    "familia": "original-33208fc723e8660d20026cca59e1df6463ba1ca1",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18285,7 +18285,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-una comunidad indigena interpone recurso de proteccion contr",
+    "familia": "original-6a677c7dde78e5db14a60f179b3edfe9500d47b4",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -18330,7 +18330,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal laboral acoge una demanda de tutela por vulnerac",
+    "familia": "original-2c56ac07a13f4fd88d87f17c8e9a76c66825399e",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18373,7 +18373,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-35",
-    "familia": "original-un tribunal de familia decreta una medida de proteccion que ",
+    "familia": "original-1e5831c6e19b721cf4dd7a185c895190a5ecee04",
     "pistas": []
   },
   {
@@ -18414,7 +18414,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un trabajador alega que fue despedido por su orientacion sex",
+    "familia": "original-411b7655349f10ffd2b2937c3acbc973d59355b3",
     "pistas": [
       "relleno_en_alternativa"
     ]
@@ -18457,7 +18457,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un juez civil admite una demanda a tramitacion a pesar de qu",
+    "familia": "original-946c08c7485140b7854485ac2aaacbc950ce13b7",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -18502,7 +18502,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-un litigante alega que el tribunal no se pronuncio sobre una",
+    "familia": "original-da5b693b328973589f174fd4ce22ba19832f147c",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -18547,7 +18547,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-27",
-    "familia": "original-un imputado es condenado en un procedimiento abreviado sin q",
+    "familia": "original-e04cd9b50231ee256d9b193ba0d8f858236340ee",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18590,7 +18590,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un tribunal rechaza un recurso de apelacion porque el apelan",
+    "familia": "original-66172b52ba0bfe8f9a27a84eff43c8e08452de6f",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18633,7 +18633,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-31",
-    "familia": "original-un juez laboral aplica una norma del codigo del trabajo de m",
+    "familia": "original-2959ea1f94643beee74eb4cccab852184a51386d",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18676,7 +18676,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-una persona interpone recurso de proteccion contra una resol",
+    "familia": "original-b870ea17cbb756c8f8862e1646bfa060859141b8",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18719,7 +18719,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante alega que el juez que conoce de su causa ha pre",
+    "familia": "original-ee3a41e99b5053b225d5bf53c4022c340a6a2ffb",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18762,7 +18762,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un recurso de amparo es interpuesto a favor de una persona q",
+    "familia": "original-be458dc2fce0a95a4a188f372e074a73c78ba8a6",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18805,7 +18805,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "provisional",
     "reemplazadaPor": null,
-    "familia": "original-un litigante alega que el tribunal de alzada confirmo una se",
+    "familia": "original-14ab25712276d3bb6cd91396f75aa474324eebac",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18848,7 +18848,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-una ley establece una sancion administrativa sin otorgar al ",
+    "familia": "original-72cae552cc48f81aab8d74a7e0f4147ab3bc35c5",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -18893,7 +18893,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-17",
-    "familia": "original-un tribunal penal debe resolver si la confesion del imputado",
+    "familia": "original-52eb1b86012ce29785fc2aad92618412006d9f62",
     "pistas": [
       "correcta_mas_larga"
     ]
@@ -18936,7 +18936,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "bloqueada",
     "reemplazadaPor": null,
-    "familia": "original-una persona solicita acceso a su ficha clinica en un hospita",
+    "familia": "original-4b30cb00ce64a950238e8268a40bd14f825f86e2",
     "pistas": [
       "texto_incompleto",
       "relleno_en_alternativa",
@@ -18981,7 +18981,7 @@ const preguntas_banco = [
     "version": "2026-09-07-pf92-v1",
     "estado": "retirada",
     "reemplazadaPor": "pf92-r-18",
-    "familia": "original-un juez de garantia excluye una prueba ofrecida por la defen",
+    "familia": "original-699df7300ba76df03ecc6236aa093e19347f5ad9",
     "pistas": [
       "correcta_mas_larga"
     ]
