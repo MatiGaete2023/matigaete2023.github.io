@@ -1,103 +1,215 @@
-
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-CL">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simulador AJ PF91</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simulador personal de repaso jurídico para el Programa de Formación de la Academia Judicial">
+  <title>Simulador jurídico · Academia Judicial</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-      text-align: center;
-      padding: 20px;
-    }
-    .pregunta {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    .opcion {
-      margin: 10px;
-      padding: 10px;
-      background-color: #1f1f1f;
-      border: 1px solid #333;
-      cursor: pointer;
-    }
-    .opcion:hover {
-      background-color: #333;
-    }
-    .respuesta {
-      margin-top: 15px;
-      font-weight: bold;
-    }
+    :root { color-scheme: light dark; --bg:#101827; --panel:#17243a; --panel2:#1d304c; --text:#f2f6fb; --muted:#b8c6d8; --line:#3b5271; --accent:#68b5e8; --ok:#67d391; --bad:#ff8c8c; --warn:#f0c674; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(circle at top,#1b3150,#0d1422 65%); color:var(--text); font:16px/1.5 system-ui,Segoe UI,sans-serif; min-height:100vh; }
+    main { width:min(1080px,100%); margin:auto; padding:18px; }
+    header,.panel { background:rgba(23,36,58,.96); border:1px solid var(--line); border-radius:16px; box-shadow:0 12px 32px #0004; }
+    header { padding:24px; margin-bottom:16px; }
+    h1 { margin:0 0 4px; font-size:clamp(1.55rem,4vw,2.2rem); }
+    h2 { margin:0 0 12px; font-size:1.35rem; }
+    h3 { margin:20px 0 8px; font-size:1.08rem; }
+    .eyebrow { color:var(--accent); font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; margin:0 0 8px; }
+    .muted,.meta { color:var(--muted); }
+    .notice { padding:12px 14px; border-left:4px solid var(--warn); background:#493d20; color:#ffe9ae; border-radius:8px; margin:14px 0; }
+    .panel { padding:20px; margin-bottom:16px; }
+    .config-grid,.stat-grid,.summary-grid { display:grid; gap:12px; }
+    .config-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .stat-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+    .summary-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    label { display:grid; gap:5px; color:var(--muted); font-size:.9rem; }
+    input,select,button { font:inherit; border-radius:9px; border:1px solid var(--line); padding:10px 12px; }
+    input,select { background:#0f1a2c; color:var(--text); width:100%; }
+    button { background:#244264; color:var(--text); cursor:pointer; }
+    button:hover:not(:disabled),button:focus-visible,input:focus-visible,select:focus-visible { outline:3px solid #68b5e866; outline-offset:2px; border-color:var(--accent); }
+    button:disabled { opacity:.5; cursor:not-allowed; }
+    .actions,.toolbar,.stats-line { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .toolbar,.stats-line { justify-content:space-between; }
+    .stats-line { color:var(--muted); margin-bottom:14px; }
+    .stat { padding:12px; background:var(--panel2); border-radius:10px; min-height:74px; }
+    .stat b { display:block; font-size:1.45rem; color:var(--text); }
+    .stat span { color:var(--muted); font-size:.84rem; }
+    .progress { height:10px; background:#0b1424; border-radius:99px; overflow:hidden; margin:8px 0 18px; }
+    .progress > div { height:100%; width:0; background:linear-gradient(90deg,var(--accent),#8be3c0); transition:width .15s ease; }
+    #questionText { font-size:1.26rem; max-width:850px; margin:10px 0 18px; }
+    .question-tag { color:var(--accent); font-size:.9rem; }
+    #options { display:grid; gap:10px; }
+    .option { display:grid; grid-template-columns:34px 1fr; gap:10px; text-align:left; width:100%; background:#1b2d48; }
+    .option-letter { color:var(--accent); font-weight:700; }
+    .option.correct { background:#194635; border-color:var(--ok); }
+    .option.incorrect { background:#4b2934; border-color:var(--bad); }
+    #feedback { min-height:52px; margin:15px 0; }
+    .ok { color:var(--ok); } .bad { color:var(--bad); }
+    .feedback-copy { color:var(--muted); margin:6px 0; }
+    .source { color:var(--muted); font-size:.85rem; }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; margin-top:10px; font-size:.92rem; }
+    th,td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--accent); }
+    .hidden { display:none !important; }
+    .secondary { background:transparent; }
+    .danger { color:#ffd1d1; border-color:#8f4c57; }
+    .small { font-size:.85rem; }
+    @media (max-width:720px) { main { padding:10px; } header,.panel { padding:16px; } .config-grid,.stat-grid,.summary-grid { grid-template-columns:1fr 1fr; } #questionText { font-size:1.13rem; } }
+    @media (max-width:450px) { .config-grid,.stat-grid,.summary-grid { grid-template-columns:1fr; } .actions button { flex:1 1 42%; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none !important; } }
   </style>
 </head>
 <body>
-  <h1>Simulador Academia Judicial</h1>
-  <p id="puntaje"></p>
-  <div class="pregunta" id="pregunta"></div>
-  <div id="opciones"></div>
-  <div class="respuesta" id="respuesta"></div>
-  <button onclick="siguientePregunta()">Siguiente pregunta</button>
-  <button onclick="reiniciarSimulador()">Reiniciar</button>
+<main>
+  <header>
+    <p class="eyebrow">Repaso personal · versión 2026-09-07-pf92-v1</p>
+    <h1>Simulador jurídico · Academia Judicial</h1>
+    <p class="muted">Práctica con preguntas de alternativa, sesiones configurables y análisis local del desempeño.</p>
+    <div id="bankNotice" class="notice" role="status">El banco contiene preguntas provisionales. Las preguntas bloqueadas o retiradas no se seleccionan; la aprobación jurídica definitiva requiere revisión humana.</div>
+  </header>
 
-  <script src="preguntas.js"></script>
-  <script>
-    let indiceActual = 0;
-    let preguntasDisponibles = [...preguntas_multiples];
-    let puntaje = 0;
+  <section id="setup" class="panel" aria-labelledby="setupTitle">
+    <h2 id="setupTitle">Configurar sesión</h2>
+    <div class="config-grid">
+      <label>Modo<select id="mode"><option value="practice">Práctica libre</option><option value="mini">Mini · 5 preguntas</option><option value="exam">Simulación PF92 · 90 preguntas</option><option value="review">Repasar errores</option><option value="favorites">Favoritos</option></select></label>
+      <label>Materia<select id="area"><option value="all">Todas</option></select></label>
+      <label>Buscar en pregunta, explicación o fuente<input id="search" type="search" autocomplete="off" placeholder="Ej.: emplazamiento, art. 247"></label>
+    </div>
+    <p id="available" class="meta" aria-live="polite"></p>
+    <div class="actions"><button id="start" type="button">Iniciar sesión</button><button id="continue" type="button" class="secondary hidden">Continuar sesión guardada</button><button id="clear" type="button" class="secondary danger">Borrar mis datos</button></div>
+  </section>
 
-    function cargarPregunta() {
-      if (preguntasDisponibles.length === 0) {
-        document.getElementById("pregunta").innerText = "Simulador finalizado.";
-        document.getElementById("opciones").innerHTML = "";
-        document.getElementById("respuesta").innerText = "";
-        return;
-      }
+  <section id="session" class="panel hidden" aria-labelledby="sessionTitle">
+    <div class="toolbar"><div><p id="questionTag" class="question-tag"></p><h2 id="sessionTitle">Pregunta</h2></div><button id="favorite" type="button" class="secondary" aria-pressed="false" aria-label="Marcar pregunta como favorita">☆ Favorita</button></div>
+    <div class="stats-line"><span id="progressText"></span><span id="timerText">00:00</span><span id="sessionLabel"></span></div>
+    <div class="progress" aria-hidden="true"><div id="progressBar"></div></div>
+    <div id="questionText" tabindex="-1"></div>
+    <div id="options" role="group" aria-label="Alternativas"></div>
+    <div id="feedback" aria-live="polite"></div>
+    <div class="actions"><button id="previous" type="button">← Anterior</button><button id="omit" type="button">Omitir</button><button id="next" type="button" disabled>Siguiente →</button><button id="finish" type="button" class="secondary">Terminar</button></div>
+  </section>
 
-      indiceActual = Math.floor(Math.random() * preguntasDisponibles.length);
-      const pregunta = preguntasDisponibles[indiceActual];
+  <section id="summary" class="panel hidden" aria-labelledby="summaryTitle">
+    <h2 id="summaryTitle">Resultado de la sesión</h2>
+    <div class="summary-grid"><div class="stat"><b id="sumCorrect">0</b><span>Correctas</span></div><div class="stat"><b id="sumWrong">0</b><span>Incorrectas</span></div><div class="stat"><b id="sumOmitted">0</b><span>Omitidas</span></div><div class="stat"><b id="sumAccuracy">0%</b><span>Precisión sobre respondidas</span></div><div class="stat"><b id="sumCoverage">0%</b><span>Cobertura de la sesión</span></div><div class="stat"><b id="sumTime">00:00</b><span>Tiempo activo</span></div></div>
+    <p id="summaryNote" class="notice"></p>
+    <h3>Desempeño por materia</h3><div class="table-wrap"><table><thead><tr><th>Materia</th><th>Correctas</th><th>Respondidas</th><th>Precisión</th></tr></thead><tbody id="areaResults"></tbody></table></div>
+    <h3>Próximo repaso</h3><p id="nextReview" class="muted"></p>
+    <div class="actions"><button id="reviewWrong" type="button">Repasar incorrectas</button><button id="exportJson" type="button" class="secondary">Exportar JSON</button><button id="exportCsv" type="button" class="secondary">Exportar CSV</button><button id="newSession" type="button">Nueva sesión</button></div>
+  </section>
 
-      document.getElementById("pregunta").innerText = pregunta.pregunta;
-      const opcionesDiv = document.getElementById("opciones");
-      opcionesDiv.innerHTML = "";
-      pregunta.opciones.forEach((op, index) => {
-        const btn = document.createElement("div");
-        btn.className = "opcion";
-        btn.innerText = op;
-        btn.onclick = () => verificarRespuesta(index, pregunta.respuesta);
-        opcionesDiv.appendChild(btn);
-      });
-    }
+  <section id="analytics" class="panel" aria-labelledby="analyticsTitle"><div class="toolbar"><h2 id="analyticsTitle">Historial local</h2><button id="refreshAnalytics" type="button" class="secondary">Actualizar</button></div><div class="stat-grid"><div class="stat"><b id="allAttempts">0</b><span>Respuestas acumuladas</span></div><div class="stat"><b id="allAccuracy">0%</b><span>Precisión acumulada</span></div><div class="stat"><b id="allSessions">0</b><span>Sesiones terminadas</span></div><div class="stat"><b id="allWeak">—</b><span>Materia más débil</span></div></div><p class="meta small">Las métricas se calculan sólo desde eventos guardados en este navegador. Puedes exportarlas para analizarlas en Excel.</p></section>
+</main>
+<script src="preguntas.js"></script>
+<script>
+(() => {
+  'use strict';
+  const KEY = 'aj-simulador-v5';
+  const SESSION_VERSION = 5;
+  const BANK = preguntas_banco.slice();
+  const BY_ID = new Map(BANK.map(q => [q.id, q]));
+  const EXCLUDED_FLAGS = new Set(['texto_incompleto', 'enunciado_repetido', 'relleno_en_alternativa', 'correcta_mas_larga']);
+  const ACTIVE = BANK.filter(q => q.estado !== 'bloqueada' && q.estado !== 'retirada' && !q.pistas.some(flag => EXCLUDED_FLAGS.has(flag)));
+  const $ = id => document.getElementById(id);
+  let store = { schema: SESSION_VERSION, favorites: [], history: [], current: null };
+  let session = null;
+  let timerHandle = null;
 
-    function verificarRespuesta(seleccionado, correcto) {
-      const respuesta = document.getElementById("respuesta");
-      if (seleccionado === correcto) {
-        respuesta.innerText = "✅ Correcto";
-        respuesta.style.color = "lightgreen";
-        puntaje++;
-      } else {
-        respuesta.innerText = `❌ Incorrecto. Respuesta correcta: ${preguntasDisponibles[indiceActual].opciones[correcto]}`;
-        respuesta.style.color = "red";
-      }
-      document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
-    }
-
-    function siguientePregunta() {
-      preguntasDisponibles.splice(indiceActual, 1);
-      document.getElementById("respuesta").innerText = "";
-      cargarPregunta();
-    }
-
-    function reiniciarSimulador() {
-      puntaje = 0;
-      preguntasDisponibles = [...preguntas_multiples];
-      document.getElementById("respuesta").innerText = "";
-      cargarPregunta();
-    }
-
-    window.onload = cargarPregunta;
-  </script>
+  function readStore() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (!raw || raw.schema !== SESSION_VERSION) return;
+      store = { ...store, ...raw, favorites: Array.isArray(raw.favorites) ? raw.favorites.filter(id => BY_ID.has(id)) : [], history: Array.isArray(raw.history) ? raw.history.slice(-200) : [] };
+      if (raw.current && raw.current.bankHash === BANCO_HASH && Array.isArray(raw.current.order) && raw.current.order.every(id => BY_ID.has(id) && ACTIVE.some(q => q.id === id))) store.current = raw.current;
+    } catch (_) { store = { schema: SESSION_VERSION, favorites: [], history: [], current: null }; }
+  }
+  function writeStore() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (_) { showNotice('No se pudo guardar en este navegador. Puedes seguir practicando, pero no se reanudará la sesión.'); } }
+  function showNotice(text) { $('bankNotice').textContent = text; $('bankNotice').hidden = false; }
+  function formatTime(ms) { const s = Math.max(0, Math.floor(ms / 1000)); return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); }
+  function shuffle(values, seed) { const a = values.slice(); let x = seed || Date.now(); for (let i = a.length - 1; i > 0; i--) { x = (x * 1664525 + 1013904223) >>> 0; const j = x % (i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  function allAreas() { return [...new Set(ACTIVE.map(q => q.area))].sort(); }
+  function areaLabel(area) { const q = ACTIVE.find(x => x.area === area); return q ? q.materia : area; }
+  function currentCandidates() {
+    const mode = $('mode').value, selectedArea = $('area').value, text = $('search').value.trim().toLocaleLowerCase('es-CL');
+    let values = ACTIVE.slice();
+    if (selectedArea !== 'all') values = values.filter(q => q.area === selectedArea);
+    if (text) values = values.filter(q => [q.pregunta, q.explicacion, q.fuente.cita, q.materia].join(' ').toLocaleLowerCase('es-CL').includes(text));
+    if (mode === 'review') { const wrong = new Set(store.history.flatMap(h => h.answers || []).filter(a => a.correcta === false).map(a => a.questionId)); values = values.filter(q => wrong.has(q.id)); }
+    if (mode === 'favorites') values = values.filter(q => store.favorites.includes(q.id));
+    return values;
+  }
+  function refreshAvailable() { const n = currentCandidates().length; $('available').textContent = n + ' preguntas disponibles para este filtro. En examen se seleccionan hasta 90, sin repetir familia cuando existe alternativa.'; $('continue').classList.toggle('hidden', !store.current); }
+  function selectExamPool(source, max) {
+    const shuffled = shuffle(source, Date.now()); const selected = []; const families = new Set();
+    shuffled.forEach(q => { if (selected.length < max && !families.has(q.familia)) { selected.push(q); families.add(q.familia); } });
+    if (selected.length < max) shuffled.forEach(q => { if (selected.length < max && !selected.includes(q)) selected.push(q); });
+    return selected;
+  }
+  function buildSession() {
+    const mode = $('mode').value, source = currentCandidates();
+    if (!source.length) { showNotice('No hay preguntas para esta combinación. Cambia el modo, materia o búsqueda.'); return null; }
+    const max = mode === 'mini' ? 5 : mode === 'exam' ? 90 : source.length;
+    const pool = mode === 'exam' ? selectExamPool(source, max) : shuffle(source, Date.now()).slice(0, max);
+    const order = pool.map(q => q.id);
+    const optionOrder = {};
+    order.forEach((id, i) => { optionOrder[id] = shuffle([0,1,2,3], Date.now() + i + id.length); });
+    return { id: Date.now().toString(36), bankHash: BANCO_HASH, mode, area: $('area').value, search: $('search').value, order, optionOrder, index: 0, answers: {}, startedAt: Date.now(), elapsedBefore: 0, lastTick: Date.now() };
+  }
+  function activeElapsed() { return session ? session.elapsedBefore + (Date.now() - session.lastTick) : 0; }
+  function saveCurrent() { if (!session) return; session.elapsedBefore = activeElapsed(); session.lastTick = Date.now(); store.current = session; writeStore(); }
+  function startTimer() { stopTimer(); timerHandle = setInterval(() => { if (session) $('timerText').textContent = formatTime(activeElapsed()); }, 1000); }
+  function stopTimer() { if (timerHandle !== null) { clearInterval(timerHandle); timerHandle = null; } }
+  function setSessionVisible(on) { $('setup').classList.toggle('hidden', on); $('session').classList.toggle('hidden', !on); $('summary').classList.add('hidden'); }
+  function renderQuestion() {
+    const q = BY_ID.get(session.order[session.index]);
+    if (!q) return finishSession();
+    const prior = session.answers[q.id];
+    $('questionTag').textContent = q.materia + (q.estado !== 'aprobada' ? ' · provisional' : '');
+    $('sessionTitle').textContent = 'Pregunta ' + (session.index + 1);
+    $('sessionLabel').textContent = session.mode === 'exam' ? 'Simulación PF92' : session.mode === 'review' ? 'Repaso de errores' : 'Práctica';
+    $('progressText').textContent = (session.index + 1) + ' / ' + session.order.length + (prior && prior.omitida ? ' · omitida' : '');
+    $('progressBar').style.width = ((session.index + 1) / session.order.length * 100) + '%';
+    $('questionText').textContent = q.pregunta;
+    $('feedback').replaceChildren(); $('options').replaceChildren();
+    const order = session.optionOrder[q.id] || [0,1,2,3];
+    order.forEach((originalIndex, visibleIndex) => {
+      const button = document.createElement('button'); button.type = 'button'; button.className = 'option';
+      const letter = document.createElement('span'); letter.className = 'option-letter'; letter.textContent = String.fromCharCode(65 + visibleIndex);
+      const text = document.createElement('span'); text.textContent = q.opciones[originalIndex].text; button.append(letter, text);
+      button.addEventListener('click', () => answerQuestion(q, originalIndex));
+      if (prior) { button.disabled = true; if (!prior.omitida && originalIndex === q.respuesta) button.classList.add('correct'); if (!prior.omitida && originalIndex === prior.seleccionada && !prior.correcta) button.classList.add('incorrect'); }
+      $('options').appendChild(button);
+    });
+    if (prior) showFeedback(q, prior); else $('omit').disabled = false;
+    $('previous').disabled = session.index === 0; $('next').disabled = !prior; $('omit').disabled = !!prior;
+    $('favorite').setAttribute('aria-pressed', store.favorites.includes(q.id) ? 'true' : 'false'); $('favorite').textContent = store.favorites.includes(q.id) ? '★ Favorita' : '☆ Favorita';
+    $('questionText').focus({ preventScroll: true }); $('timerText').textContent = formatTime(activeElapsed());
+  }
+  function showFeedback(q, result) {
+    const title = document.createElement('strong'); title.className = result.correcta ? 'ok' : result.omitida ? 'muted' : 'bad'; title.textContent = result.correcta ? '✓ Correcto' : result.omitida ? 'Omitida' : '✗ Incorrecto · Correcta: ' + q.opciones[q.respuesta].text; $('feedback').appendChild(title);
+    const copy = document.createElement('p'); copy.className = 'feedback-copy'; copy.textContent = q.explicacion || 'Explicación pendiente de revisión.'; $('feedback').appendChild(copy);
+    const source = document.createElement('small'); source.className = 'source'; source.textContent = (q.fuente.verificada ? 'Fuente verificada: ' : 'Fuente pendiente de cotejo: ') + q.fuente.cita; $('feedback').appendChild(source);
+  }
+  function answerQuestion(q, selected) {
+    if (!session || session.answers[q.id]) return;
+    session.answers[q.id] = { questionId: q.id, seleccionada: selected, correcta: selected === q.respuesta, omitida: false, duracionMs: activeElapsed() - (session.answerStart || 0), respondidaEn: new Date().toISOString() };
+    session.answerStart = activeElapsed(); saveCurrent(); renderQuestion();
+  }
+  function omitQuestion() { const q = BY_ID.get(session.order[session.index]); if (!q || session.answers[q.id]) return; session.answers[q.id] = { questionId: q.id, seleccionada: null, correcta: false, omitida: true, duracionMs: activeElapsed(), respondidaEn: new Date().toISOString() }; saveCurrent(); renderQuestion(); }
+  function nextQuestion() { if (!session.answers[session.order[session.index]]) return; if (session.index + 1 >= session.order.length) return finishSession(); session.index++; session.answerStart = activeElapsed(); saveCurrent(); renderQuestion(); }
+  function previousQuestion() { if (!session || session.index === 0) return; session.index--; saveCurrent(); renderQuestion(); }
+  function finishSession(force = false) { if (!session) return; const answered = Object.keys(session.answers).length; if (!force && answered < session.order.length && !confirm('Aún hay preguntas sin responder. ¿Terminar sesión?')) return; session.elapsedBefore = activeElapsed(); session.lastTick = Date.now(); const answers = Object.values(session.answers); const summary = { id: session.id, bankHash: BANCO_HASH, mode: session.mode, area: session.area, total: session.order.length, correctas: answers.filter(a => a.correcta).length, incorrectas: answers.filter(a => !a.correcta && !a.omitida).length, omitidas: answers.filter(a => a.omitida).length, duracionMs: session.elapsedBefore, answers, finishedAt: new Date().toISOString() }; store.history.push(summary); store.history = store.history.slice(-200); store.current = null; writeStore(); stopTimer(); renderSummary(summary); }
+  function renderSummary(summary) { session = null; $('session').classList.add('hidden'); $('setup').classList.remove('hidden'); $('summary').classList.remove('hidden'); const responded = summary.correctas + summary.incorrectas; $('sumCorrect').textContent = summary.correctas; $('sumWrong').textContent = summary.incorrectas; $('sumOmitted').textContent = summary.omitidas; $('sumAccuracy').textContent = (responded ? Math.round(summary.correctas / responded * 100) : 0) + '%'; $('sumCoverage').textContent = Math.round((responded / Math.max(1, summary.total)) * 100) + '%'; $('sumTime').textContent = formatTime(summary.duracionMs); $('summaryNote').textContent = summary.mode === 'exam' ? 'Resultado de práctica: PF92 exige 90 preguntas de alternativa, pero este banco sigue siendo provisional y no reproduce la corrección oficial.' : 'La precisión excluye omitidas; la cobertura muestra cuánto de la sesión respondiste.'; renderAreaResults(summary); $('nextReview').textContent = summary.incorrectas ? 'Prioriza los errores con fuente pendiente y luego resuelve una variante de la misma familia.' : 'No hay errores en esta sesión; usa una variante nueva para comprobar transferencia.'; refreshAnalytics(); }
+  function renderAreaResults(summary) { const map = new Map(); summary.answers.forEach(a => { const q = BY_ID.get(a.questionId); if (!q) return; const row = map.get(q.area) || { correct: 0, answered: 0 }; if (!a.omitida) { row.answered++; if (a.correcta) row.correct++; } map.set(q.area, row); }); $('areaResults').replaceChildren(); map.forEach((row, area) => { const tr = document.createElement('tr'); [areaLabel(area), row.correct, row.answered, (row.answered ? Math.round(row.correct / row.answered * 100) : 0) + '%'].forEach(value => { const td = document.createElement('td'); td.textContent = value; tr.appendChild(td); }); $('areaResults').appendChild(tr); }); }
+  function toggleFavorite() { if (!session) return; const id = session.order[session.index], i = store.favorites.indexOf(id); if (i >= 0) store.favorites.splice(i, 1); else store.favorites.push(id); writeStore(); refreshAvailable(); renderQuestion(); }
+  function exportData(kind) { const payload = { schema: SESSION_VERSION, bankVersion: BANCO_VERSION, bankHash: BANCO_HASH, exportedAt: new Date().toISOString(), history: store.history, favorites: store.favorites }; let data, name, type; if (kind === 'json') { data = JSON.stringify(payload, null, 2); name = 'simulador-aj-historial.json'; type = 'application/json'; } else { const rows = [['sessionId','banco','modo','materia','preguntaId','correcta','omitida','duracionMs','respondidaEn']]; store.history.forEach(h => (h.answers || []).forEach(a => rows.push([h.id,h.bankHash || BANCO_HASH,h.mode,h.area,a.questionId,a.correcta,a.omitida,a.duracionMs,a.respondidaEn]))); data = rows.map(row => row.map(v => '"' + String(v ?? '').replaceAll('"','""') + '"').join(';')).join('\n'); name = 'simulador-aj-intentos.csv'; type = 'text/csv;charset=utf-8'; } const url = URL.createObjectURL(new Blob([data], { type })); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); URL.revokeObjectURL(url); }
+  function refreshAnalytics() { const attempts = store.history.flatMap(h => h.answers || []), correct = attempts.filter(a => a.correcta).length, answered = attempts.filter(a => !a.omitida).length; $('allAttempts').textContent = attempts.length; $('allAccuracy').textContent = (answered ? Math.round(correct / answered * 100) : 0) + '%'; $('allSessions').textContent = store.history.length; const by = new Map(); attempts.forEach(a => { const q = BY_ID.get(a.questionId); if (!q || a.omitida) return; const x = by.get(q.area) || { c: 0, n: 0 }; x.n++; if (a.correcta) x.c++; by.set(q.area, x); }); const weak = [...by.entries()].sort((a,b) => a[1].c / a[1].n - b[1].c / b[1].n)[0]; $('allWeak').textContent = weak ? areaLabel(weak[0]) : '—'; }
+  function populate() { allAreas().forEach(area => { const o = document.createElement('option'); o.value = area; o.textContent = areaLabel(area); $('area').appendChild(o); }); }
+  function init() { readStore(); populate(); ['mode','area','search'].forEach(id => $(id).addEventListener(id === 'search' ? 'input' : 'change', refreshAvailable)); $('start').addEventListener('click', () => { session = buildSession(); if (!session) return; store.current = session; writeStore(); setSessionVisible(true); startTimer(); renderQuestion(); }); $('continue').addEventListener('click', () => { if (!store.current) return; session = store.current; session.lastTick = Date.now(); setSessionVisible(true); startTimer(); renderQuestion(); }); $('previous').addEventListener('click', previousQuestion); $('next').addEventListener('click', nextQuestion); $('omit').addEventListener('click', omitQuestion); $('finish').addEventListener('click', () => finishSession(false)); $('favorite').addEventListener('click', toggleFavorite); $('reviewWrong').addEventListener('click', () => { $('mode').value = 'review'; $('summary').classList.add('hidden'); refreshAvailable(); }); $('newSession').addEventListener('click', () => { $('summary').classList.add('hidden'); $('setup').classList.remove('hidden'); refreshAvailable(); }); $('exportJson').addEventListener('click', () => exportData('json')); $('exportCsv').addEventListener('click', () => exportData('csv')); $('refreshAnalytics').addEventListener('click', refreshAnalytics); $('clear').addEventListener('click', () => { if (confirm('¿Borrar sólo el historial, favoritos y sesión de este simulador?')) { localStorage.removeItem(KEY); store = { schema: SESSION_VERSION, favorites: [], history: [], current: null }; refreshAvailable(); refreshAnalytics(); showNotice('Datos del simulador borrados.'); } }); refreshAvailable(); refreshAnalytics(); }
+  init();
+})();
+</script>
 </body>
 </html>
