@@ -63,133 +63,225 @@
   <script src="preguntas.js"></script>
   <script>
     (() => {
-      const STORAGE_KEY = "aj-simulador-sesion-v2";
+      const STORAGE_KEY = "aj-simulador-sesion-v3";
+      const SESSION_SCHEMA_VERSION = 3;
       const banco = preguntas_multiples.slice();
+      const preguntasPorId = new Map(banco.map(pregunta => [pregunta.id, pregunta]));
+      const huellaBanco = banco.map(pregunta => pregunta.id + ":" + pregunta.version + ":" + pregunta.respuesta).join("|");
       const $ = (id) => document.getElementById(id);
+
       let preguntasDisponibles = [];
       let preguntaActual = null;
       let puntaje = 0;
       let respondidas = new Map();
       let filtro = "Todas";
+      let avisoPendiente = "";
 
       function guardarSesion() {
         try {
           localStorage.setItem(STORAGE_KEY, JSON.stringify({
-            bankVersion: banco.map(p => p.version || "sin-version").join("|"),
-            remainingIds: preguntasDisponibles.map(p => p.id),
+            schemaVersion: SESSION_SCHEMA_VERSION,
+            bankFingerprint: huellaBanco,
+            remainingIds: preguntasDisponibles.map(pregunta => pregunta.id),
+            currentQuestionId: preguntaActual ? preguntaActual.id : null,
             answers: [...respondidas.entries()],
-            puntaje
+            filtro
           }));
         } catch (_) { /* almacenamiento no disponible */ }
+      }
+
+      function restaurarRespuestas(entradas) {
+        const respuestas = new Map();
+        entradas.forEach(entrada => {
+          if (!Array.isArray(entrada) || entrada.length !== 2) return;
+          const [id, dato] = entrada;
+          const pregunta = preguntasPorId.get(id);
+          if (!pregunta || !dato || !Number.isInteger(dato.seleccionada)) return;
+          if (dato.seleccionada < 0 || dato.seleccionada >= pregunta.opciones.length) return;
+          respuestas.set(id, {
+            seleccionada: dato.seleccionada,
+            correcta: dato.seleccionada === pregunta.respuesta,
+            respondidaEn: typeof dato.respondidaEn === "string" ? dato.respondidaEn : null
+          });
+        });
+        return respuestas;
       }
 
       function restaurarSesion() {
         preguntasDisponibles = banco.slice();
         try {
           const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-          if (!data || !Array.isArray(data.answers)) return;
-          respondidas = new Map(data.answers.filter(([id]) => banco.some(p => p.id === id)));
-          puntaje = Number.isFinite(data.puntaje) ? data.puntaje : 0;
-          const restantes = new Set(Array.isArray(data.remainingIds) ? data.remainingIds : []);
-          preguntasDisponibles = banco.filter(p => restantes.has(p.id) || !respondidas.has(p.id));
-        } catch (_) { /* sesión corrupta: iniciar limpia */ }
+          if (!data) return;
+          if (data.schemaVersion !== SESSION_SCHEMA_VERSION || data.bankFingerprint !== huellaBanco) {
+            avisoPendiente = "El banco de preguntas fue actualizado; se inició una nueva sesión para evitar resultados inconsistentes.";
+            return;
+          }
+          if (!Array.isArray(data.answers) || !Array.isArray(data.remainingIds)) return;
+
+          respondidas = restaurarRespuestas(data.answers);
+          puntaje = [...respondidas.values()].filter(respuesta => respuesta.correcta).length;
+          const restantes = new Set(data.remainingIds.filter(id => preguntasPorId.has(id)));
+          preguntasDisponibles = banco.filter(pregunta => restantes.has(pregunta.id));
+          if (typeof data.filtro === "string" && materias().includes(data.filtro)) filtro = data.filtro;
+
+          if (typeof data.currentQuestionId === "string" && restantes.has(data.currentQuestionId)) {
+            preguntaActual = preguntasPorId.get(data.currentQuestionId) || null;
+          }
+        } catch (_) {
+          avisoPendiente = "No fue posible restaurar la sesión anterior; se inició una nueva.";
+          preguntasDisponibles = banco.slice();
+          preguntaActual = null;
+          puntaje = 0;
+          respondidas = new Map();
+        }
       }
 
       function materias() {
-        return ["Todas", ...new Set(banco.map(p => p.materia || "Sin materia"))];
+        return ["Todas", ...new Set(banco.map(pregunta => pregunta.materia || "Sin materia"))];
       }
 
       function prepararFiltro() {
         $("filtroMateria").replaceChildren();
-        materias().forEach(m => {
+        materias().forEach(materia => {
           const option = document.createElement("option");
-          option.value = m; option.textContent = m;
+          option.value = materia;
+          option.textContent = materia;
           $("filtroMateria").appendChild(option);
         });
         $("filtroMateria").value = filtro;
         $("filtroMateria").addEventListener("change", () => {
+          if (preguntaActual && respondidas.has(preguntaActual.id)) {
+            preguntasDisponibles = preguntasDisponibles.filter(pregunta => pregunta.id !== preguntaActual.id);
+          }
+          preguntaActual = null;
           filtro = $("filtroMateria").value;
+          $("revision").hidden = true;
+          guardarSesion();
           cargarPregunta(true);
         });
       }
 
       function listaFiltrada() {
-        return preguntasDisponibles.filter(p => filtro === "Todas" || p.materia === filtro);
+        return preguntasDisponibles.filter(pregunta => filtro === "Todas" || pregunta.materia === filtro);
       }
 
       function actualizarStats() {
-        const total = filtro === "Todas" ? banco.length : banco.filter(p => p.materia === filtro).length;
-        const hechas = filtro === "Todas" ? respondidas.size : [...respondidas.keys()].filter(id => banco.find(p => p.id === id)?.materia === filtro).length;
-        $("progreso").textContent = `Respondidas: ${hechas}/${total}`;
-        $("puntaje").textContent = `Puntaje: ${puntaje}`;
+        const preguntasMateria = filtro === "Todas" ? banco : banco.filter(pregunta => pregunta.materia === filtro);
+        const hechas = preguntasMateria.filter(pregunta => respondidas.has(pregunta.id)).length;
+        const aciertos = preguntasMateria.filter(pregunta => respondidas.get(pregunta.id)?.correcta).length;
+        $("progreso").textContent = "Respondidas: " + hechas + "/" + preguntasMateria.length;
+        $("puntaje").textContent = filtro === "Todas" ? "Puntaje: " + puntaje : "Aciertos en materia: " + aciertos;
+      }
+
+      function mostrarAvisoPendiente() {
+        if (!avisoPendiente) return;
+        const aviso = document.createElement("p");
+        aviso.className = "explicacion";
+        aviso.textContent = avisoPendiente;
+        $("respuesta").appendChild(aviso);
+        avisoPendiente = "";
       }
 
       function cargarPregunta(cambiarFiltro = false) {
         const candidatas = listaFiltrada();
-        if (!candidatas.length) return finalizar();
-        if (cambiarFiltro || !preguntaActual || !candidatas.some(p => p.id === preguntaActual.id)) {
+        if (!candidatas.length) {
+          if (preguntasDisponibles.length === 0) return finalizar();
+          return finalizarMateria();
+        }
+
+        if (cambiarFiltro || !preguntaActual || !candidatas.some(pregunta => pregunta.id === preguntaActual.id)) {
           preguntaActual = candidatas[Math.floor(Math.random() * candidatas.length)];
         }
+
         $("materia").textContent = preguntaActual.materia || "Sin materia";
         $("pregunta").textContent = preguntaActual.pregunta;
         $("respuesta").replaceChildren();
         $("opciones").replaceChildren();
         $("siguiente").disabled = !respondidas.has(preguntaActual.id);
+
         preguntaActual.opciones.forEach((texto, index) => {
-          const btn = document.createElement("button");
-          btn.type = "button"; btn.className = "opcion"; btn.textContent = texto;
-          btn.setAttribute("aria-label", `Alternativa ${index + 1}: ${texto}`);
-          btn.addEventListener("click", () => verificarRespuesta(index));
+          const boton = document.createElement("button");
+          boton.type = "button";
+          boton.className = "opcion";
+          boton.textContent = texto;
+          boton.setAttribute("aria-label", "Alternativa " + (index + 1) + ": " + texto);
+          boton.addEventListener("click", () => verificarRespuesta(index));
+
           const previa = respondidas.get(preguntaActual.id);
           if (previa) {
-            btn.disabled = true;
-            if (index === preguntaActual.respuesta) btn.classList.add("correcta");
-            if (index === previa.seleccionada && !previa.correcta) btn.classList.add("incorrecta");
+            boton.disabled = true;
+            if (index === preguntaActual.respuesta) boton.classList.add("correcta");
+            if (index === previa.seleccionada && !previa.correcta) boton.classList.add("incorrecta");
           }
-          $("opciones").appendChild(btn);
+          $("opciones").appendChild(boton);
         });
+
         const previa = respondidas.get(preguntaActual.id);
         if (previa) mostrarResultado(previa.seleccionada);
+        mostrarAvisoPendiente();
         actualizarStats();
+        guardarSesion();
       }
 
       function mostrarResultado(seleccionado) {
-        const correcto = seleccionado === preguntaActual.respuesta;
+        const correcta = seleccionado === preguntaActual.respuesta;
         $("respuesta").replaceChildren();
+
         const titulo = document.createElement("strong");
-        titulo.className = correcto ? "ok" : "bad";
-        titulo.textContent = correcto ? "✅ Correcto" : `❌ Incorrecto. Respuesta correcta: ${preguntaActual.opciones[preguntaActual.respuesta]}`;
+        titulo.className = correcta ? "ok" : "bad";
+        titulo.textContent = correcta ? "✅ Correcto" : "❌ Incorrecto. Respuesta correcta: " + preguntaActual.opciones[preguntaActual.respuesta];
         $("respuesta").appendChild(titulo);
-        if (preguntaActual.explicacion) {
-          const exp = document.createElement("p"); exp.className = "explicacion"; exp.textContent = preguntaActual.explicacion; $("respuesta").appendChild(exp);
-        }
-        if (preguntaActual.fuente) {
-          const fuente = document.createElement("small"); fuente.textContent = `Fuente: ${preguntaActual.fuente}`; $("respuesta").appendChild(fuente);
-        }
+
+        const explicacion = document.createElement("p");
+        explicacion.className = "explicacion";
+        explicacion.textContent = preguntaActual.explicacion;
+        $("respuesta").appendChild(explicacion);
+
+        const fuente = document.createElement("small");
+        fuente.textContent = preguntaActual.fuenteVerificada ? "Fuente verificada: " + preguntaActual.fuente : "Advertencia: " + preguntaActual.fuente;
+        $("respuesta").appendChild(fuente);
       }
 
       function verificarRespuesta(seleccionado) {
         if (!preguntaActual || respondidas.has(preguntaActual.id)) return;
+
         const correcta = seleccionado === preguntaActual.respuesta;
-        respondidas.set(preguntaActual.id, { seleccionada: seleccionado, correcta, respondidaEn: new Date().toISOString() });
-        if (correcta) puntaje++;
+        respondidas.set(preguntaActual.id, {
+          seleccionada: seleccionado,
+          correcta,
+          respondidaEn: new Date().toISOString()
+        });
+        puntaje = [...respondidas.values()].filter(respuesta => respuesta.correcta).length;
+
         mostrarResultado(seleccionado);
-        document.querySelectorAll(".opcion").forEach((btn, index) => {
-          btn.disabled = true;
-          if (index === preguntaActual.respuesta) btn.classList.add("correcta");
-          if (index === seleccionado && !correcta) btn.classList.add("incorrecta");
+        document.querySelectorAll(".opcion").forEach((boton, index) => {
+          boton.disabled = true;
+          if (index === preguntaActual.respuesta) boton.classList.add("correcta");
+          if (index === seleccionado && !correcta) boton.classList.add("incorrecta");
         });
         $("siguiente").disabled = false;
-        guardarSesion(); actualizarStats();
+        guardarSesion();
+        actualizarStats();
       }
 
       function siguientePregunta() {
         if (!preguntaActual || !respondidas.has(preguntaActual.id)) return;
-        preguntasDisponibles = preguntasDisponibles.filter(p => p.id !== preguntaActual.id);
-        guardarSesion();
+        preguntasDisponibles = preguntasDisponibles.filter(pregunta => pregunta.id !== preguntaActual.id);
         preguntaActual = null;
         $("revision").hidden = true;
+        guardarSesion();
         cargarPregunta();
+      }
+
+      function finalizarMateria() {
+        preguntaActual = null;
+        $("materia").textContent = "";
+        $("pregunta").textContent = "No quedan preguntas sin responder en " + filtro + ".";
+        $("opciones").replaceChildren();
+        $("respuesta").textContent = "Puedes seleccionar otra materia o reiniciar esta sesión.";
+        $("siguiente").disabled = true;
+        actualizarStats();
+        guardarSesion();
       }
 
       function finalizar() {
@@ -197,30 +289,41 @@
         $("pregunta").textContent = "Sesión finalizada.";
         $("materia").textContent = "";
         $("opciones").replaceChildren();
-        $("respuesta").textContent = `Resultado: ${puntaje} acierto(s) de ${respondidas.size}.`;
+        $("respuesta").textContent = "Resultado: " + puntaje + " acierto(s) de " + respondidas.size + ".";
         $("siguiente").disabled = true;
-        const errores = [...respondidas.entries()].filter(([id, r]) => !r.correcta);
+
+        const errores = [...respondidas.entries()].filter(([, respuesta]) => !respuesta.correcta);
         $("errores").replaceChildren();
-        if (errores.length) {
-          $("revision").hidden = false;
-          errores.forEach(([id, r]) => {
-            const p = banco.find(item => item.id === id); if (!p) return;
-            const item = document.createElement("article"); item.className = "error-item";
-            item.textContent = `${p.pregunta} · Tu respuesta: ${p.opciones[r.seleccionada]}. Correcta: ${p.opciones[p.respuesta]}. ${p.explicacion || ""}`;
-            $("errores").appendChild(item);
-          });
-        }
-        actualizarStats(); guardarSesion();
+        $("revision").hidden = errores.length === 0;
+        errores.forEach(([id, respuesta]) => {
+          const pregunta = preguntasPorId.get(id);
+          if (!pregunta) return;
+          const item = document.createElement("article");
+          item.className = "error-item";
+          item.textContent = pregunta.pregunta + " · Tu respuesta: " + pregunta.opciones[respuesta.seleccionada] + ". Correcta: " + pregunta.opciones[pregunta.respuesta] + ". " + pregunta.explicacion;
+          $("errores").appendChild(item);
+        });
+
+        actualizarStats();
+        guardarSesion();
       }
 
       function reiniciarSimulador() {
-        puntaje = 0; respondidas = new Map(); preguntasDisponibles = banco.slice(); preguntaActual = null;
-        $("revision").hidden = true; guardarSesion(); cargarPregunta();
+        puntaje = 0;
+        respondidas = new Map();
+        preguntasDisponibles = banco.slice();
+        preguntaActual = null;
+        avisoPendiente = "";
+        $("revision").hidden = true;
+        guardarSesion();
+        cargarPregunta();
       }
 
       $("siguiente").addEventListener("click", siguientePregunta);
       $("reiniciar").addEventListener("click", reiniciarSimulador);
-      restaurarSesion(); prepararFiltro(); cargarPregunta();
+      restaurarSesion();
+      prepararFiltro();
+      cargarPregunta();
     })();
   </script>
 </body>
