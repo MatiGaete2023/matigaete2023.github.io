@@ -1,103 +1,226 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simulador AJ PF91</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Práctica de preguntas de la Academia Judicial">
+  <title>Simulador Academia Judicial</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-      text-align: center;
-      padding: 20px;
-    }
-    .pregunta {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    .opcion {
-      margin: 10px;
-      padding: 10px;
-      background-color: #1f1f1f;
-      border: 1px solid #333;
-      cursor: pointer;
-    }
-    .opcion:hover {
-      background-color: #333;
-    }
-    .respuesta {
-      margin-top: 15px;
-      font-weight: bold;
-    }
+    :root { color-scheme: dark; --bg:#101827; --panel:#182338; --text:#eef4ff; --muted:#aebbd1; --accent:#63b3ed; --ok:#68d391; --bad:#fc8181; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; font:16px/1.5 system-ui,sans-serif; color:var(--text); background:linear-gradient(145deg,#0d1422,#172640); padding:24px; }
+    main { max-width:760px; margin:auto; }
+    .panel { background:rgba(24,35,56,.96); border:1px solid #2c3e5e; border-radius:16px; padding:24px; box-shadow:0 12px 36px #0004; }
+    h1 { margin-top:0; font-size:clamp(1.5rem,4vw,2.2rem); }
+    .toolbar,.stats,.actions { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .toolbar { justify-content:space-between; margin-bottom:20px; }
+    select,button { font:inherit; border-radius:10px; border:1px solid #3c5375; padding:10px 14px; }
+    select { background:#101a2b; color:var(--text); }
+    button { background:#223653; color:var(--text); cursor:pointer; }
+    button:hover:not(:disabled),button:focus-visible { border-color:var(--accent); outline:2px solid #63b3ed55; }
+    button:disabled { cursor:not-allowed; opacity:.55; }
+    .stats { color:var(--muted); justify-content:space-between; margin:10px 0 22px; }
+    .materia { color:var(--accent); font-weight:600; }
+    #pregunta { font-size:1.3rem; margin:8px 0 18px; }
+    #opciones { display:grid; gap:10px; }
+    .opcion { width:100%; text-align:left; background:#1d2c46; }
+    .opcion.correcta { border-color:var(--ok); background:#1b4439; }
+    .opcion.incorrecta { border-color:var(--bad); background:#4a2933; }
+    #respuesta { min-height:3.2em; margin:18px 0; }
+    .ok { color:var(--ok); } .bad { color:var(--bad); }
+    .explicacion { color:var(--muted); margin:.4em 0; }
+    #revision { margin-top:24px; border-top:1px solid #314563; padding-top:18px; }
+    .error-item { border-left:3px solid var(--bad); padding:8px 12px; margin:12px 0; background:#152137; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
   </style>
 </head>
 <body>
-  <h1>Simulador Academia Judicial</h1>
-  <p id="puntaje"></p>
-  <div class="pregunta" id="pregunta"></div>
-  <div id="opciones"></div>
-  <div class="respuesta" id="respuesta"></div>
-  <button onclick="siguientePregunta()">Siguiente pregunta</button>
-  <button onclick="reiniciarSimulador()">Reiniciar</button>
-
+  <main>
+    <section class="panel" aria-labelledby="titulo">
+      <div class="toolbar">
+        <h1 id="titulo">Simulador Academia Judicial</h1>
+        <label>Materia
+          <select id="filtroMateria" aria-label="Filtrar por materia"></select>
+        </label>
+      </div>
+      <div class="stats" aria-live="polite">
+        <span id="progreso"></span><span id="puntaje"></span>
+      </div>
+      <div id="materia" class="materia"></div>
+      <div id="pregunta" aria-live="polite"></div>
+      <div id="opciones" role="group" aria-label="Alternativas"></div>
+      <div id="respuesta" aria-live="assertive"></div>
+      <div class="actions">
+        <button id="siguiente" type="button" disabled>Siguiente pregunta</button>
+        <button id="reiniciar" type="button">Reiniciar sesión</button>
+      </div>
+      <section id="revision" hidden aria-labelledby="revisionTitulo">
+        <h2 id="revisionTitulo">Revisión de errores</h2>
+        <div id="errores"></div>
+      </section>
+    </section>
+  </main>
   <script src="preguntas.js"></script>
   <script>
-    let indiceActual = 0;
-    let preguntasDisponibles = [...preguntas_multiples];
-    let puntaje = 0;
+    (() => {
+      const STORAGE_KEY = "aj-simulador-sesion-v2";
+      const banco = preguntas_multiples.slice();
+      const $ = (id) => document.getElementById(id);
+      let preguntasDisponibles = [];
+      let preguntaActual = null;
+      let puntaje = 0;
+      let respondidas = new Map();
+      let filtro = "Todas";
 
-    function cargarPregunta() {
-      if (preguntasDisponibles.length === 0) {
-        document.getElementById("pregunta").innerText = "Simulador finalizado.";
-        document.getElementById("opciones").innerHTML = "";
-        document.getElementById("respuesta").innerText = "";
-        return;
+      function guardarSesion() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            bankVersion: banco.map(p => p.version || "sin-version").join("|"),
+            remainingIds: preguntasDisponibles.map(p => p.id),
+            answers: [...respondidas.entries()],
+            puntaje
+          }));
+        } catch (_) { /* almacenamiento no disponible */ }
       }
 
-      indiceActual = Math.floor(Math.random() * preguntasDisponibles.length);
-      const pregunta = preguntasDisponibles[indiceActual];
-
-      document.getElementById("pregunta").innerText = pregunta.pregunta;
-      const opcionesDiv = document.getElementById("opciones");
-      opcionesDiv.innerHTML = "";
-      pregunta.opciones.forEach((op, index) => {
-        const btn = document.createElement("div");
-        btn.className = "opcion";
-        btn.innerText = op;
-        btn.onclick = () => verificarRespuesta(index, pregunta.respuesta);
-        opcionesDiv.appendChild(btn);
-      });
-    }
-
-    function verificarRespuesta(seleccionado, correcto) {
-      const respuesta = document.getElementById("respuesta");
-      if (seleccionado === correcto) {
-        respuesta.innerText = "✅ Correcto";
-        respuesta.style.color = "lightgreen";
-        puntaje++;
-      } else {
-        respuesta.innerText = `❌ Incorrecto. Respuesta correcta: ${preguntasDisponibles[indiceActual].opciones[correcto]}`;
-        respuesta.style.color = "red";
+      function restaurarSesion() {
+        preguntasDisponibles = banco.slice();
+        try {
+          const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+          if (!data || !Array.isArray(data.answers)) return;
+          respondidas = new Map(data.answers.filter(([id]) => banco.some(p => p.id === id)));
+          puntaje = Number.isFinite(data.puntaje) ? data.puntaje : 0;
+          const restantes = new Set(Array.isArray(data.remainingIds) ? data.remainingIds : []);
+          preguntasDisponibles = banco.filter(p => restantes.has(p.id) || !respondidas.has(p.id));
+        } catch (_) { /* sesión corrupta: iniciar limpia */ }
       }
-      document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
-    }
 
-    function siguientePregunta() {
-      preguntasDisponibles.splice(indiceActual, 1);
-      document.getElementById("respuesta").innerText = "";
-      cargarPregunta();
-    }
+      function materias() {
+        return ["Todas", ...new Set(banco.map(p => p.materia || "Sin materia"))];
+      }
 
-    function reiniciarSimulador() {
-      puntaje = 0;
-      preguntasDisponibles = [...preguntas_multiples];
-      document.getElementById("respuesta").innerText = "";
-      cargarPregunta();
-    }
+      function prepararFiltro() {
+        $("filtroMateria").replaceChildren();
+        materias().forEach(m => {
+          const option = document.createElement("option");
+          option.value = m; option.textContent = m;
+          $("filtroMateria").appendChild(option);
+        });
+        $("filtroMateria").value = filtro;
+        $("filtroMateria").addEventListener("change", () => {
+          filtro = $("filtroMateria").value;
+          cargarPregunta(true);
+        });
+      }
 
-    window.onload = cargarPregunta;
+      function listaFiltrada() {
+        return preguntasDisponibles.filter(p => filtro === "Todas" || p.materia === filtro);
+      }
+
+      function actualizarStats() {
+        const total = filtro === "Todas" ? banco.length : banco.filter(p => p.materia === filtro).length;
+        const hechas = filtro === "Todas" ? respondidas.size : [...respondidas.keys()].filter(id => banco.find(p => p.id === id)?.materia === filtro).length;
+        $("progreso").textContent = `Respondidas: ${hechas}/${total}`;
+        $("puntaje").textContent = `Puntaje: ${puntaje}`;
+      }
+
+      function cargarPregunta(cambiarFiltro = false) {
+        const candidatas = listaFiltrada();
+        if (!candidatas.length) return finalizar();
+        if (cambiarFiltro || !preguntaActual || !candidatas.some(p => p.id === preguntaActual.id)) {
+          preguntaActual = candidatas[Math.floor(Math.random() * candidatas.length)];
+        }
+        $("materia").textContent = preguntaActual.materia || "Sin materia";
+        $("pregunta").textContent = preguntaActual.pregunta;
+        $("respuesta").replaceChildren();
+        $("opciones").replaceChildren();
+        $("siguiente").disabled = !respondidas.has(preguntaActual.id);
+        preguntaActual.opciones.forEach((texto, index) => {
+          const btn = document.createElement("button");
+          btn.type = "button"; btn.className = "opcion"; btn.textContent = texto;
+          btn.setAttribute("aria-label", `Alternativa ${index + 1}: ${texto}`);
+          btn.addEventListener("click", () => verificarRespuesta(index));
+          const previa = respondidas.get(preguntaActual.id);
+          if (previa) {
+            btn.disabled = true;
+            if (index === preguntaActual.respuesta) btn.classList.add("correcta");
+            if (index === previa.seleccionada && !previa.correcta) btn.classList.add("incorrecta");
+          }
+          $("opciones").appendChild(btn);
+        });
+        const previa = respondidas.get(preguntaActual.id);
+        if (previa) mostrarResultado(previa.seleccionada);
+        actualizarStats();
+      }
+
+      function mostrarResultado(seleccionado) {
+        const correcto = seleccionado === preguntaActual.respuesta;
+        $("respuesta").replaceChildren();
+        const titulo = document.createElement("strong");
+        titulo.className = correcto ? "ok" : "bad";
+        titulo.textContent = correcto ? "✅ Correcto" : `❌ Incorrecto. Respuesta correcta: ${preguntaActual.opciones[preguntaActual.respuesta]}`;
+        $("respuesta").appendChild(titulo);
+        if (preguntaActual.explicacion) {
+          const exp = document.createElement("p"); exp.className = "explicacion"; exp.textContent = preguntaActual.explicacion; $("respuesta").appendChild(exp);
+        }
+        if (preguntaActual.fuente) {
+          const fuente = document.createElement("small"); fuente.textContent = `Fuente: ${preguntaActual.fuente}`; $("respuesta").appendChild(fuente);
+        }
+      }
+
+      function verificarRespuesta(seleccionado) {
+        if (!preguntaActual || respondidas.has(preguntaActual.id)) return;
+        const correcta = seleccionado === preguntaActual.respuesta;
+        respondidas.set(preguntaActual.id, { seleccionada: seleccionado, correcta, respondidaEn: new Date().toISOString() });
+        if (correcta) puntaje++;
+        mostrarResultado(seleccionado);
+        document.querySelectorAll(".opcion").forEach((btn, index) => {
+          btn.disabled = true;
+          if (index === preguntaActual.respuesta) btn.classList.add("correcta");
+          if (index === seleccionado && !correcta) btn.classList.add("incorrecta");
+        });
+        $("siguiente").disabled = false;
+        guardarSesion(); actualizarStats();
+      }
+
+      function siguientePregunta() {
+        if (!preguntaActual || !respondidas.has(preguntaActual.id)) return;
+        preguntasDisponibles = preguntasDisponibles.filter(p => p.id !== preguntaActual.id);
+        preguntaActual = null;
+        $("revision").hidden = true;
+        cargarPregunta();
+      }
+
+      function finalizar() {
+        preguntaActual = null;
+        $("pregunta").textContent = "Sesión finalizada.";
+        $("materia").textContent = "";
+        $("opciones").replaceChildren();
+        $("respuesta").textContent = `Resultado: ${puntaje} acierto(s) de ${respondidas.size}.`;
+        $("siguiente").disabled = true;
+        const errores = [...respondidas.entries()].filter(([id, r]) => !r.correcta);
+        $("errores").replaceChildren();
+        if (errores.length) {
+          $("revision").hidden = false;
+          errores.forEach(([id, r]) => {
+            const p = banco.find(item => item.id === id); if (!p) return;
+            const item = document.createElement("article"); item.className = "error-item";
+            item.textContent = `${p.pregunta} · Tu respuesta: ${p.opciones[r.seleccionada]}. Correcta: ${p.opciones[p.respuesta]}. ${p.explicacion || ""}`;
+            $("errores").appendChild(item);
+          });
+        }
+        actualizarStats(); guardarSesion();
+      }
+
+      function reiniciarSimulador() {
+        puntaje = 0; respondidas = new Map(); preguntasDisponibles = banco.slice(); preguntaActual = null;
+        $("revision").hidden = true; guardarSesion(); cargarPregunta();
+      }
+
+      $("siguiente").addEventListener("click", siguientePregunta);
+      $("reiniciar").addEventListener("click", reiniciarSimulador);
+      restaurarSesion(); prepararFiltro(); cargarPregunta();
+    })();
   </script>
 </body>
 </html>
