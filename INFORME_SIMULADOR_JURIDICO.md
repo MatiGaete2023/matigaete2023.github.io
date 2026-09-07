@@ -42,8 +42,8 @@ El motor marca todo el material como provisional o pendiente hasta una segunda r
 
 ## Cómo mantenerlo
 
-1. Editar la fuente de datos y no el HTML generado a mano.
-2. Ejecutar el generador y las validaciones (`node build_repo.cjs`, `node --check preguntas_repo_generadas.js`, `node scripts/validar_banco.cjs`).
+1. Editar la fuente de preguntas y regenerar `preguntas.js`; no editar el HTML generado a mano.
+2. Ejecutar las validaciones disponibles en el repositorio (`node --check preguntas.js`, `node scripts/validar_banco.cjs`).
 3. Revisar una sesión mini y una de 90 preguntas: comprobar que no se repitan familias, que el cambio de letra no altere la clave y que el resumen coincida con las respuestas.
 4. Subir `preguntas.js`, `index.html` y este informe en una rama de revisión; revisar el diff y las fuentes antes de fusionar a `main`.
 
