@@ -18,7 +18,6 @@
 <p class="muted">451 preguntas sistematizadas en 109 temas. El flujo separa revisión jurídica, fuente, redacción, distractores, dificultad y calibración.</p>
 <p class="notice"><b>Estado del producto:</b> cobertura editorial completa, validación jurídica pendiente. Ninguna referencia se considera verificada por el solo hecho de aparecer citada. La simulación de 90 usa una política de entrenamiento proporcional a los cupos de confección; no afirma una distribución oficial de las 90 preguntas.</p>
 </header>
-
 <section id="setup" class="panel">
 <h2>Configurar sesión</h2>
 <div class="grid">
@@ -30,24 +29,16 @@
 <label>Buscar<input id="search" type="search" placeholder="ID, tema o texto de la pregunta" autocomplete="off"></label>
 </div>
 <div class="stats" style="margin-top:14px">
-<div class="stat"><b id="bankCount">451</b><span>preguntas PF93</span></div>
-<div class="stat"><b id="topicCount">109</b><span>temas oficiales</span></div>
-<div class="stat"><b id="available">—</b><span>disponibles</span></div>
-<div class="stat"><b id="reviewed">0</b><span>con decisión distinta de inicial</span></div>
-<div class="stat"><b id="production">0</b><span>aprobadas producción</span></div>
+<div class="stat"><b id="bankCount">451</b><span>preguntas PF93</span></div><div class="stat"><b id="topicCount">109</b><span>temas oficiales</span></div><div class="stat"><b id="available">—</b><span>disponibles</span></div><div class="stat"><b id="reviewed">0</b><span>con decisión distinta de inicial</span></div><div class="stat"><b id="production">0</b><span>aprobadas producción</span></div>
 </div>
 <div class="actions"><button id="start">Iniciar</button><button id="exportReview">Exportar revisión JSON</button><button id="exportCsv">Exportar métricas CSV</button><button id="reset">Borrar datos locales</button></div>
 </section>
-
 <section id="session" class="panel hidden">
 <div class="toolbar"><div><div class="tag" id="tag"></div><h2 id="qtitle">Pregunta</h2></div><span id="decisionPill" class="pill"></span></div>
-<div class="toolbar"><span id="counter"></span><span id="timer">00:00</span></div>
-<div class="progress"><div id="bar"></div></div>
+<div class="toolbar"><span id="counter"></span><span id="timer">00:00</span></div><div class="progress"><div id="bar"></div></div>
 <p id="question" style="font-size:1.2rem"></p><div id="options"></div><div id="feedback" aria-live="polite"></div>
-
 <div id="reviewBox" class="review-box hidden">
-<h3>Control editorial-jurídico del ítem</h3>
-<p class="muted small">Los ejes son independientes. “Aprobada para producción” queda bloqueada si no supera el control jurídico-editorial y la calibración mínima configurada.</p>
+<h3>Control editorial-jurídico del ítem</h3><p class="muted small">Los ejes son independientes. “Aprobada para producción” queda bloqueada si no supera el control jurídico-editorial y la calibración mínima configurada.</p>
 <div class="review-grid">
 <label>Contenido jurídico<select id="rvJuridico"><option value="pendiente">Pendiente</option><option value="correcto">Correcto</option><option value="dudoso">Dudoso</option><option value="incorrecto">Incorrecto</option></select></label>
 <label>Fuente<select id="rvFuente"><option value="pendiente">Pendiente</option><option value="verificada">Verificada</option><option value="insuficiente">Insuficiente</option><option value="desactualizada">Desactualizada</option></select></label>
@@ -57,42 +48,29 @@
 <label>Estado progresivo<select id="rvDecision"></select></label>
 </div>
 <div class="review-metrics"><div><b id="mResponses">0</b><br><span class="muted small">respuestas</span></div><div><b id="mAccuracy">—</b><br><span class="muted small">acierto</span></div><div><b id="mAvg">—</b><br><span class="muted small">tiempo medio</span></div><div><b id="mRecommended">—</b><br><span class="muted small">estado sugerido</span></div></div>
-<p id="gateNotice" class="notice"></p>
-<div class="grid2">
-<label>Revisor<input id="rvRevisor" placeholder="Nombre o iniciales"></label>
-<label>Fecha de verificación<input id="rvFecha" type="date"></label>
-<label>Fuente verificada / versión<input id="rvFuenteDetalle" placeholder="Ej.: LeyChile, Código Civil, texto vigente al ..."></label>
-<label>Artículo / inciso<input id="rvArticulo" placeholder="Ej.: art. 1545; inciso 2°"></label>
+<p id="gateNotice" class="notice"></p><div class="grid2">
+<label>Revisor<input id="rvRevisor" placeholder="Nombre o iniciales"></label><label>Fecha de verificación<input id="rvFecha" type="date"></label><label>Fuente verificada / versión<input id="rvFuenteDetalle" placeholder="Ej.: LeyChile, Código Civil, texto vigente al ..."></label><label>Artículo / inciso<input id="rvArticulo" placeholder="Ej.: art. 1545; inciso 2°"></label>
 </div>
 <label style="margin-top:10px">Criterio interpretativo / jurisprudencia<textarea id="rvCriterio" placeholder="Sólo cuando la clave dependa de interpretación o jurisprudencia; identificar tribunal, rol y fecha cuando corresponda"></textarea></label>
 <label>Nota de revisión / corrección propuesta<textarea id="rvNota" placeholder="Ambigüedad, distractor defectuoso, corrección o fundamento de retiro"></textarea></label>
 <div class="actions"><button id="saveReview">Guardar revisión</button><button id="applySuggestion">Aplicar estado sugerido</button><button id="approveProduction">Aprobar para producción</button></div>
 </div>
-
 <div class="actions"><button id="prev">← Anterior</button><button id="omit">Omitir</button><button id="next">Siguiente →</button><button id="finish">Terminar</button></div>
 </section>
-
 <section id="summary" class="panel hidden"><h2>Resultado</h2><div class="stats"><div class="stat"><b id="correct">0</b><span>correctas</span></div><div class="stat"><b id="wrong">0</b><span>incorrectas</span></div><div class="stat"><b id="omitted">0</b><span>omitidas</span></div><div class="stat"><b id="accuracy">0%</b><span>precisión</span></div><div class="stat"><b id="sumTime">00:00</b><span>tiempo</span></div></div><p id="summaryNote" class="notice"></p><h3>Desglose por código</h3><div class="table-wrap"><table><thead><tr><th>Código</th><th>Correctas</th><th>Respondidas</th><th>%</th></tr></thead><tbody id="breakdown"></tbody></table></div><div class="actions"><button id="newSession">Nueva sesión</button></div></section>
-
 <section class="panel"><h2>Embudo de revisión</h2><p class="muted">Los estados corresponden al registro local/exportado del revisor. No alteran automáticamente los archivos fuente del banco.</p><div class="table-wrap"><table><thead><tr><th>Estado</th><th>Preguntas</th></tr></thead><tbody id="funnel"></tbody></table></div></section>
 <section class="panel"><h2>Estado de cobertura</h2><p class="muted">Los 451 registros cubren el blueprint editorial. Esta tabla distingue cuántos ya tienen intervención humana y cuántos alcanzaron producción.</p><div class="table-wrap"><table><thead><tr><th>Código</th><th>Total</th><th>Revisadas</th><th>Producción</th></tr></thead><tbody id="coverage"></tbody></table></div></section>
 </main>
-<script src="blueprint.js"></script><script src="banco-comun.js"></script><script src="banco-civil.js"></script><script src="banco-penal.js"></script><script src="banco-familia.js"></script><script src="banco-laboral.js"></script><script src="revision-workflow.js"></script>
+<script src="blueprint.js"></script><script src="banco-comun.js"></script><script src="banco-civil.js"></script><script src="banco-penal.js"></script><script src="banco-familia.js"></script><script src="banco-laboral.js"></script><script src="revision-workflow.js"></script><script src="ajustes-l4.js"></script>
 <script>
 (()=>{'use strict';
-const WF=PF93_REVIEW_WORKFLOW,$=id=>document.getElementById(id);
-const BANK=[...PF93_DRAFT_COMMON,...PF93_DRAFT_CIVIL,...PF93_DRAFT_PENAL,...PF93_DRAFT_FAMILIA,...PF93_DRAFT_LABORAL];
-const BY_ID=new Map(BANK.map(q=>[q.id,q])); const BP=new Map(PF93_BLUEPRINT.map(t=>[t.id,t]));
-let store={schema:WF.SCHEMA_VERSION,reviews:{},history:[]},session=null,timer=null,sessionStarted=0,questionStarted=0;
-
+const WF=PF93_REVIEW_WORKFLOW,$=id=>document.getElementById(id);const BANK=[...PF93_DRAFT_COMMON,...PF93_DRAFT_CIVIL,...PF93_DRAFT_PENAL,...PF93_DRAFT_FAMILIA,...PF93_DRAFT_LABORAL];const BY_ID=new Map(BANK.map(q=>[q.id,q]));const BP=new Map(PF93_BLUEPRINT.map(t=>[t.id,t]));let store={schema:WF.SCHEMA_VERSION,reviews:{},history:[]},session=null,timer=null,sessionStarted=0,questionStarted=0;
 function migrateLegacy(){try{const old=JSON.parse(localStorage.getItem('aj-pf93-review-v1')||'null');if(!old||!old.reviews)return;for(const [id,x] of Object.entries(old.reviews)){if(!BY_ID.has(id))continue;const r=WF.emptyReview();r.nota=((x.note||'')+' [Migrado desde revisión simple v1]').trim();if(x.decision==='corregir')r.decision='corregir_editorial';else if(x.decision==='rechazada')r.decision='retirada';else r.decision='revision_humana';r.updatedAt=x.at||new Date().toISOString();store.reviews[id]=r;}if(Array.isArray(old.history))store.history=old.history;save();}catch(_){}}
 function load(){try{const raw=JSON.parse(localStorage.getItem(WF.STORAGE_KEY)||'null');if(raw&&raw.schema===WF.SCHEMA_VERSION){store={...store,...raw,reviews:raw.reviews||{},history:Array.isArray(raw.history)?raw.history:[]};return;}}catch(_){}migrateLegacy();}
 function save(){try{localStorage.setItem(WF.STORAGE_KEY,JSON.stringify(store));}catch(_){alert('No se pudo guardar localmente. Exporta la revisión antes de cerrar.');}}
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function fmt(ms){const s=Math.max(0,Math.floor(ms/1000));return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;}
-function trackTopics(track){return PF93_BLUEPRINT.filter(t=>t.track==='comun'||t.track===track);}
-function reviewFor(id){return WF.normalizeReview(store.reviews[id]);}
-function metrics(){return WF.metricsFromHistory(store.history);}
+function trackTopics(track){return PF93_BLUEPRINT.filter(t=>t.track==='comun'||t.track===track);}function reviewFor(id){return WF.normalizeReview(store.reviews[id]);}function metrics(){return WF.metricsFromHistory(store.history);}
 function selectedPool(q){const p=$('pool').value,d=reviewFor(q.id).decision;if(p==='production')return d==='aprobada_produccion';if(p==='juridical')return ['aprobada_juridicamente','calibracion','aprobada_produccion'].includes(d);return true;}
 function filtered(){const allowed=new Set(trackTopics($('track').value).map(t=>t.id)),topic=$('topic').value,state=$('reviewState').value,text=$('search').value.trim().toLocaleLowerCase('es-CL');let q=BANK.filter(x=>allowed.has(x.temaPF93)&&selectedPool(x));if(topic!=='all')q=q.filter(x=>x.temaPF93===topic);if(state!=='all')q=q.filter(x=>reviewFor(x.id).decision===state);if(text)q=q.filter(x=>{const t=BP.get(x.temaPF93);return [x.id,x.temaPF93,t?.tema,x.pregunta,x.explicacion].join(' ').toLocaleLowerCase('es-CL').includes(text)});return q;}
 function refreshTopics(){const prev=$('topic').value;$('topic').replaceChildren(new Option('Todos los temas del itinerario','all'));for(const t of trackTopics($('track').value))$('topic').appendChild(new Option(`${t.id} · ${t.tema}`,t.id));if([...$('topic').options].some(o=>o.value===prev))$('topic').value=prev;refresh();}
@@ -117,7 +95,6 @@ function download(name,type,text){const a=document.createElement('a');a.href=URL
 function exportReview(){const payload={schema:WF.SCHEMA_VERSION,generatedAt:new Date().toISOString(),blueprintVersion:typeof PF93_BLUEPRINT_VERSION!=='undefined'?PF93_BLUEPRINT_VERSION:null,totalBank:BANK.length,reviews:store.reviews,metrics:metrics()};download('revision-pf93.json','application/json',JSON.stringify(payload,null,2));}
 function csvCell(x){const s=String(x??'');return /[;"\n]/.test(s)?'"'+s.replaceAll('"','""')+'"':s;}
 function exportCsv(){const mm=metrics(),head=['id','tema','decision','juridico','fuente','redaccion','distractores','dificultad','respuestas','acierto_pct','tiempo_medio_s','elegible_produccion','revisor','fecha_verificacion','fuente_detalle','articulo_inciso','nota'],rows=[head];for(const q of BANK){const r=reviewFor(q.id),m=mm[q.id]||{},g=WF.productionGate(r,m);rows.push([q.id,q.temaPF93,r.decision,r.juridico,r.fuente,r.redaccion,r.distractores,r.dificultad,m.responses||0,Number.isFinite(m.accuracy)?Math.round(m.accuracy*100):'',Number.isFinite(m.avgMs)?(m.avgMs/1000).toFixed(1):'',g.eligible?'SI':'NO',r.revisor,r.fechaVerificacion,r.fuenteDetalle,r.articuloInciso,r.nota]);}download('metricas-revision-pf93.csv','text/csv;charset=utf-8','\ufeff'+rows.map(r=>r.map(csvCell).join(';')).join('\n'));}
-
 for(const d of WF.OPTIONS.decision){$('reviewState').appendChild(new Option(WF.LABELS[d],d));$('rvDecision').appendChild(new Option(WF.LABELS[d],d));}
 $('track').onchange=refreshTopics;$('mode').onchange=refresh;$('pool').onchange=refresh;$('topic').onchange=refresh;$('reviewState').onchange=refresh;$('search').oninput=refresh;$('start').onclick=build;$('prev').onclick=()=>move(-1);$('next').onclick=()=>move(1);$('omit').onclick=()=>move(1);$('finish').onclick=finish;$('newSession').onclick=()=>{$('summary').classList.add('hidden');$('setup').classList.remove('hidden');refresh()};$('saveReview').onclick=()=>saveReview(false);$('applySuggestion').onclick=applySuggestion;$('approveProduction').onclick=()=>saveReview(true);for(const id of ['rvJuridico','rvFuente','rvRedaccion','rvDistractores','rvDificultad','rvDecision'])$(id).onchange=()=>{const q=session?.items?.[session.index];if(q)renderGate(formReview(),metrics()[q.id]||{})};$('exportReview').onclick=exportReview;$('exportCsv').onclick=exportCsv;$('reset').onclick=()=>{if(confirm('¿Borrar revisiones y métricas guardadas en este navegador? Esta acción no cambia el repositorio.')){localStorage.removeItem(WF.STORAGE_KEY);localStorage.removeItem('aj-pf93-review-v1');store={schema:WF.SCHEMA_VERSION,reviews:{},history:[]};refresh();}};
 load();refreshTopics();refresh();
