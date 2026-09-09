@@ -29,10 +29,8 @@ jobs:
           node --check pf93/banco-familia.js
           node --check pf93/banco-laboral.js
           node --check pf93/revision-workflow.js
-          node --check pf93/ajustes-l4.js
-          node --check pf93/ajustes-l5.js
-          node --check pf93/ajustes-l6.js
-          node --check pf93/ajustes-l7.js
+          for f in pf93/ajustes-l*.js; do node --check "$f"; done
+          node --check pf93/capas-editoriales.cjs
           node --check pf93/calidad-editorial.js
           node --check pf93/compilar_produccion.cjs
           node --check pf93/validar_compilador_produccion.cjs
