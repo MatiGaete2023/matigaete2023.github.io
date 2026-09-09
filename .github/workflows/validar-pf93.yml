@@ -33,3 +33,5 @@ jobs:
         run: node pf93/validar_banco_pf93.cjs
       - name: Validar workflow editorial-jurídico
         run: node pf93/validar_revision_workflow.cjs
+      - name: Validar integración HTML de revisión
+        run: node pf93/validar_revision_html.cjs
