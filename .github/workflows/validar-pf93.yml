@@ -38,6 +38,7 @@ jobs:
           node --check pf93/listar_media_editorial.cjs
           node --check pf93/listar_bajas_editorial.cjs
           node --check pf93/validar_calidad_final.cjs
+          node --check pf93/auditar_fuentes_juridicas.cjs
       - name: Validar estructura y cobertura PF93
         run: node pf93/validar_banco_pf93.cjs
       - name: Resumir riesgos editoriales únicos
@@ -50,6 +51,8 @@ jobs:
         run: node pf93/listar_bajas_editorial.cjs
       - name: Gate final de calidad editorial
         run: node pf93/validar_calidad_final.cjs
+      - name: Auditar fuentes jurídicas del banco
+        run: node pf93/auditar_fuentes_juridicas.cjs
       - name: Validar workflow editorial-jurídico
         run: node pf93/validar_revision_workflow.cjs
       - name: Validar compilador estricto de producción
