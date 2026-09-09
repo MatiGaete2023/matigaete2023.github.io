@@ -310,3 +310,141 @@
     reviewProgress
   });
 })(typeof globalThis !== 'undefined' ? globalThis : window);
+
+/* Segunda pasada: reemplazos de los ocho ítems de riesgo alto del bloque común.
+ * Se ejecuta después del workflow L1 y antes de que revision.html construya el pool BANK.
+ * Las fuentes continúan como orientativas (`verificada:false`) hasta revisión humana.
+ */
+(function(root){
+  'use strict';
+  const L2_OVERRIDES=Object.freeze({
+    'pf93-dco-07-04':{
+      pregunta:'En una gestión pendiente ante un tribunal civil, una parte sostiene que la aplicación de un precepto legal decisivo produciría un resultado contrario a la Constitución. ¿Qué vía corresponde para obtener que ese precepto no se aplique en esa gestión?',
+      opciones:[
+        {id:'A',text:'Plantear un requerimiento de inaplicabilidad ante el Tribunal Constitucional, por la parte legitimada o por el juez del asunto'},
+        {id:'B',text:'Interponer protección para que la Corte de Apelaciones elimine el precepto legal del ordenamiento con efectos generales'},
+        {id:'C',text:'Deducir casación en el fondo antes de que exista sentencia, para que la Corte Suprema suspenda la vigencia de la ley'},
+        {id:'D',text:'Solicitar al órgano administrativo competente que invalide el precepto legal por resultar contrario a la Constitución'}
+      ],
+      respuesta:0,
+      explicacion:'El artículo 93 N° 6 de la Constitución atribuye al Tribunal Constitucional la inaplicabilidad de un precepto legal cuya aplicación en una gestión pendiente pueda resultar contraria a la Constitución; la cuestión puede ser planteada por una parte o por el juez que conoce del asunto.',
+      fuente:{cita:'Constitución Política de la República, art. 93 N° 6 e inciso undécimo',verificada:false,revisadaEn:null},
+      dificultad:'alta'
+    },
+    'pf93-dco-09-03':{
+      pregunta:'Una persona es mantenida detenida con infracción de las exigencias constitucionales y legales. Si la pretensión urgente se dirige específicamente a restablecer su libertad personal y seguridad individual, ¿qué acción corresponde?',
+      opciones:[
+        {id:'A',text:'Acción de protección ante la Corte de Apelaciones por cualquier garantía del artículo 19'},
+        {id:'B',text:'Recurso de reposición ante la autoridad que dispuso materialmente la detención'},
+        {id:'C',text:'Acción de amparo destinada a corregir la privación, perturbación o amenaza ilegal de la libertad'},
+        {id:'D',text:'Requerimiento de inaplicabilidad para obtener la libertad sin una gestión judicial pendiente'}
+      ],
+      respuesta:2,
+      explicacion:'El artículo 21 de la Constitución establece el amparo respecto de arresto, detención o prisión ilegales y, en general, frente a privaciones, perturbaciones o amenazas ilegales a la libertad personal y seguridad individual.',
+      fuente:{cita:'Constitución Política de la República, art. 21',verificada:false,revisadaEn:null},
+      dificultad:'media-alta'
+    },
+    'pf93-dad-01-01':{
+      pregunta:'El director de un servicio dicta una resolución sobre una materia que la ley atribuye expresamente a otro órgano, sosteniendo que su decisión es más conveniente para el interés público. ¿Cuál es el defecto jurídico central?',
+      opciones:[
+        {id:'A',text:'Falta de competencia del órgano que actuó, aunque la finalidad invocada sea de interés público'},
+        {id:'B',text:'Falta de motivación suficiente, aun cuando el órgano tuviera competencia legal sobre la materia'},
+        {id:'C',text:'Defecto de notificación del acto, aunque éste todavía no haya sido comunicado al interesado'},
+        {id:'D',text:'Error de mérito o conveniencia que sólo puede corregirse mediante revocación administrativa'}
+      ],
+      respuesta:0,
+      explicacion:'Los artículos 6 y 7 de la Constitución exigen que los órganos actúen dentro de su competencia y en la forma prescrita por la ley. La invocación de utilidad o conveniencia pública no crea una competencia que el ordenamiento no otorgó.',
+      fuente:{cita:'Constitución Política de la República, arts. 6 y 7',verificada:false,revisadaEn:null},
+      dificultad:'media-alta'
+    },
+    'pf93-dad-02-01':{
+      pregunta:'Un órgano de la Administración dicta una resolución formal, en ejercicio de una potestad pública, que contiene una decisión destinada a producir efectos jurídicos. ¿Cómo la califica la Ley N° 19.880?',
+      opciones:[
+        {id:'A',text:'Como hecho administrativo material, porque toda actuación ejecutiva queda fuera del régimen de los actos administrativos'},
+        {id:'B',text:'Como contrato administrativo, porque una decisión estatal supone siempre acuerdo de voluntades con su destinatario'},
+        {id:'C',text:'Como acto administrativo, por tratarse de una decisión formal emitida en ejercicio de una potestad pública'},
+        {id:'D',text:'Como dictamen consultivo, porque las resoluciones administrativas carecen por sí mismas de efectos jurídicos'}
+      ],
+      respuesta:2,
+      explicacion:'El artículo 3 de la Ley N° 19.880 define el acto administrativo como una decisión formal emitida por un órgano de la Administración en ejercicio de una potestad pública y reconoce como formas típicas los decretos supremos y las resoluciones.',
+      fuente:{cita:'Ley N° 19.880, art. 3',verificada:false,revisadaEn:null},
+      dificultad:'media'
+    },
+    'pf93-dad-02-02':{
+      pregunta:'Un acto administrativo fue válidamente notificado y su ejecución no ha sido suspendida. El interesado interpone un recurso administrativo. ¿Qué efecto general produce la presunción de legalidad, imperio y exigibilidad del artículo 3 de la Ley N° 19.880?',
+      opciones:[
+        {id:'A',text:'El acto mantiene en principio su eficacia y exigibilidad mientras no sea suspendido o dejado sin efecto por una vía jurídica procedente'},
+        {id:'B',text:'La sola interposición del recurso suspende automáticamente la ejecución del acto hasta que exista una decisión definitiva'},
+        {id:'C',text:'El acto adquiere cosa juzgada material y deja de ser susceptible de revisión por la Administración o por los tribunales'},
+        {id:'D',text:'La Administración debe obtener una sentencia judicial previa antes de exigir el cumplimiento del acto recurrido'}
+      ],
+      respuesta:0,
+      explicacion:'La presunción de legalidad, imperio y exigibilidad permite la eficacia del acto conforme al ordenamiento. La impugnación administrativa no suspende por sí sola su ejecución; la suspensión se rige por las reglas legales aplicables.',
+      fuente:{cita:'Ley N° 19.880, arts. 3 y 57',verificada:false,revisadaEn:null},
+      dificultad:'alta'
+    },
+    'pf93-dad-05-04':{
+      pregunta:'Una autoridad está regularmente investida y respeta la forma legal, pero decide una materia que la Constitución y la ley entregan a otro órgano. Para el análisis de nulidad de derecho público, ¿qué presupuesto del artículo 7 resulta directamente infringido?',
+      opciones:[
+        {id:'A',text:'La investidura regular, porque toda infracción de competencia transforma retroactivamente el nombramiento de la autoridad'},
+        {id:'B',text:'La forma prescrita por la ley, porque todo vicio de competencia se convierte necesariamente en un defecto formal'},
+        {id:'C',text:'La competencia, porque el órgano ejerció una potestad que el ordenamiento no le había atribuido'},
+        {id:'D',text:'La publicidad del acto, porque una decisión incompetente sólo es inválida cuando no se publica o notifica'}
+      ],
+      respuesta:2,
+      explicacion:'El artículo 7 de la Constitución exige investidura regular, actuación dentro de la competencia y respeto de la forma prescrita por la ley. En el supuesto descrito, el déficit se localiza en la competencia; las consecuencias concretas deben analizarse según el remedio y régimen aplicables.',
+      fuente:{cita:'Constitución Política de la República, art. 7',verificada:false,revisadaEn:null},
+      dificultad:'media-alta'
+    },
+    'pf93-dad-07-04':{
+      pregunta:'Un órgano de la Administración sometido al régimen del artículo 42 de la Ley N° 18.575 indemniza un daño causado por falta de servicio. Se acredita, además, que un funcionario incurrió en falta personal. ¿Qué prevé expresamente esa norma?',
+      opciones:[
+        {id:'A',text:'Que el Estado puede repetir contra el funcionario que incurrió en la falta personal'},
+        {id:'B',text:'Que la víctima debe restituir la indemnización antes de ejercer cualquier acción contra el funcionario'},
+        {id:'C',text:'Que la falta personal extingue la responsabilidad del órgano por la falta de servicio ya establecida'},
+        {id:'D',text:'Que el funcionario queda liberado de responsabilidad interna una vez pagada la indemnización estatal'}
+      ],
+      respuesta:0,
+      explicacion:'El artículo 42 de la Ley N° 18.575 establece responsabilidad por falta de servicio para los órganos sujetos a ese régimen y reconoce al Estado derecho a repetir contra el funcionario que hubiere incurrido en falta personal.',
+      fuente:{cita:'DFL N° 1-19.653, Ley N° 18.575, art. 42',verificada:false,revisadaEn:null},
+      dificultad:'media-alta'
+    },
+    'pf93-dpo-05-04':{
+      pregunta:'En un juicio civil las partes alcanzan una conciliación total y se levanta el acta en los términos del artículo 267 del Código de Procedimiento Civil. ¿Qué efecto atribuye la ley a esa acta?',
+      opciones:[
+        {id:'A',text:'Produce sólo efectos contractuales entre las partes y requiere un juicio posterior para poder ejecutarse'},
+        {id:'B',text:'Equivale a un desistimiento de la demanda y no contiene una decisión susceptible de cumplimiento forzado'},
+        {id:'C',text:'Se estima como sentencia ejecutoriada para todos los efectos legales, en los términos del artículo 267'},
+        {id:'D',text:'Queda sujeta a aprobación posterior de la Corte de Apelaciones antes de producir cualquier efecto procesal'}
+      ],
+      respuesta:2,
+      explicacion:'El artículo 267 del Código de Procedimiento Civil dispone que de la conciliación total o parcial se levantará acta y que ésta se estimará como sentencia ejecutoriada para todos los efectos legales.',
+      fuente:{cita:'Código de Procedimiento Civil, art. 267',verificada:false,revisadaEn:null},
+      dificultad:'media-alta'
+    }
+  });
+
+  function patchArray(bank){
+    if(!Array.isArray(bank))return 0;
+    let count=0;
+    for(let i=0;i<bank.length;i++){
+      const patch=L2_OVERRIDES[bank[i]?.id];
+      if(!patch)continue;
+      bank[i]={...bank[i],...patch,fuente:{...bank[i].fuente,...(patch.fuente||{})},revisionOrigen:'AUDITORIA_COMUN_L2',reemplazoEditorial:true,revisionL2:true};
+      count++;
+    }
+    return count;
+  }
+
+  let appliedL2=0;
+  try{
+    if(typeof PF93_DRAFT_COMMON!=='undefined')appliedL2+=patchArray(PF93_DRAFT_COMMON);
+    if(typeof PF93_DRAFT_CIVIL!=='undefined')appliedL2+=patchArray(PF93_DRAFT_CIVIL);
+    if(typeof PF93_DRAFT_PENAL!=='undefined')appliedL2+=patchArray(PF93_DRAFT_PENAL);
+    if(typeof PF93_DRAFT_FAMILIA!=='undefined')appliedL2+=patchArray(PF93_DRAFT_FAMILIA);
+    if(typeof PF93_DRAFT_LABORAL!=='undefined')appliedL2+=patchArray(PF93_DRAFT_LABORAL);
+  }catch(_){appliedL2=-1;}
+
+  const previous=root.PF93_REVIEW_WORKFLOW||{};
+  root.PF93_REVIEW_WORKFLOW=Object.freeze({...previous,L2_OVERRIDES,appliedL2});
+})(typeof globalThis!=='undefined'?globalThis:window);
