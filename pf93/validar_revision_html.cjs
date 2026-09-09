@@ -21,7 +21,10 @@ const localScripts = [...html.matchAll(/<script\s+src="([^"]+)"\s*><\/script>/gi
 for (const src of localScripts) expect(fs.existsSync(path.join(__dirname, src)), `Script local inexistente: ${src}`);
 expect(localScripts.includes('revision-workflow.js'), 'revision.html debe cargar revision-workflow.js');
 expect(localScripts.includes('ajustes-l4.js'), 'revision.html debe cargar ajustes-l4.js');
-expect(localScripts.indexOf('ajustes-l4.js') > localScripts.indexOf('revision-workflow.js'), 'ajustes-l4.js debe ejecutarse después de revision-workflow.js');
+expect(localScripts.includes('ajustes-l5.js'), 'revision.html debe cargar ajustes-l5.js');
+const idxWorkflow=localScripts.indexOf('revision-workflow.js'),idxL4=localScripts.indexOf('ajustes-l4.js'),idxL5=localScripts.indexOf('ajustes-l5.js');
+expect(idxL4 > idxWorkflow, 'ajustes-l4.js debe ejecutarse después de revision-workflow.js');
+expect(idxL5 > idxL4, 'ajustes-l5.js debe ejecutarse después de ajustes-l4.js');
 
 const inline = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)].map(m => m[1]);
 expect(inline.length >= 1, 'No se encontró JavaScript inline');
