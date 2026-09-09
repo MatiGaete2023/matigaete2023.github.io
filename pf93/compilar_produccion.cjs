@@ -8,7 +8,7 @@ const fs=require('fs');const vm=require('vm');const path=require('path');
 
 function loadRuntime(){
   const context={console};vm.createContext(context);
-  const files=['blueprint.js','banco-comun.js','banco-civil.js','banco-penal.js','banco-familia.js','banco-laboral.js','revision-workflow.js','calidad-editorial.js'];
+  const files=['blueprint.js','banco-comun.js','banco-civil.js','banco-penal.js','banco-familia.js','banco-laboral.js','revision-workflow.js','ajustes-l4.js','calidad-editorial.js'];
   for(const file of files)vm.runInContext(fs.readFileSync(path.join(__dirname,file),'utf8'),context,{filename:file});
   vm.runInContext(`globalThis.__bank=[...PF93_DRAFT_COMMON,...PF93_DRAFT_CIVIL,...PF93_DRAFT_PENAL,...PF93_DRAFT_FAMILIA,...PF93_DRAFT_LABORAL];globalThis.__bp=PF93_BLUEPRINT;globalThis.__q=PF93_EDITORIAL_QUALITY;`,context);
   return{bank:context.__bank,blueprint:context.__bp,quality:context.__q};
