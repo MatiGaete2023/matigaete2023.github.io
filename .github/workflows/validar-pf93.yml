@@ -32,10 +32,13 @@ jobs:
           node --check pf93/calidad-editorial.js
           node --check pf93/compilar_produccion.cjs
           node --check pf93/validar_compilador_produccion.cjs
+          node --check pf93/listar_prioridad_editorial.cjs
       - name: Validar estructura y cobertura PF93
         run: node pf93/validar_banco_pf93.cjs
       - name: Resumir riesgos editoriales únicos
         run: node pf93/resumen_calidad.cjs
+      - name: Listar cola editorial de riesgo alto
+        run: node pf93/listar_prioridad_editorial.cjs
       - name: Validar workflow editorial-jurídico
         run: node pf93/validar_revision_workflow.cjs
       - name: Validar compilador estricto de producción
