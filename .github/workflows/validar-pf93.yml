@@ -32,6 +32,8 @@ jobs:
           node --check pf93/calidad-editorial.js
       - name: Validar estructura y cobertura PF93
         run: node pf93/validar_banco_pf93.cjs
+      - name: Resumir riesgos editoriales únicos
+        run: node pf93/resumen_calidad.cjs
       - name: Validar workflow editorial-jurídico
         run: node pf93/validar_revision_workflow.cjs
       - name: Validar integración HTML de revisión
