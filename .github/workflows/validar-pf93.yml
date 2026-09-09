@@ -31,6 +31,7 @@ jobs:
           node --check pf93/revision-workflow.js
           node --check pf93/ajustes-l4.js
           node --check pf93/ajustes-l5.js
+          node --check pf93/ajustes-l6.js
           node --check pf93/calidad-editorial.js
           node --check pf93/compilar_produccion.cjs
           node --check pf93/validar_compilador_produccion.cjs
