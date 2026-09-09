@@ -2,7 +2,7 @@ const fs = require('fs');
 const vm = require('vm');
 const path = require('path');
 
-const files = ['blueprint.js','banco-comun.js','banco-civil.js','banco-penal.js','banco-familia.js','banco-laboral.js','revision-workflow.js','ajustes-l4.js','ajustes-l5.js','ajustes-l6.js'];
+const files = ['blueprint.js','banco-comun.js','banco-civil.js','banco-penal.js','banco-familia.js','banco-laboral.js','revision-workflow.js','ajustes-l4.js','ajustes-l5.js','ajustes-l6.js','ajustes-l7.js'];
 const context = { console };
 vm.createContext(context);
 for (const file of files) {
@@ -22,14 +22,14 @@ const warn=(type,id,msg)=>{ warnings.push(`${id}: [${type}] ${msg}`); riskCounts
 expect(bp.length===109,`Blueprint: ${bp.length} temas; esperado 109`);
 expect(bp.reduce((n,t)=>n+t.cupo,0)===451,'Blueprint: cupos no suman 451');
 expect(bank.length===451,`Banco: ${bank.length} preguntas; esperado 451`);
-for(const [layer,n] of [['L1',8],['L2',8],['L3',10],['L4',18],['L5',18],['L6',19]]){
+for(const [layer,n] of [['L1',8],['L2',8],['L3',10],['L4',18],['L5',18],['L6',19],['L7',49]]){
   expect(workflow && workflow[`applied${layer}`]===n,`Ajustes ${layer} aplicados: ${workflow?.[`applied${layer}`]}; esperado ${n}`);
   expect(workflow && Object.keys(workflow[`${layer}_OVERRIDES`]||{}).length===n,`El catálogo ${layer} debe contener ${n} reemplazos trazables`);
 }
 
 const ids=new Set(); const stems=new Map(); const byTopic={}; const answerDist=[0,0,0,0]; const topicItems={};
-const layerCounts={L1:0,L2:0,L3:0,L4:0,L5:0,L6:0};
-const origins={AUDITORIA_COMUN_L1:'L1',AUDITORIA_COMUN_L2:'L2',AUDITORIA_CIVIL_L3:'L3',AUDITORIA_PENAL_L4:'L4',AUDITORIA_FAMILIA_L5:'L5',AUDITORIA_LABORAL_L6:'L6'};
+const layerCounts={L1:0,L2:0,L3:0,L4:0,L5:0,L6:0,L7:0};
+const origins={AUDITORIA_COMUN_L1:'L1',AUDITORIA_COMUN_L2:'L2',AUDITORIA_CIVIL_L3:'L3',AUDITORIA_PENAL_L4:'L4',AUDITORIA_FAMILIA_L5:'L5',AUDITORIA_LABORAL_L6:'L6',AUDITORIA_MEDIA_COMUN_L7:'L7'};
 const legalCue=/\b(?:art(?:ículo)?\.?|ley|código|inciso|n[°ºo]\s*\d+)\b/i;
 const absoluteCue=/\b(?:siempre|nunca|jamás|exclusivamente|automáticamente|sin excepción|en todo caso|cualquier|ninguna?)\b/i;
 const metaStem=/\b(?:criterio metodológico|qué debe revisarse|qué debe hacerse|al analizar|antes de calificar|metodológicamente|mejor enfoque de análisis)\b/i;
@@ -71,7 +71,7 @@ for (const q of bank) {
   if(stems.has(norm)) errors.push(`${q.id}: enunciado duplicado con ${stems.get(norm)}`); else stems.set(norm,q.id);
   byTopic[q.temaPF93]=(byTopic[q.temaPF93]||0)+1;
 }
-for(const [layer,n] of [['L1',8],['L2',8],['L3',10],['L4',18],['L5',18],['L6',19]]) expect(layerCounts[layer]===n,`Registros del pool marcados ${layer}: ${layerCounts[layer]}; esperado ${n}`);
+for(const [layer,n] of [['L1',8],['L2',8],['L3',10],['L4',18],['L5',18],['L6',19],['L7',49]]) expect(layerCounts[layer]===n,`Registros del pool marcados ${layer}: ${layerCounts[layer]}; esperado ${n}`);
 
 for(const [topic,items] of Object.entries(topicItems)){
   for(let i=0;i<items.length;i++)for(let j=i+1;j<items.length;j++){
