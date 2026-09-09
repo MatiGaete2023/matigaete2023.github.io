@@ -1,0 +1,24 @@
+name: Validar banco PF93
+on:
+  push:
+    branches:
+      - codex/pf93-revision-humana
+    paths:
+      - 'pf93/**'
+      - '.github/workflows/validar-pf93.yml'
+  pull_request:
+    paths:
+      - 'pf93/**'
+      - '.github/workflows/validar-pf93.yml'
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validar estructura y cobertura PF93
+        run: node pf93/validar_banco_pf93.cjs
