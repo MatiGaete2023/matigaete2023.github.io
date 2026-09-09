@@ -20,14 +20,17 @@ for(const src of scripts)expect(fs.existsSync(path.join(__dirname,src)),`Script 
 expect(scripts.includes('revision-workflow.js'),'Falta workflow efectivo');
 expect(scripts.includes('ajustes-l4.js'),'Falta capa penal ajustes-l4.js');
 expect(scripts.includes('ajustes-l5.js'),'Falta capa familia ajustes-l5.js');
+expect(scripts.includes('ajustes-l6.js'),'Falta capa laboral ajustes-l6.js');
 expect(scripts.includes('calidad-editorial.js'),'Falta motor calidad-editorial.js');
 const idxWorkflow=scripts.indexOf('revision-workflow.js');
 const idxL4=scripts.indexOf('ajustes-l4.js');
 const idxL5=scripts.indexOf('ajustes-l5.js');
+const idxL6=scripts.indexOf('ajustes-l6.js');
 const idxQuality=scripts.indexOf('calidad-editorial.js');
 expect(idxWorkflow>=0&&idxL4>idxWorkflow,'ajustes-l4.js debe cargarse después de revision-workflow.js');
 expect(idxL5>idxL4,'ajustes-l5.js debe cargarse después de ajustes-l4.js');
-expect(idxQuality>idxL5,'calidad-editorial.js debe cargarse después de aplicar ajustes-l5.js');
+expect(idxL6>idxL5,'ajustes-l6.js debe cargarse después de ajustes-l5.js');
+expect(idxQuality>idxL6,'calidad-editorial.js debe cargarse después de aplicar ajustes-l6.js');
 
 const inline=[...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]);
 for(let i=0;i<inline.length;i++){
