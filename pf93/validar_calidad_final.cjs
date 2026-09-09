@@ -1,0 +1,12 @@
+const fs=require('fs');const vm=require('vm');const path=require('path');const{runtimeFiles}=require('./capas-editoriales.cjs');
+const context={console};vm.createContext(context);for(const file of runtimeFiles(__dirname,{quality:true}))vm.runInContext(fs.readFileSync(path.join(__dirname,file),'utf8'),context,{filename:file});
+vm.runInContext(`globalThis.__bank=[...PF93_DRAFT_COMMON,...PF93_DRAFT_CIVIL,...PF93_DRAFT_PENAL,...PF93_DRAFT_FAMILIA,...PF93_DRAFT_LABORAL];globalThis.__quality=PF93_EDITORIAL_QUALITY;globalThis.__wf=PF93_REVIEW_WORKFLOW;`,context);
+const bank=context.__bank,Q=context.__quality,WF=context.__wf,errors=[];const report=Q.analyzeBank(bank);const dist=[0,0,0,0];for(const q of bank)dist[q.respuesta]++;
+if(bank.length!==451)errors.push(`Total esperado 451; obtenido ${bank.length}`);
+if(report.flagged!==0)errors.push(`Persisten ${report.flagged} preguntas con alertas editoriales: ${JSON.stringify(report.byFlag)}`);
+const target=[113,113,113,112];if(dist.some((n,i)=>n!==target[i]))errors.push(`Distribución de claves fuera del objetivo ${target.join('/')}: ${dist.join('/')}`);
+if(WF.appliedL12!==11)errors.push(`L12 debe aplicar 11 reemplazos; aplicó ${WF.appliedL12}`);
+if(WF.appliedL13!==16)errors.push(`L13 debe mover 16 claves; movió ${WF.appliedL13}`);
+if((WF.L13_MOVES||[]).some(x=>x.error))errors.push(`L13 informó error: ${JSON.stringify(WF.L13_MOVES)}`);
+console.log(JSON.stringify({total:bank.length,clean:report.clean,flagged:report.flagged,bySeverity:report.bySeverity,answerDistribution:{A:dist[0],B:dist[1],C:dist[2],D:dist[3]},L12:WF.appliedL12,L13:WF.appliedL13,movesL13:WF.L13_MOVES,errorCount:errors.length,errors},null,2));
+if(errors.length)process.exit(1);
