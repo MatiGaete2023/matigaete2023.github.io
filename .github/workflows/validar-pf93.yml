@@ -20,5 +20,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Validar sintaxis JavaScript PF93
+        run: |
+          node --check pf93/blueprint.js
+          node --check pf93/banco-comun.js
+          node --check pf93/banco-civil.js
+          node --check pf93/banco-penal.js
+          node --check pf93/banco-familia.js
+          node --check pf93/banco-laboral.js
+          node --check pf93/revision-workflow.js
       - name: Validar estructura y cobertura PF93
         run: node pf93/validar_banco_pf93.cjs
+      - name: Validar workflow editorial-jurídico
+        run: node pf93/validar_revision_workflow.cjs
