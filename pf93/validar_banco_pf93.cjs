@@ -2,7 +2,7 @@ const fs = require('fs');
 const vm = require('vm');
 const path = require('path');
 
-const files = ['blueprint.js','banco-comun.js','banco-civil.js','banco-penal.js','banco-familia.js','banco-laboral.js','revision-workflow.js','ajustes-l4.js','ajustes-l5.js'];
+const files = ['blueprint.js','banco-comun.js','banco-civil.js','banco-penal.js','banco-familia.js','banco-laboral.js','revision-workflow.js','ajustes-l4.js','ajustes-l5.js','ajustes-l6.js'];
 const context = { console };
 vm.createContext(context);
 for (const file of files) {
@@ -22,19 +22,14 @@ const warn=(type,id,msg)=>{ warnings.push(`${id}: [${type}] ${msg}`); riskCounts
 expect(bp.length===109,`Blueprint: ${bp.length} temas; esperado 109`);
 expect(bp.reduce((n,t)=>n+t.cupo,0)===451,'Blueprint: cupos no suman 451');
 expect(bank.length===451,`Banco: ${bank.length} preguntas; esperado 451`);
-expect(workflow && workflow.appliedL1===8,`Ajustes L1 aplicados: ${workflow?.appliedL1}; esperado 8`);
-expect(workflow && Object.keys(workflow.L1_OVERRIDES||{}).length===8,'El catálogo L1 debe contener 8 reemplazos trazables');
-expect(workflow && workflow.appliedL2===8,`Ajustes L2 aplicados: ${workflow?.appliedL2}; esperado 8`);
-expect(workflow && Object.keys(workflow.L2_OVERRIDES||{}).length===8,'El catálogo L2 debe contener 8 reemplazos trazables');
-expect(workflow && workflow.appliedL3===10,`Ajustes L3 aplicados: ${workflow?.appliedL3}; esperado 10`);
-expect(workflow && Object.keys(workflow.L3_OVERRIDES||{}).length===10,'El catálogo L3 debe contener 10 reemplazos trazables');
-expect(workflow && workflow.appliedL4===18,`Ajustes L4 aplicados: ${workflow?.appliedL4}; esperado 18`);
-expect(workflow && Object.keys(workflow.L4_OVERRIDES||{}).length===18,'El catálogo L4 debe contener 18 reemplazos trazables');
-expect(workflow && workflow.appliedL5===18,`Ajustes L5 aplicados: ${workflow?.appliedL5}; esperado 18`);
-expect(workflow && Object.keys(workflow.L5_OVERRIDES||{}).length===18,'El catálogo L5 debe contener 18 reemplazos trazables');
+for(const [layer,n] of [['L1',8],['L2',8],['L3',10],['L4',18],['L5',18],['L6',19]]){
+  expect(workflow && workflow[`applied${layer}`]===n,`Ajustes ${layer} aplicados: ${workflow?.[`applied${layer}`]}; esperado ${n}`);
+  expect(workflow && Object.keys(workflow[`${layer}_OVERRIDES`]||{}).length===n,`El catálogo ${layer} debe contener ${n} reemplazos trazables`);
+}
 
 const ids=new Set(); const stems=new Map(); const byTopic={}; const answerDist=[0,0,0,0]; const topicItems={};
-let l1Count=0,l2Count=0,l3Count=0,l4Count=0,l5Count=0;
+const layerCounts={L1:0,L2:0,L3:0,L4:0,L5:0,L6:0};
+const origins={AUDITORIA_COMUN_L1:'L1',AUDITORIA_COMUN_L2:'L2',AUDITORIA_CIVIL_L3:'L3',AUDITORIA_PENAL_L4:'L4',AUDITORIA_FAMILIA_L5:'L5',AUDITORIA_LABORAL_L6:'L6'};
 const legalCue=/\b(?:art(?:ículo)?\.?|ley|código|inciso|n[°ºo]\s*\d+)\b/i;
 const absoluteCue=/\b(?:siempre|nunca|jamás|exclusivamente|automáticamente|sin excepción|en todo caso|cualquier|ninguna?)\b/i;
 const metaStem=/\b(?:criterio metodológico|qué debe revisarse|qué debe hacerse|al analizar|antes de calificar|metodológicamente|mejor enfoque de análisis)\b/i;
@@ -53,11 +48,7 @@ for (const q of bank) {
   expect(Number.isInteger(q.respuesta) && q.respuesta>=0 && q.respuesta<4,`${q.id}: respuesta fuera de rango`);
   expect(q.estado==='revision_humana',`${q.id}: estado inesperado ${q.estado}`);
   expect(q.fuente && q.fuente.verificada===false,`${q.id}: la rama de revisión no debe fingir fuente verificada`);
-  if(q.revisionOrigen==='AUDITORIA_COMUN_L1') l1Count++;
-  if(q.revisionOrigen==='AUDITORIA_COMUN_L2') l2Count++;
-  if(q.revisionOrigen==='AUDITORIA_CIVIL_L3') l3Count++;
-  if(q.revisionOrigen==='AUDITORIA_PENAL_L4') l4Count++;
-  if(q.revisionOrigen==='AUDITORIA_FAMILIA_L5') l5Count++;
+  if(origins[q.revisionOrigen]) layerCounts[origins[q.revisionOrigen]]++;
   topicItems[q.temaPF93]??=[]; topicItems[q.temaPF93].push(q);
 
   if (q.opciones?.length===4) {
@@ -80,11 +71,7 @@ for (const q of bank) {
   if(stems.has(norm)) errors.push(`${q.id}: enunciado duplicado con ${stems.get(norm)}`); else stems.set(norm,q.id);
   byTopic[q.temaPF93]=(byTopic[q.temaPF93]||0)+1;
 }
-expect(l1Count===8,`Registros del pool marcados AUDITORIA_COMUN_L1: ${l1Count}; esperado 8`);
-expect(l2Count===8,`Registros del pool marcados AUDITORIA_COMUN_L2: ${l2Count}; esperado 8`);
-expect(l3Count===10,`Registros del pool marcados AUDITORIA_CIVIL_L3: ${l3Count}; esperado 10`);
-expect(l4Count===18,`Registros del pool marcados AUDITORIA_PENAL_L4: ${l4Count}; esperado 18`);
-expect(l5Count===18,`Registros del pool marcados AUDITORIA_FAMILIA_L5: ${l5Count}; esperado 18`);
+for(const [layer,n] of [['L1',8],['L2',8],['L3',10],['L4',18],['L5',18],['L6',19]]) expect(layerCounts[layer]===n,`Registros del pool marcados ${layer}: ${layerCounts[layer]}; esperado ${n}`);
 
 for(const [topic,items] of Object.entries(topicItems)){
   for(let i=0;i<items.length;i++)for(let j=i+1;j<items.length;j++){
@@ -113,6 +100,6 @@ expect(trackTotals.laboral===86,'Laboral debe sumar 86');
 const max=Math.max(...answerDist), min=Math.min(...answerDist);
 if(max-min>8) warn('distribucion_claves','BANCO',`distribución desigual: ${answerDist.join('/')}`);
 
-const result={version:context.PF93_BLUEPRINT_VERSION,topics:bp.length,total:bank.length,l1Overrides:l1Count,l2Overrides:l2Count,l3Overrides:l3Count,l4Overrides:l4Count,l5Overrides:l5Count,byCode:codeActual,byTrack:trackTotals,answerDistribution:{A:answerDist[0],B:answerDist[1],C:answerDist[2],D:answerDist[3]},editorialRiskCounts:riskCounts,warnings:warnings.slice(0,100),warningCount:warnings.length,errorCount:errors.length,errors};
+const result={version:context.PF93_BLUEPRINT_VERSION,topics:bp.length,total:bank.length,layers:layerCounts,byCode:codeActual,byTrack:trackTotals,answerDistribution:{A:answerDist[0],B:answerDist[1],C:answerDist[2],D:answerDist[3]},editorialRiskCounts:riskCounts,warnings:warnings.slice(0,100),warningCount:warnings.length,errorCount:errors.length,errors};
 console.log(JSON.stringify(result,null,2));
 if(errors.length) process.exit(1);
