@@ -30,12 +30,16 @@ jobs:
           node --check pf93/banco-laboral.js
           node --check pf93/revision-workflow.js
           node --check pf93/calidad-editorial.js
+          node --check pf93/compilar_produccion.cjs
+          node --check pf93/validar_compilador_produccion.cjs
       - name: Validar estructura y cobertura PF93
         run: node pf93/validar_banco_pf93.cjs
       - name: Resumir riesgos editoriales únicos
         run: node pf93/resumen_calidad.cjs
       - name: Validar workflow editorial-jurídico
         run: node pf93/validar_revision_workflow.cjs
+      - name: Validar compilador estricto de producción
+        run: node pf93/validar_compilador_produccion.cjs
       - name: Validar integración HTML de revisión
         run: node pf93/validar_revision_html.cjs
       - name: Validar triaje editorial
