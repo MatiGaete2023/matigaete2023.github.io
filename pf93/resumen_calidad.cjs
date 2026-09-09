@@ -1,0 +1,5 @@
+const fs=require('fs');const vm=require('vm');const path=require('path');
+const files=['blueprint.js','banco-comun.js','banco-civil.js','banco-penal.js','banco-familia.js','banco-laboral.js','revision-workflow.js','calidad-editorial.js'];const context={console};vm.createContext(context);for(const file of files){vm.runInContext(fs.readFileSync(path.join(__dirname,file),'utf8'),context,{filename:file});}
+vm.runInContext(`globalThis.__bank=[...PF93_DRAFT_COMMON,...PF93_DRAFT_CIVIL,...PF93_DRAFT_PENAL,...PF93_DRAFT_FAMILIA,...PF93_DRAFT_LABORAL];globalThis.__quality=PF93_EDITORIAL_QUALITY;`,context);
+const bank=context.__bank,report=context.__quality.analyzeBank(bank);const byCode={};for(const q of bank){const code=q.temaPF93.split('-')[0],r=context.__quality.analyze(q);byCode[code]??={total:0,clean:0,flagged:0,alta:0};byCode[code].total++;if(r.score===0)byCode[code].clean++;else byCode[code].flagged++;if(r.severity==='alta'||r.severity==='critica')byCode[code].alta++;}
+console.log(JSON.stringify({total:report.total,clean:report.clean,flagged:report.flagged,bySeverity:report.bySeverity,byFlag:report.byFlag,byCode},null,2));
