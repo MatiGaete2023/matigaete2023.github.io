@@ -30,12 +30,18 @@ if(clean){
   const tooEasy=evaluateQuestion(clean,review,{responses:25,accuracy:0.95},quality);
   expect(!tooEasy.eligible&&tooEasy.reasons.some(x=>x.includes('20%-90%')),'Debe bloquear acierto extremo');
 
-  const risky=bank.find(q=>quality.analyze(q).score>0);
-  expect(!!risky,'Debe existir al menos un registro con alerta editorial para comprobar el gate');
-  if(risky){
-    const riskEval=evaluateQuestion(risky,review,metrics,quality);
-    expect(!riskEval.eligible&&riskEval.reasons.some(x=>x.includes('riesgo editorial pendiente')),'Debe bloquear riesgo editorial pendiente aunque la revisión manual esté marcada completa');
-  }
+  // El banco real puede estar completamente limpio. Para comprobar el gate no se conserva
+  // deliberadamente un defecto real: se fabrica una copia sintética con pistas editoriales.
+  const risky={...clean,id:'TEST-RIESGO-EDITORIAL',opciones:[
+    {id:'A',text:'Siempre'},
+    {id:'B',text:'Nunca'},
+    {id:'C',text:'En ningún caso'},
+    {id:'D',text:'La alternativa correcta contiene una formulación jurídica sustancialmente más extensa que los distractores y permite resolver el ítem por su construcción formal'}
+  ],respuesta:3};
+  const riskReport=quality.analyze(risky);
+  expect(riskReport.score>0,'El registro sintético debe activar al menos una alerta editorial');
+  const riskEval=evaluateQuestion(risky,review,metrics,quality);
+  expect(!riskEval.eligible&&riskEval.reasons.some(x=>x.includes('riesgo editorial pendiente')),'Debe bloquear riesgo editorial pendiente aunque la revisión manual esté marcada completa');
 }
 
 console.log(JSON.stringify({cleanTestId:clean?.id||null,tests:errors.length?'failed':'ok',errorCount:errors.length,errors},null,2));
