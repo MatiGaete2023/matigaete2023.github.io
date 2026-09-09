@@ -2,25 +2,62 @@
 
 ## Estado del producto
 
-Esta carpeta es una **compilación de revisión**, no un banco jurídicamente aprobado. Está diseñada para que una persona pueda usar el simulador como usuario final, detectar ambigüedades y aprobar/corregir/rechazar ítems antes de promoverlos a un banco formal.
+Esta carpeta es una **compilación de revisión**, no un banco jurídicamente aprobado. Está diseñada para que una persona pueda usar el simulador como usuario final, detectar ambigüedades y transformar progresivamente cada ítem hasta un estado apto para producción.
 
 - Temas oficiales modelados: **109**.
 - Cupos de la convocatoria docente modelados: **451**.
 - Preguntas de esta compilación: **451**.
-- Estado de todas las preguntas: `revision_humana`.
-- Fuentes marcadas como verificadas: **0** por diseño.
+- Estado fuente inicial de todas las preguntas: `revision_humana`.
+- Fuentes marcadas como verificadas en los archivos de banco: **0** por diseño.
 - Especialidades: civil, penal, familia y laboral, más temario común.
+
+La decisión de revisión se guarda separadamente del banco fuente. Una cita orientativa no se transforma en `verificada` por el solo hecho de existir.
+
+## Workflow progresivo
+
+La estación `revision.html` reemplaza el antiguo control simple Aprobar/Corregir/Rechazar por seis ejes independientes:
+
+- contenido jurídico;
+- fuente;
+- redacción;
+- distractores;
+- dificultad;
+- decisión progresiva.
+
+Los estados progresivos son:
+
+`revision_humana` → `corregir_editorial` / `verificar_juridicamente` → `aprobada_juridicamente` → `calibracion` → `aprobada_produccion`.
+
+`retirada` conserva trazabilidad de un ítem que no debe volver al pool activo.
+
+La especificación completa está en [`WORKFLOW_REVISION.md`](WORKFLOW_REVISION.md).
 
 ## Cómo revisar como usuario final
 
-1. Abrir `pf93/revision.html` desde la rama `codex/pf93-revision-humana` mediante un servidor estático o GitHub Pages de revisión.
+1. Abrir `pf93/revision.html` mediante un servidor estático o una publicación de revisión.
 2. Elegir especialidad.
-3. Usar `Simulación PF93 · 90` para probar experiencia de examen. La distribución se calcula proporcionalmente desde los cupos de la convocatoria docente y **no se presenta como distribución oficial de una prueba real**.
-4. Usar `Revisión humana pendiente` para controlar pregunta por pregunta.
-5. Después de responder, clasificar el ítem como `Aprobar`, `Requiere corrección` o `Rechazar`, y registrar nota cuando corresponda.
-6. Exportar `pf93-revision-humana.json`. Esa exportación constituye el insumo para promover sólo preguntas revisadas a una versión formal.
+3. Usar `Simulación PF93 · 90` para probar la experiencia de examen. La distribución se calcula proporcionalmente desde los cupos de la convocatoria docente y **no se presenta como distribución oficial de una prueba real**.
+4. Usar `Estación de revisión humana` para controlar pregunta por pregunta.
+5. Revisar separadamente contenido jurídico, fuente, redacción, distractores y dificultad.
+6. Registrar revisor, fecha, fuente efectivamente cotejada, artículo/inciso y jurisprudencia o criterio interpretativo cuando corresponda.
+7. Aplicar el estado sugerido o decidir manualmente. El sistema impide elevar una pregunta a aprobación jurídica o producción si no cumple los requisitos mínimos correspondientes.
+8. Exportar `revision-pf93.json` y `metricas-revision-pf93.csv`.
 
-Los datos de revisión se almacenan únicamente en `localStorage` del navegador hasta que se exportan.
+Los datos se almacenan únicamente en `localStorage` hasta su exportación. No modifican automáticamente los archivos del repositorio.
+
+## Gate interno de producción
+
+Una pregunta sólo puede marcarse `aprobada_produccion` desde la interfaz cuando:
+
+- contenido jurídico = correcto;
+- fuente = verificada;
+- redacción = apta;
+- distractores = aptos;
+- no está marcada como demasiado fácil o demasiado difícil;
+- acumula al menos 20 respuestas empíricas;
+- el porcentaje de acierto no está bajo 20 % ni sobre 90 %.
+
+Los umbrales 20 respuestas y 20 %-90 % son **parámetros internos iniciales de calibración**, no reglas de la Academia Judicial. Deben revisarse cuando exista una muestra real suficiente.
 
 ## Jerarquía de fuentes usada para diseñar el producto
 
@@ -53,12 +90,15 @@ La rama de origen conserva 484 registros históricos PF92/anteriores con filtros
 - `banco-penal.js`: DPP + DPE.
 - `banco-familia.js`: DFA + DPFA.
 - `banco-laboral.js`: DLA + DPL.
-- `revision.html`: simulador y estación de revisión humana.
+- `revision-workflow.js`: estados, normalización, sugerencias, métricas y gate de producción.
+- `revision.html`: simulador y estación de revisión humana multicriterio.
 - `validar_banco_pf93.cjs`: validación estructural, cuotas, IDs, duplicados exactos, alternativas y distribución de claves.
+- `validar_revision_workflow.cjs`: pruebas automáticas del workflow progresivo.
+- `WORKFLOW_REVISION.md`: protocolo operativo de revisión y promoción.
 
-## Criterios para aprobar un ítem
+## Criterios para aprobar jurídicamente un ítem
 
-Un revisor no debería marcar `Aprobar` hasta comprobar simultáneamente:
+Un revisor no debería avanzar a `aprobada_juridicamente` hasta comprobar simultáneamente:
 
 - el enunciado corresponde al tema PF93 asignado;
 - existe una única alternativa defendible como correcta;
@@ -73,20 +113,25 @@ Un revisor no debería marcar `Aprobar` hasta comprobar simultáneamente:
 Desde la raíz del repositorio:
 
 ```bash
+node --check pf93/revision-workflow.js
 node pf93/validar_banco_pf93.cjs
+node pf93/validar_revision_workflow.cjs
 ```
 
-El validador debe terminar con `errorCount: 0` y banco total `451`.
+GitHub Actions ejecuta además la comprobación de sintaxis de los archivos JavaScript del banco. El banco debe terminar con 451 registros, 109 temas y `errorCount: 0`; el workflow debe terminar con `tests: "ok"`.
 
-La comprobación funcional mínima comprende cuatro recorridos, uno por especialidad:
+La comprobación funcional humana mínima comprende cuatro recorridos, uno por especialidad:
 
-- iniciar simulación de 90;
+- iniciar simulación de 90 con el banco en revisión;
 - responder, omitir, retroceder y terminar;
 - comprobar desglose por código;
-- ejecutar revisión humana y exportar JSON;
-- recargar el navegador y verificar persistencia de decisiones de revisión;
-- exportar CSV de resultados.
+- abrir la estación de revisión y completar los seis ejes;
+- comprobar que una aprobación jurídica inválida sea bloqueada;
+- comprobar que producción quede bloqueada sin calibración suficiente;
+- recargar y verificar persistencia;
+- exportar JSON y CSV;
+- comprobar filtros por estado y pool.
 
 ## Pendiente humano real
 
-La etapa pendiente no es de estructura ni de cobertura: es **validación jurídica sustantiva de las 451 preguntas**. La rama evita declarar como `aprobada` una pregunta que todavía no ha sido cotejada contra texto legal vigente y, cuando corresponda, jurisprudencia identificable.
+La etapa pendiente principal es **validación jurídica sustantiva de las 451 preguntas** y su posterior calibración empírica. La infraestructura ya distingue qué falta en cada ítem y evita declarar como `aprobada_produccion` una pregunta que todavía no ha cumplido los controles configurados.
