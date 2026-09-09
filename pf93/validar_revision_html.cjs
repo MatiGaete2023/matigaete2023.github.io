@@ -22,9 +22,11 @@ for (const src of localScripts) expect(fs.existsSync(path.join(__dirname, src)),
 expect(localScripts.includes('revision-workflow.js'), 'revision.html debe cargar revision-workflow.js');
 expect(localScripts.includes('ajustes-l4.js'), 'revision.html debe cargar ajustes-l4.js');
 expect(localScripts.includes('ajustes-l5.js'), 'revision.html debe cargar ajustes-l5.js');
-const idxWorkflow=localScripts.indexOf('revision-workflow.js'),idxL4=localScripts.indexOf('ajustes-l4.js'),idxL5=localScripts.indexOf('ajustes-l5.js');
+expect(localScripts.includes('ajustes-l6.js'), 'revision.html debe cargar ajustes-l6.js');
+const idxWorkflow=localScripts.indexOf('revision-workflow.js'),idxL4=localScripts.indexOf('ajustes-l4.js'),idxL5=localScripts.indexOf('ajustes-l5.js'),idxL6=localScripts.indexOf('ajustes-l6.js');
 expect(idxL4 > idxWorkflow, 'ajustes-l4.js debe ejecutarse después de revision-workflow.js');
 expect(idxL5 > idxL4, 'ajustes-l5.js debe ejecutarse después de ajustes-l4.js');
+expect(idxL6 > idxL5, 'ajustes-l6.js debe ejecutarse después de ajustes-l5.js');
 
 const inline = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)].map(m => m[1]);
 expect(inline.length >= 1, 'No se encontró JavaScript inline');
