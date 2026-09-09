@@ -1,6 +1,7 @@
 const fs = require('fs');
 const vm = require('vm');
 const path = require('path');
+const { listEditorialLayers } = require('./capas-editoriales.cjs');
 
 const file = path.join(__dirname, 'revision.html');
 const html = fs.readFileSync(file, 'utf8');
@@ -20,13 +21,17 @@ for (const id of requiredIds) expect(seen.has(id), `Falta control requerido #${i
 const localScripts = [...html.matchAll(/<script\s+src="([^"]+)"\s*><\/script>/gi)].map(m => m[1]);
 for (const src of localScripts) expect(fs.existsSync(path.join(__dirname, src)), `Script local inexistente: ${src}`);
 expect(localScripts.includes('revision-workflow.js'), 'revision.html debe cargar revision-workflow.js');
-expect(localScripts.includes('ajustes-l4.js'), 'revision.html debe cargar ajustes-l4.js');
-expect(localScripts.includes('ajustes-l5.js'), 'revision.html debe cargar ajustes-l5.js');
-expect(localScripts.includes('ajustes-l6.js'), 'revision.html debe cargar ajustes-l6.js');
-const idxWorkflow=localScripts.indexOf('revision-workflow.js'),idxL4=localScripts.indexOf('ajustes-l4.js'),idxL5=localScripts.indexOf('ajustes-l5.js'),idxL6=localScripts.indexOf('ajustes-l6.js');
-expect(idxL4 > idxWorkflow, 'ajustes-l4.js debe ejecutarse después de revision-workflow.js');
-expect(idxL5 > idxL4, 'ajustes-l5.js debe ejecutarse después de ajustes-l4.js');
-expect(idxL6 > idxL5, 'ajustes-l6.js debe ejecutarse después de ajustes-l5.js');
+
+const layers = listEditorialLayers(__dirname);
+const idxWorkflow = localScripts.indexOf('revision-workflow.js');
+let previous = idxWorkflow;
+for (const layer of layers) {
+  const count = localScripts.filter(src => src === layer).length;
+  const idx = localScripts.indexOf(layer);
+  expect(count === 1, `revision.html debe cargar exactamente una vez ${layer}`);
+  expect(idx > previous, `${layer} debe ejecutarse después de ${previous === idxWorkflow ? 'revision-workflow.js' : layers[layers.indexOf(layer)-1]}`);
+  previous = idx;
+}
 
 const inline = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)].map(m => m[1]);
 expect(inline.length >= 1, 'No se encontró JavaScript inline');
@@ -34,5 +39,5 @@ for (let i = 0; i < inline.length; i++) { try { new vm.Script(inline[i], { filen
 expect(/aprobada_produccion/.test(html), 'La interfaz no expone estado de producción');
 expect(/Fuente orientativa NO verificada/.test(html), 'Falta advertencia explícita de fuente no verificada en feedback');
 expect(/20 respuestas/.test(html), 'Falta explicación visible del umbral interno de calibración');
-console.log(JSON.stringify({ ids: ids.length, localScripts, inlineBlocks: inline.length, errorCount: errors.length, errors }, null, 2));
+console.log(JSON.stringify({ ids: ids.length, localScripts, editorialLayers: layers, inlineBlocks: inline.length, errorCount: errors.length, errors }, null, 2));
 if (errors.length) process.exit(1);
