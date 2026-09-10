@@ -1,76 +1,100 @@
 # PF93 — banco jurídico para revisión humana
 
-## Estado del producto
+Esta carpeta contiene la línea de desarrollo vigente del simulador para preparación del Programa de Formación especial de la Academia Judicial. El producto está diseñado para transformar un **banco de cobertura editorial** en un subconjunto jurídicamente revisado, calibrado y apto para producción.
 
-Esta carpeta es una **compilación de revisión**, no un banco jurídicamente aprobado. Está diseñada para que una persona pueda usar el simulador como usuario final, detectar ambigüedades y transformar progresivamente cada ítem hasta un estado apto para producción.
+> Estado actual: cobertura y depuración editorial completas; verificación jurídica humana en curso. Para cifras vigentes, consultar [`ESTADO_PROYECTO.md`](ESTADO_PROYECTO.md).
 
-- Temas oficiales modelados: **109**.
-- Cupos de la convocatoria docente modelados: **451**.
-- Preguntas de esta compilación: **451**.
-- Estado fuente inicial de todas las preguntas: `revision_humana`.
-- Fuentes marcadas como verificadas en los archivos de banco: **0** por diseño.
-- Especialidades: civil, penal, familia y laboral, más temario común.
-- Primera preauditoría sustantiva del bloque común: documentada en `AUDITORIA_COMUN_L1.md`.
-- Ajustes L1 activos y trazables: **8**, correspondientes a DPO-02/DPO-03.
+## Estado resumido
 
-La decisión de revisión se guarda separadamente del banco fuente. Una cita orientativa no se transforma en `verificada` por el solo hecho de existir.
+- 109 temas modelados.
+- 451 preguntas de cobertura.
+- 84 preguntas comunes + cuatro bloques de especialidad.
+- 451/451 sin alertas editoriales automatizadas.
+- Claves fuente equilibradas: A 113 / B 113 / C 113 / D 112.
+- 183 referencias normativas con artículo/numeral identificable.
+- 268 referencias que requieren fortalecimiento de fuente.
+- 11 preguntas en la primera preauditoría jurídica: 10 concordantes preliminares y 1 concordante con cautela.
+- 0 fuentes marcadas `verificada:true` en los bancos de borrador, por diseño.
 
-## Diagnóstico de calidad editorial
+La existencia de una cita no equivale a verificación jurídica. La revisión humana se registra separadamente y sólo el compilador de producción materializa el estado de fuente verificada.
 
-La validación estructural confirma 451 preguntas/109 temas sin errores estructurales, pero el triaje formal demuestra que el banco generado todavía necesita depuración antes de uso como instrumento formal:
+## Qué es y qué no es este banco
 
-- 103 preguntas sin alertas automáticas;
-- 348 con una o más alertas;
-- 73 en severidad alta;
-- 335 con clave notablemente más larga que los distractores;
-- 187 con algún distractor demasiado corto;
-- 71 con señal normativa sólo en la correcta;
-- 57 con absolutismos concentrados en distractores;
-- 12 con enunciado metajurídico.
+Los 451 registros reproducen el **blueprint de cobertura** construido desde los cupos de confección de preguntas de la convocatoria docente 2026 y el temario aplicable desde PF N°93.
 
-Estas cifras se solapan y corresponden a heurísticas, no a errores jurídicos demostrados. El detalle está en [`CALIDAD_EDITORIAL.md`](CALIDAD_EDITORIAL.md).
+No se afirma que una prueba real tenga 451 preguntas. La etapa de alternativas descrita en las bases utiliza 90 preguntas. Tampoco se afirma una distribución oficial exacta de esas 90 entre bloque común y especialidad, porque esa distribución no está determinada en las fuentes de trabajo disponibles.
 
-`triaje.html` permite revisar estas alertas por código y severidad antes de invertir tiempo en la revisión jurídica.
+El modo de 90 usa una ponderación proporcional interna sobre `común + especialidad elegida`. Es una política de entrenamiento explícita, no una regla atribuida a la Academia Judicial.
 
-## Workflow progresivo
+## Entradas de usuario
 
-La estación `revision.html` reemplaza el antiguo control simple Aprobar/Corregir/Rechazar por seis ejes independientes:
+### `revision.html`
 
-- contenido jurídico;
-- fuente;
-- redacción;
-- distractores;
-- dificultad;
-- decisión progresiva.
+Simulador y estación de revisión humana. Permite:
 
-Los estados progresivos son:
+- elegir Civil, Penal, Familia o Laboral;
+- simulación de 90, mini sesiones y práctica temática;
+- revisar contenido jurídico, fuente, redacción, distractores y dificultad;
+- registrar revisor, fecha, fuente/versión, artículo/inciso y criterio jurisprudencial;
+- guardar localmente y exportar revisión/métricas.
 
-`revision_humana` → `corregir_editorial` / `verificar_juridicamente` → `aprobada_juridicamente` → `calibracion` → `aprobada_produccion`.
+### `triaje.html`
 
-`retirada` conserva trazabilidad de un ítem que no debe volver al pool activo.
+Tablero de calidad editorial. Las heurísticas actuales deben mostrar **451 preguntas limpias**. Su función permanece activa como control de regresiones futuras.
 
-La especificación completa está en [`WORKFLOW_REVISION.md`](WORKFLOW_REVISION.md).
+## Flujo de trabajo
 
-## Cómo revisar como usuario final
+El flujo operativo es:
 
-1. Abrir `pf93/triaje.html` para identificar primero riesgo alto y preguntas con pistas formales.
-2. Abrir `pf93/revision.html` mediante un servidor estático o una publicación de revisión.
-3. Elegir especialidad.
-4. Usar `Simulación PF93 · 90` para probar la experiencia de examen. La distribución se calcula proporcionalmente desde los cupos de la convocatoria docente y **no se presenta como distribución oficial de una prueba real**.
-5. Usar `Estación de revisión humana` para controlar pregunta por pregunta.
-6. Revisar separadamente contenido jurídico, fuente, redacción, distractores y dificultad.
-7. Registrar revisor, fecha, fuente efectivamente cotejada, artículo/inciso y jurisprudencia o criterio interpretativo cuando corresponda.
-8. Aplicar el estado sugerido o decidir manualmente. El sistema impide elevar una pregunta a aprobación jurídica o producción si no cumple los requisitos mínimos correspondientes.
-9. Exportar `revision-pf93.json` y `metricas-revision-pf93.csv`.
-10. Cuando exista revisión suficiente, ejecutar el compilador estricto de producción; revisar el banco resultante y su cobertura antes de integrarlo.
+`cobertura → corrección editorial → verificación jurídica → aprobación jurídica → calibración → aprobación de producción → compilación`
 
-Los datos se almacenan únicamente en `localStorage` hasta su exportación. No modifican automáticamente los archivos del repositorio.
+La fase de corrección editorial masiva ya está cerrada en el estado actual. La fase activa es la verificación jurídica.
 
-## Gate de producción en dos capas
+El detalle de estados y gates está en [`WORKFLOW_REVISION.md`](WORKFLOW_REVISION.md).
 
-La interfaz sólo permite marcar `aprobada_produccion` cuando el ítem supera el control jurídico/editorial y una calibración mínima inicial. Los umbrales de calibración son internos, no reglas de la Academia Judicial.
+## Prioridad actual
 
-Después, `compilar_produccion.cjs` aplica una segunda barrera reproducible. Además de la decisión humana exige dificultad adecuada, identificación de revisor/fecha/fuente, referencia normativa o criterio interpretativo, calibración suficiente y ausencia de alertas editoriales pendientes.
+### Cola A — revisión jurídica directa
+
+Revisar las **183 preguntas con referencia normativa específica**, comenzando por DCO, DAD y DPO por ser comunes a todas las especialidades.
+
+Para cada ítem comprobar:
+
+- vigencia y aplicabilidad de la disposición;
+- correspondencia exacta entre enunciado, clave y artículo/inciso;
+- existencia de una única mejor respuesta;
+- corrección de la explicación;
+- inexistencia de excepción o régimen transitorio omitido;
+- corrección individual de los tres distractores.
+
+### Cola B — saneamiento de fuentes
+
+Fortalecer las **268 referencias débiles**:
+
+- 20 jurisprudenciales genéricas;
+- 20 de otra naturaleza;
+- 228 normativas genéricas.
+
+Si la clave depende de jurisprudencia, identificar tribunal, rol, fecha, proposición jurídica y referencia recuperable. Si puede sostenerse directamente en norma vigente, preferir la fuente primaria.
+
+El procedimiento detallado está en [`PAQUETE_REVISION_HUMANA.md`](PAQUETE_REVISION_HUMANA.md).
+
+## Gate de producción
+
+Una pregunta no entra al banco productivo sólo porque una persona la marque como aprobada.
+
+`compilar_produccion.cjs` exige, entre otros:
+
+- decisión `aprobada_produccion`;
+- contenido jurídico correcto;
+- fuente verificada;
+- redacción y distractores aptos;
+- dificultad adecuada;
+- revisor y fecha;
+- fuente/versión efectiva;
+- artículo/inciso o criterio interpretativo identificable;
+- calibración mínima;
+- cero alertas editoriales.
 
 Uso:
 
@@ -78,95 +102,66 @@ Uso:
 node pf93/compilar_produccion.cjs revision-pf93.json pf93/banco-produccion.js
 ```
 
-Sólo la salida del compilador materializa `fuente.verificada:true`, usando los antecedentes concretos registrados por el revisor. El banco fuente permanece siempre como material de revisión.
+Los umbrales de calibración actuales son parámetros internos iniciales y no reglas de la Academia Judicial.
 
-## Jerarquía de fuentes usada para diseñar el producto
+## Arquitectura
 
-1. Reglamento General de la Academia Judicial publicado en Diario Oficial el 11 de junio de 2026: arquitectura general del proceso de selección.
-2. Temario del proceso de selección para el Programa de Formación especial, aplicable desde PF N°93: alcance temático.
-3. Bases 2026 de convocatoria docente para confección de preguntas: 90 preguntas en el examen de alternativas, códigos temáticos y cupos encargados por materia.
-4. Bases 2026 de casos y Acta N°462 del Consejo: orientación sobre etapa de casos, razonamiento jurídico y rúbrica; se usan para orientar estilo, no para inventar reglas de distribución del examen de alternativas.
+La explicación completa está en [`ARQUITECTURA.md`](ARQUITECTURA.md). En síntesis:
 
-## Decisiones metodológicas
+- `blueprint.js`: temas y cupos.
+- `banco-comun.js`: DCO/DAD/DPO.
+- `banco-civil.js`: DCI/DPC.
+- `banco-penal.js`: DPP/DPE.
+- `banco-familia.js`: DFA/DPFA.
+- `banco-laboral.js`: DLA/DPL.
+- `revision-workflow.js`: estados, revisión, métricas y ajustes iniciales.
+- `ajustes-l*.js`: capas de corrección trazables.
+- `capas-editoriales.cjs`: orden común de carga.
+- `calidad-editorial.js`: heurísticas de triaje.
+- `auditar_fuentes_juridicas.cjs`: clasificación estructural de referencias.
+- `compilar_produccion.cjs`: gate reproducible de producción.
+- `revision.html` y `triaje.html`: interfaces.
 
-### 451 cupos no equivalen a una prueba de 451 preguntas
+## Calidad editorial
 
-La convocatoria docente encarga un universo de preguntas por tema. El producto usa esos cupos como **blueprint de cobertura**. El examen señalado en las bases contiene 90 preguntas. No se encontró en las fuentes de trabajo una distribución oficial que diga cuántas de esas 90 corresponden exactamente a temario común o a cada submateria de la especialidad.
+El banco pasó de una línea base con numerosas pistas formales a **451/451 sin alertas** bajo las reglas actuales. El historial y los criterios del triaje están en [`CALIDAD_EDITORIAL.md`](CALIDAD_EDITORIAL.md).
 
-Por eso el modo de 90 preguntas calcula una ponderación proporcional sobre `común + especialidad elegida`. Es una política de simulación explícita y reemplazable.
+Este resultado no debe interpretarse como certificación psicométrica ni jurídica. Sólo significa que las señales formales codificadas por el analizador no están presentes en el runtime actual.
 
-### DCI-06 en sentido amplio
+## Revisión jurídica documentada
 
-El temario PF93 expresa `Acciones posesorias y reivindicatorias`. Las bases de confección usan una formulación más breve para ese cupo. Para preparación se adopta **el sentido amplio del temario PF93**, conservando cuatro cupos. La diferencia documental queda trazada pero no bloquea la cobertura.
+- [`AUDITORIA_COMUN_L1.md`](AUDITORIA_COMUN_L1.md): auditoría temprana del bloque común; es un documento histórico y varias observaciones editoriales fueron posteriormente abordadas por las capas L4–L13.
+- [`PREAUDITORIA_JURIDICA_L1.md`](PREAUDITORIA_JURIDICA_L1.md): primer lote de 11 cotejos jurídicos sobre preguntas L12.
 
-### Separación del banco histórico
+No usar una auditoría histórica como descripción del estado actual sin contrastarla con `ESTADO_PROYECTO.md` y el runtime vigente.
 
-La rama de origen conserva 484 registros históricos PF92/anteriores con filtros editoriales. Esta compilación no los sobrescribe ni los presenta como PF93 validados. Se creó un banco PF93 separado y temáticamente normalizado para evitar que duplicados históricos o etiquetas antiguas distorsionen la cobertura.
+## DCI-06
 
-## Estructura
+El temario PF93 expresa `Acciones posesorias y reivindicatorias`, mientras la convocatoria de confección utiliza una formulación más breve. Para cobertura se adopta el sentido amplio del temario PF93 manteniendo cuatro cupos. La diferencia documental se conserva como decisión metodológica explícita.
 
-- `blueprint.js`: 109 temas, códigos, especialidad y cupo de cobertura.
-- `banco-comun.js`: DCO + DAD + DPO.
-- `banco-civil.js`: DCI + DPC.
-- `banco-penal.js`: DPP + DPE.
-- `banco-familia.js`: DFA + DPFA.
-- `banco-laboral.js`: DLA + DPL.
-- `revision-workflow.js`: estados, ajustes L1 activos, normalización, sugerencias, métricas y gate de revisión.
-- `revision.html`: simulador y estación de revisión humana multicriterio.
-- `calidad-editorial.js`: motor de alertas formales.
-- `triaje.html`: tablero de priorización editorial.
-- `CALIDAD_EDITORIAL.md`: línea base de riesgos.
-- `AUDITORIA_COMUN_L1.md`: primera preauditoría sustantiva del bloque común.
-- `compilar_produccion.cjs`: compilación estricta desde una revisión exportada.
-- `validar_banco_pf93.cjs`: validación estructural, cobertura y alertas.
-- `resumen_calidad.cjs`: resumen de riesgo único por pregunta y código.
-- `validar_revision_workflow.cjs`, `validar_revision_html.cjs`, `validar_triaje_html.cjs` y `validar_compilador_produccion.cjs`: pruebas del circuito de revisión.
-- `WORKFLOW_REVISION.md`: protocolo operativo de revisión, promoción y compilación.
+## Separación del banco histórico
 
-## Criterios para aprobar jurídicamente un ítem
+Los archivos `../index.html` y `../preguntas.js` pertenecen al simulador histórico de 484 registros. No forman parte del runtime PF93.
 
-Un revisor no debería avanzar a `aprobada_juridicamente` hasta comprobar simultáneamente:
+El material histórico puede reutilizarse por contenido cuando sea pertinente, sin excluirlo por una etiqueta PF92/PF93 antigua, pero debe reclasificarse contra el temario vigente y superar el mismo circuito editorial/jurídico.
 
-- el enunciado corresponde al tema PF93 asignado;
-- existe una única alternativa defendible como correcta;
-- los distractores son plausibles y no se descartan por pistas de longitud, absolutismos absurdos o diferencias formales;
-- la explicación justifica la clave y no se limita a repetirla;
-- la norma citada está vigente a la fecha de revisión, incluyendo reformas y régimen transitorio cuando sea pertinente;
-- si la respuesta depende de jurisprudencia, el precedente o línea jurisprudencial está identificado y no se formula como regla absoluta cuando existe controversia;
-- el ítem no exige conocimientos fuera del temario salvo contexto estrictamente necesario.
-
-## Aceptación técnica
+## Validación técnica
 
 Desde la raíz del repositorio:
 
 ```bash
-node --check pf93/revision-workflow.js
-node --check pf93/calidad-editorial.js
-node --check pf93/compilar_produccion.cjs
 node pf93/validar_banco_pf93.cjs
 node pf93/resumen_calidad.cjs
+node pf93/validar_calidad_final.cjs
+node pf93/auditar_fuentes_juridicas.cjs
 node pf93/validar_revision_workflow.cjs
 node pf93/validar_compilador_produccion.cjs
 node pf93/validar_revision_html.cjs
 node pf93/validar_triaje_html.cjs
 ```
 
-GitHub Actions ejecuta estas verificaciones. El banco debe terminar con 451 registros, 109 temas y `errorCount: 0`; el workflow y el compilador deben superar sus pruebas.
+GitHub Actions ejecuta estas comprobaciones. La línea base vigente exige 451 preguntas, 109 temas, cero alertas editoriales, balance 113/113/113/112 y ausencia de fuentes autocertificadas en borrador.
 
-La comprobación funcional humana mínima comprende cuatro recorridos, uno por especialidad:
+## Documentación
 
-- iniciar simulación de 90 con el banco en revisión;
-- responder, omitir, retroceder y terminar;
-- comprobar desglose por código;
-- abrir el triaje y filtrar/exportar alertas;
-- abrir la estación de revisión y completar los seis ejes;
-- comprobar que una aprobación jurídica inválida sea bloqueada;
-- comprobar que producción quede bloqueada sin calibración suficiente;
-- recargar y verificar persistencia;
-- exportar JSON y CSV;
-- comprobar filtros por estado y pool;
-- ejecutar el compilador sobre una revisión exportada y comprobar que sólo incorpore registros que superen todas las barreras.
-
-## Pendiente humano real
-
-La etapa pendiente principal es **corregir las preguntas con pistas formales, validar jurídicamente las 451 preguntas y calibrar empíricamente las que superen esa revisión**. La infraestructura ya distingue cada fase y evita que la mera cobertura temática se confunda con un banco jurídicamente aprobado o listo para producción.
+El índice completo y las reglas de precedencia documental están en [`DOCUMENTACION.md`](DOCUMENTACION.md).
