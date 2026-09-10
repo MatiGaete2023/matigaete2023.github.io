@@ -1,6 +1,8 @@
-# PF93 — Paquete operativo de revisión humana
+# PF93 — paquete operativo de revisión humana
 
 Estado de referencia: 9 de septiembre de 2026.
+
+> Este documento describe **cómo ejecutar** la revisión humana. Para cifras y fase vigente, consultar primero [`ESTADO_PROYECTO.md`](ESTADO_PROYECTO.md). Para la jerarquía completa de documentos, ver [`DOCUMENTACION.md`](DOCUMENTACION.md).
 
 ## 1. Qué está listo
 
@@ -16,7 +18,7 @@ El producto de revisión contiene:
 - estación de revisión jurídica-editorial;
 - triaje y exportación;
 - compilador estricto de producción;
-- CI que controla estructura, cobertura, calidad editorial, fuentes, workflow, compilador e integración HTML.
+- CI que controla estructura, cobertura, calidad editorial, fuentes, documentación, workflow, compilador e integración HTML.
 
 Esto significa que el banco está **editorial y técnicamente preparado para revisión jurídica humana**. No significa que las 451 preguntas estén jurídicamente aprobadas.
 
@@ -37,7 +39,7 @@ La auditoría `auditar_fuentes_juridicas.cjs` clasifica actualmente las 451 refe
 
 ## 3. Dos colas de trabajo humano
 
-### Cola A — Semilla de producción
+### Cola A — semilla de producción
 
 Objetivo: obtener con rapidez un subconjunto confiable para comenzar pruebas reales.
 
@@ -52,7 +54,7 @@ Objetivo: obtener con rapidez un subconjunto confiable para comenzar pruebas rea
 4. Sólo después registrar `fuente=verificada` y `juridico=correcto` en la estación de revisión.
 5. Pasar a `aprobada_juridicamente`; la entrada a producción sigue requiriendo calibración.
 
-### Cola B — Saneamiento de fuentes
+### Cola B — saneamiento de fuentes
 
 Objetivo: eliminar referencias vagas antes de intentar aprobación.
 
@@ -66,7 +68,7 @@ Para jurisprudencia, registrar obligatoriamente: tribunal, rol, fecha, materia/p
 
 ## 4. Primera preauditoría ya efectuada
 
-`PREAUDITORIA_JURIDICA_L1.md` contiene un lote piloto de 11 preguntas L12:
+[`PREAUDITORIA_JURIDICA_L1.md`](PREAUDITORIA_JURIDICA_L1.md) contiene un lote piloto de 11 preguntas L12:
 
 - 10 `CONCORDANTE_PRELIMINAR` con fuente primaria;
 - 1 `CONCORDANTE_CON_CAUTELA` (`pf93-dpfa-08-04`), que debe cotejarse también en sede jurisprudencial por el alcance del recurso y las particularidades del proceso de familia;
@@ -134,13 +136,15 @@ No es necesario aprobar las 451 para comenzar a utilizar el sistema: es preferib
 
 ## 8. Archivos que debe mirar el revisor
 
+- [`ESTADO_PROYECTO.md`](ESTADO_PROYECTO.md): estado y prioridades vigentes.
 - `revision.html`: simulador + estación de revisión.
 - `triaje.html`: control editorial; actualmente debe mostrar 451 limpias.
-- `PREAUDITORIA_JURIDICA_L1.md`: primera muestra de cotejo jurídico.
+- [`PREAUDITORIA_JURIDICA_L1.md`](PREAUDITORIA_JURIDICA_L1.md): primera muestra de cotejo jurídico.
 - `auditar_fuentes_juridicas.cjs`: clasificación y cola de fuentes.
-- `WORKFLOW_REVISION.md`: reglas de estados y gates.
+- [`WORKFLOW_REVISION.md`](WORKFLOW_REVISION.md): reglas de estados y gates.
 - `compilar_produccion.cjs`: construcción estricta del banco productivo.
 - `validar_calidad_final.cjs`: invariante de calidad editorial y balance de claves.
+- [`ARQUITECTURA.md`](ARQUITECTURA.md): ubicación de cada responsabilidad técnica.
 
 ## 9. Invariantes que no deben relajarse
 
