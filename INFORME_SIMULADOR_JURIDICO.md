@@ -1,7 +1,11 @@
-# Implementación del simulador jurídico
+# Implementación del simulador jurídico — informe histórico
 
-Versión del banco: `2026-09-07-pf92-v1`  
-Rama: `codex/simulador-juridico-mejoras`
+> **DOCUMENTO HISTÓRICO.** Este informe describe la generación anterior del simulador (`index.html` + `preguntas.js`) y su banco de 484 registros. **No describe el estado actual de la compilación PF93.** Para el producto vigente consultar [`pf93/ESTADO_PROYECTO.md`](pf93/ESTADO_PROYECTO.md), [`pf93/README.md`](pf93/README.md) y [`pf93/DOCUMENTACION.md`](pf93/DOCUMENTACION.md).
+>
+> El material histórico no se descarta por estar etiquetado PF92 o anterior: puede reutilizarse cuando su contenido sustantivo corresponda al temario vigente, pero debe reclasificarse y pasar el workflow PF93 antes de integrarse.
+
+Versión histórica del banco: `2026-09-07-pf92-v1`  
+Rama histórica de referencia: `codex/simulador-juridico-mejoras`
 
 ## Qué se incorporó
 
@@ -15,38 +19,60 @@ Rama: `codex/simulador-juridico-mejoras`
 ## Motor y experiencia de uso
 
 - `index.html` pasa a ser una interfaz de sesiones: práctica libre, mini sesión de cinco preguntas, simulación de 90 preguntas, repaso de errores y favoritos.
-- La simulación de 90 preguntas selecciona primero una pregunta por familia y sólo reutiliza familia si no hay suficientes registros. Con el filtro editorial actual dispone de 105 familias seleccionables, por lo que una ejecución normal no repite variantes casi idénticas.
+- La simulación de 90 preguntas selecciona primero una pregunta por familia y sólo reutiliza familia si no hay suficientes registros. Con el filtro editorial de esa versión dispone de 105 familias seleccionables, por lo que una ejecución normal no repite variantes casi idénticas.
 - Las alternativas se barajan por pregunta y se conserva el orden en la sesión guardada. La letra de la alternativa deja de ser una pista.
 - La navegación permite anterior, siguiente, omitir, terminar, continuar una sesión interrumpida y marcar favoritos.
 - El feedback se construye con nodos DOM y `textContent`; no se inyectan enunciados ni fuentes con `innerHTML`.
 - Se añadió diseño responsive, foco visible, estados accesibles, `aria-live`, soporte para teclado y respeto de `prefers-reduced-motion`.
 - El temporizador usa un solo intervalo activo. El tiempo de cada respuesta y el tiempo total se guardan en el historial.
 
-## Analítica disponible
+## Analítica disponible en esa versión
 
 - El resultado muestra correctas, incorrectas, omitidas, precisión sobre respondidas, cobertura y tiempo activo.
 - Se desglosa la sesión por materia y se identifica la materia más débil en el historial acumulado.
 - `Exportar JSON` conserva sesiones, respuestas, favoritos, versión y hash del banco.
 - `Exportar CSV` entrega una fila por respuesta para tablas dinámicas, análisis de tiempo y seguimiento por pregunta.
-- La clave de almacenamiento cambió a `aj-simulador-v5`. Cada sesión incluye el hash SHA-256 del banco (`e286c8370b0477e3805637bd438a085e334eb2f1446fadd64164bb52752598f0`); si el banco cambia, no se reanuda una sesión incompatible.
+- La clave de almacenamiento de esa generación es `aj-simulador-v5`.
 
-## Revisión jurídica pendiente
+## Revisión jurídica que quedaba pendiente
 
-El motor marca todo el material como provisional o pendiente hasta una segunda revisión humana. Las fuentes del archivo adjunto no se trataron como autoridad por sí solas. Antes de usar el modo de 90 preguntas como preparación formal:
+El motor histórico marcaba el material como provisional o pendiente hasta una segunda revisión humana. Las fuentes del archivo de origen no se trataban como autoridad por sí solas.
 
-1. Cotejar cada fuente con el texto vigente en LeyChile, la Constitución, códigos y leyes especiales.
-2. Registrar artículo, inciso, fecha de consulta y, cuando corresponda, régimen transitorio.
-3. Aprobar el objetivo PF92 y la única clave correcta; si hay más de una interpretación defendible, convertirla en pregunta de respuesta fundada o retirarla.
-4. Revisar especialmente plazos civiles y laborales, ejecución fiscal, notificaciones electrónicas, recursos, cautelares penales, firma electrónica y ética judicial.
-5. Marcar el registro como `aprobada` sólo después de esa revisión. El código ya reconoce ese estado para poder separar el banco formal del banco de práctica.
+Los criterios de revisión identificados siguen siendo útiles como antecedente:
 
-## Cómo mantenerlo
+1. cotejar cada fuente con el texto vigente;
+2. registrar artículo, inciso, fecha de consulta y régimen transitorio cuando corresponda;
+3. comprobar la única mejor respuesta;
+4. revisar con especial cuidado plazos, recursos, cautelares, ejecución y reglas que dependan de vigencia;
+5. no convertir una cita en fuente verificada sin revisión real.
 
-1. Editar la fuente de preguntas y regenerar `preguntas.js`; no editar el HTML generado a mano.
-2. Ejecutar las validaciones disponibles en el repositorio (`node --check preguntas.js`, `node scripts/validar_banco.cjs`).
-3. Revisar una sesión mini y una de 90 preguntas: comprobar que no se repitan familias, que el cambio de letra no altere la clave y que el resumen coincida con las respuestas.
-4. Subir `preguntas.js`, `index.html` y este informe en una rama de revisión; revisar el diff y las fuentes antes de fusionar a `main`.
+El workflow PF93 posterior formaliza estos controles y debe usarse en lugar del sistema de estados de esta versión histórica.
 
-## Criterio de producto para la siguiente iteración
+## Cómo se mantenía esta generación
 
-El siguiente incremento debe añadir una matriz de objetivos PF92, dificultad calibrada con datos reales, intervalos de repaso espaciado y un modo de casos escritos con rúbrica. Esas funciones dependen de tener fuentes y claves aprobadas; implementarlas antes introduciría una falsa sensación de precisión.
+1. editar la fuente de preguntas y regenerar `preguntas.js`;
+2. ejecutar `node --check preguntas.js` y `node scripts/validar_banco.cjs`;
+3. revisar sesiones mini y de 90;
+4. revisar el diff antes de integrar cambios.
+
+## Relación con PF93
+
+Esta generación aportó:
+
+- material histórico reutilizable;
+- IDs/familias y trazabilidad;
+- experiencia de simulación;
+- detección inicial de pistas editoriales;
+- exportación y analítica.
+
+La compilación PF93 posterior reemplaza como línea vigente su taxonomía y proceso de calidad mediante:
+
+- blueprint de 109 temas/451 cupos;
+- bancos separados por bloque;
+- capas editoriales trazables;
+- triaje automatizado con gate de regresión;
+- workflow jurídico multicriterio;
+- auditoría de fuentes;
+- compilador estricto de producción.
+
+Por eso este archivo debe consultarse como **historia del producto**, no como manual de mantenimiento actual.

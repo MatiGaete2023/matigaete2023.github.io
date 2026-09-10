@@ -1,0 +1,70 @@
+name: Validar banco PF93
+on:
+  push:
+    branches:
+      - codex/pf93-revision-humana
+    paths:
+      - 'pf93/**'
+      - 'README.md'
+      - 'INFORME_SIMULADOR_JURIDICO.md'
+      - '.github/workflows/validar-pf93.yml'
+  pull_request:
+    paths:
+      - 'pf93/**'
+      - 'README.md'
+      - 'INFORME_SIMULADOR_JURIDICO.md'
+      - '.github/workflows/validar-pf93.yml'
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validar sintaxis JavaScript PF93
+        run: |
+          node --check pf93/blueprint.js
+          node --check pf93/banco-comun.js
+          node --check pf93/banco-civil.js
+          node --check pf93/banco-penal.js
+          node --check pf93/banco-familia.js
+          node --check pf93/banco-laboral.js
+          node --check pf93/revision-workflow.js
+          for f in pf93/ajustes-l*.js; do node --check "$f"; done
+          node --check pf93/capas-editoriales.cjs
+          node --check pf93/calidad-editorial.js
+          node --check pf93/compilar_produccion.cjs
+          node --check pf93/validar_compilador_produccion.cjs
+          node --check pf93/listar_prioridad_editorial.cjs
+          node --check pf93/listar_media_editorial.cjs
+          node --check pf93/listar_bajas_editorial.cjs
+          node --check pf93/validar_calidad_final.cjs
+          node --check pf93/auditar_fuentes_juridicas.cjs
+          node --check pf93/validar_documentacion.cjs
+      - name: Validar estructura y cobertura PF93
+        run: node pf93/validar_banco_pf93.cjs
+      - name: Resumir riesgos editoriales únicos
+        run: node pf93/resumen_calidad.cjs
+      - name: Listar cola editorial de riesgo alto
+        run: node pf93/listar_prioridad_editorial.cjs
+      - name: Listar cola editorial de riesgo medio
+        run: node pf93/listar_media_editorial.cjs
+      - name: Listar cola editorial de riesgo bajo
+        run: node pf93/listar_bajas_editorial.cjs
+      - name: Gate final de calidad editorial
+        run: node pf93/validar_calidad_final.cjs
+      - name: Auditar fuentes jurídicas del banco
+        run: node pf93/auditar_fuentes_juridicas.cjs
+      - name: Validar documentación PF93
+        run: node pf93/validar_documentacion.cjs
+      - name: Validar workflow editorial-jurídico
+        run: node pf93/validar_revision_workflow.cjs
+      - name: Validar compilador estricto de producción
+        run: node pf93/validar_compilador_produccion.cjs
+      - name: Validar integración HTML de revisión
+        run: node pf93/validar_revision_html.cjs
+      - name: Validar triaje editorial
+        run: node pf93/validar_triaje_html.cjs
