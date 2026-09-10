@@ -41,13 +41,18 @@ validateLocalLinks('AUDITORIA_COMUN_L1.md');
 validateLocalLinks('PREAUDITORIA_JURIDICA_L1.md');
 
 const status=fs.existsSync(path.join(__dirname,'ESTADO_PROYECTO.md'))?fs.readFileSync(path.join(__dirname,'ESTADO_PROYECTO.md'),'utf8'):'';
-for(const marker of ['**109**','**451**','A 113 / B 113 / C 113 / D 112','**183**','**268**']){
-  expect(status.includes(marker),`ESTADO_PROYECTO.md no contiene marcador vigente: ${marker}`);
-}
+const stateChecks=[
+  ['109 temas',/\b109\b[^\n]{0,40}temas|temas[^\n]{0,40}\b109\b/i],
+  ['451 preguntas',/\b451\b[^\n]{0,50}preguntas|preguntas[^\n]{0,50}\b451\b/i],
+  ['balance A/B/C/D',/A\s*113\s*\/\s*B\s*113\s*\/\s*C\s*113\s*\/\s*D\s*112/i],
+  ['183 referencias específicas',/\b183\b[^\n]{0,80}(?:referencias|preguntas)/i],
+  ['268 referencias débiles',/\b268\b[^\n]{0,80}(?:referencias|preguntas)/i]
+];
+for(const [label,re] of stateChecks)expect(re.test(status),`ESTADO_PROYECTO.md no refleja el dato vigente: ${label}`);
 
 const quality=fs.existsSync(path.join(__dirname,'CALIDAD_EDITORIAL.md'))?fs.readFileSync(path.join(__dirname,'CALIDAD_EDITORIAL.md'),'utf8'):'';
-expect(quality.includes('sin alertas: **451**'),'CALIDAD_EDITORIAL.md no refleja 451 preguntas limpias');
-expect(quality.includes('referencia histórica'),'CALIDAD_EDITORIAL.md debe distinguir la línea base histórica');
+expect(/sin alertas:\s*\*\*451\*\*/i.test(quality),'CALIDAD_EDITORIAL.md no refleja 451 preguntas limpias');
+expect(/referencia histórica/i.test(quality),'CALIDAD_EDITORIAL.md debe distinguir la línea base histórica');
 
 const legacy=fs.existsSync(path.join(ROOT,'INFORME_SIMULADOR_JURIDICO.md'))?fs.readFileSync(path.join(ROOT,'INFORME_SIMULADOR_JURIDICO.md'),'utf8'):'';
 expect(legacy.includes('DOCUMENTO HISTÓRICO'),'El informe de raíz debe estar identificado como histórico');
