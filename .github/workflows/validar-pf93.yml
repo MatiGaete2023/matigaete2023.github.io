@@ -5,10 +5,14 @@ on:
       - codex/pf93-revision-humana
     paths:
       - 'pf93/**'
+      - 'README.md'
+      - 'INFORME_SIMULADOR_JURIDICO.md'
       - '.github/workflows/validar-pf93.yml'
   pull_request:
     paths:
       - 'pf93/**'
+      - 'README.md'
+      - 'INFORME_SIMULADOR_JURIDICO.md'
       - '.github/workflows/validar-pf93.yml'
 permissions:
   contents: read
@@ -39,6 +43,7 @@ jobs:
           node --check pf93/listar_bajas_editorial.cjs
           node --check pf93/validar_calidad_final.cjs
           node --check pf93/auditar_fuentes_juridicas.cjs
+          node --check pf93/validar_documentacion.cjs
       - name: Validar estructura y cobertura PF93
         run: node pf93/validar_banco_pf93.cjs
       - name: Resumir riesgos editoriales únicos
@@ -53,6 +58,8 @@ jobs:
         run: node pf93/validar_calidad_final.cjs
       - name: Auditar fuentes jurídicas del banco
         run: node pf93/auditar_fuentes_juridicas.cjs
+      - name: Validar documentación PF93
+        run: node pf93/validar_documentacion.cjs
       - name: Validar workflow editorial-jurídico
         run: node pf93/validar_revision_workflow.cjs
       - name: Validar compilador estricto de producción
