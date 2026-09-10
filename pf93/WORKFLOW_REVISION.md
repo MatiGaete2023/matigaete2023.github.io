@@ -1,22 +1,24 @@
-# Workflow progresivo de revisión PF93
+# PF93 — workflow progresivo de revisión
 
-Este documento define cómo transformar las 451 preguntas de cobertura editorial en un banco apto para uso formal. Los estados no sustituyen el juicio del revisor y no convierten una cita orientativa en fuente verificada.
+Este documento define cómo transformar las 451 preguntas del banco de cobertura en un subconjunto jurídicamente revisado, calibrado y apto para producción.
 
-## Estados
+> Estado actual: el triaje editorial automatizado está cerrado en 451/451 preguntas limpias. La fase activa es la verificación jurídica humana. Véase `ESTADO_PROYECTO.md`.
 
-1. `revision_humana`: registro recién incorporado o migrado, sin decisión suficiente.
-2. `corregir_editorial`: el objetivo jurídico puede servir, pero hay un defecto de redacción o de distractores.
-3. `verificar_juridicamente`: falta comprobar norma vigente, fuente, interpretación o unicidad de la clave.
+## 1. Estados
+
+1. `revision_humana`: registro incorporado al banco, sin revisión suficiente.
+2. `corregir_editorial`: existe un defecto de redacción, estructura o distractores que impide avanzar.
+3. `verificar_juridicamente`: falta comprobar norma vigente, fuente, interpretación, aplicabilidad o unicidad de la clave.
 4. `aprobada_juridicamente`: contenido correcto, fuente verificada, redacción apta y distractores aptos.
-5. `calibracion`: jurídicamente apta, pero todavía debe observarse su funcionamiento empírico.
-6. `aprobada_produccion`: supera revisión jurídica/editorial y el gate interno de calibración; queda candidata a integrar el banco formal.
-7. `retirada`: no debe volver al pool activo; se conserva la decisión para trazabilidad.
+5. `calibracion`: jurídicamente apta; requiere observar su funcionamiento empírico.
+6. `aprobada_produccion`: supera revisión jurídica/editorial y el gate interno de calibración; queda candidata al banco formal.
+7. `retirada`: no debe volver al pool activo; se conserva para trazabilidad.
 
-La decisión `aprobada_produccion` de la interfaz es necesaria, pero **no suficiente** para materializar una pregunta en el archivo final: el compilador estricto aplica controles adicionales reproducibles.
+La decisión `aprobada_produccion` registrada en interfaz es necesaria pero no suficiente: `compilar_produccion.cjs` vuelve a comprobar los requisitos antes de generar el artefacto productivo.
 
-## Ejes independientes de revisión
+## 2. Ejes independientes
 
-Cada pregunta registra:
+Cada revisión registra:
 
 - **Contenido jurídico:** pendiente / correcto / dudoso / incorrecto.
 - **Fuente:** pendiente / verificada / insuficiente / desactualizada.
@@ -25,44 +27,127 @@ Cada pregunta registra:
 - **Dificultad:** pendiente / adecuada / demasiado fácil / demasiado difícil.
 - **Decisión progresiva:** uno de los siete estados anteriores.
 
-Además admite revisor, fecha, fuente o versión efectivamente consultada, artículo/inciso, criterio interpretativo o jurisprudencia y nota de corrección.
+Además se registra:
 
-## Triaje editorial previo
+- revisor;
+- fecha de verificación;
+- fuente o versión efectivamente consultada;
+- artículo/inciso;
+- criterio interpretativo o jurisprudencia, cuando corresponda;
+- nota de revisión o corrección.
 
-Antes de invertir tiempo en cotejo normativo, `triaje.html` y `calidad-editorial.js` detectan señales formales que pueden permitir responder sin suficiente conocimiento jurídico:
+## 3. Secuencia normal desde el estado actual
 
-- alternativa correcta considerablemente más larga;
-- referencia normativa explícita sólo en la clave;
-- distractores excesivamente cortos;
-- distractores con absolutismos o marcadores categóricos;
-- enunciados metajurídicos/metodológicos.
+### Etapa A — resolver la pregunta
 
-Las alertas no cambian el estado jurídico y no retiran preguntas automáticamente. Sirven para priorizar `corregir_editorial` antes de la revisión normativa. La línea base y las cifras por código están documentadas en `CALIDAD_EDITORIAL.md`.
+El revisor debe contestar el ítem antes de mirar la explicación. Esto permite detectar si la clave es identificable por conocimiento jurídico y si existe una alternativa competidora razonable.
 
-## Reglas de avance
+### Etapa B — cotejo normativo/jurisprudencial
 
-`aprobada_juridicamente`, `calibracion` y `aprobada_produccion` exigen simultáneamente en la interfaz:
+Comprobar:
+
+1. que la materia corresponda al tema PF93 asignado;
+2. vigencia de la norma;
+3. aplicabilidad al supuesto;
+4. artículo/inciso exacto;
+5. excepciones relevantes;
+6. reglas transitorias cuando correspondan;
+7. jurisprudencia identificable si la clave depende de interpretación judicial.
+
+### Etapa C — unicidad de la clave
+
+No basta comprobar que la respuesta marcada sea correcta. Debe demostrarse que los tres distractores son incorrectos o inferiores **bajo los mismos hechos del enunciado**.
+
+Si dos alternativas son defendibles, la pregunta no avanza a aprobación jurídica.
+
+### Etapa D — decisión
+
+- contenido o fuente insuficientes → `verificar_juridicamente`;
+- defecto formal descubierto durante el cotejo → `corregir_editorial`;
+- regla equivocada/no recuperable → `retirada` o reconstrucción;
+- contenido y fuente comprobados, con redacción/distractores aptos → `aprobada_juridicamente`.
+
+### Etapa E — calibración
+
+Las preguntas aprobadas jurídicamente se utilizan en práctica controlada para reunir:
+
+- respuestas;
+- acierto;
+- omisiones;
+- tiempo de respuesta;
+- distribución de elección entre alternativas.
+
+### Etapa F — producción
+
+Después de calibración suficiente, el revisor puede llevar el ítem a `aprobada_produccion`. El compilador verifica nuevamente todas las barreras.
+
+## 4. Prioridad jurídica vigente
+
+La auditoría estructural de fuentes divide el banco en dos colas.
+
+### Cola A — 183 referencias normativas específicas
+
+Son el mejor punto de partida para construir una semilla jurídicamente aprobada. El orden recomendado es:
+
+1. DCO + DAD + DPO;
+2. especialidad principal de uso;
+3. restantes especialidades.
+
+Una referencia específica reduce trabajo de búsqueda, pero no se considera verificada hasta cotejarla con el texto vigente.
+
+### Cola B — 268 referencias débiles
+
+Orden recomendado:
+
+1. 20 jurisprudenciales genéricas;
+2. 20 referencias de otra naturaleza;
+3. 228 normativas genéricas.
+
+Las jurisprudenciales deben individualizar tribunal, rol, fecha, proposición utilizada y fuente recuperable cuando el precedente sea necesario para sostener la clave.
+
+## 5. Triaje editorial
+
+`calidad-editorial.js` y `triaje.html` detectan señales formales como:
+
+- clave demasiado larga;
+- cita normativa sólo en la correcta;
+- distractor excesivamente corto;
+- absolutismos concentrados en distractores;
+- enunciados metajurídicos.
+
+En la línea base vigente existen **0 alertas**. Por eso el triaje dejó de ser una cola de trabajo masivo y pasó a cumplir principalmente una función de **control de regresión**.
+
+Si una revisión jurídica obliga a reescribir una pregunta y reaparece una alerta, el ítem debe volver a `corregir_editorial` hasta resolverla.
+
+## 6. Reglas de aprobación jurídica
+
+Para avanzar a `aprobada_juridicamente`, `calibracion` o `aprobada_produccion`, la interfaz exige simultáneamente:
 
 - contenido jurídico = `correcto`;
 - fuente = `verificada`;
 - redacción = `apta`;
 - distractores = `aptos`.
 
-Si el contenido es `incorrecto`, el sistema sugiere `retirada`. Si redacción o distractores requieren corrección, sugiere `corregir_editorial`. Si falta fuente o certeza jurídica, sugiere `verificar_juridicamente`.
+Como estándar humano, además debe existir evidencia suficiente de:
 
-## Gate interno de producción de la interfaz
+- norma vigente y aplicable;
+- correspondencia exacta fuente ↔ clave;
+- única mejor respuesta;
+- explicación limitada a lo que las fuentes sostienen;
+- distractores incorrectos bajo el mismo supuesto;
+- jurisprudencia identificada si la respuesta depende de ella.
+
+## 7. Gate interno de calibración
 
 La interfaz no permite aprobar para producción mientras no se cumplan los requisitos jurídicos/editoriales y, además:
 
-- existan al menos **20 respuestas empíricas** para el ítem;
+- existan al menos **20 respuestas empíricas**;
 - el porcentaje de acierto no esté en zona de alerta extrema (<20 % o >90 %);
 - la dificultad no esté expresamente marcada como demasiado fácil o demasiado difícil.
 
-Los valores 20 %, 90 % y 20 respuestas son **umbrales internos iniciales de calibración**, no parámetros de la Academia Judicial. Deben revisarse cuando exista una muestra suficiente de uso real.
+Estos valores son **parámetros internos iniciales**, no criterios de la Academia Judicial. Deben revisarse con datos reales suficientes.
 
-## Compilador estricto de producción
-
-`compilar_produccion.cjs` toma el JSON exportado desde la estación de revisión y genera un archivo de producción separado. No modifica los bancos fuente.
+## 8. Compilador estricto de producción
 
 Uso:
 
@@ -70,74 +155,64 @@ Uso:
 node pf93/compilar_produccion.cjs revision-pf93.json pf93/banco-produccion.js
 ```
 
-Para aceptar un ítem exige simultáneamente:
+Para aceptar un ítem exige:
 
-- decisión humana = `aprobada_produccion`;
-- contenido jurídico = `correcto`;
-- fuente = `verificada`;
-- redacción = `apta`;
-- distractores = `aptos`;
-- dificultad = `adecuada`;
-- nombre/iniciales del revisor;
-- fecha de verificación válida;
-- identificación de la fuente o versión efectivamente consultada;
+- decisión humana `aprobada_produccion`;
+- contenido jurídico correcto;
+- fuente verificada;
+- redacción y distractores aptos;
+- dificultad adecuada;
+- revisor;
+- fecha válida;
+- fuente/versión consultada;
 - artículo/inciso o criterio interpretativo identificable;
-- al menos 20 respuestas de calibración;
-- porcentaje de acierto entre 20 % y 90 %;
-- **cero alertas pendientes del triaje editorial automático**.
+- calibración mínima;
+- porcentaje de acierto dentro del rango interno;
+- cero alertas editoriales.
 
-Sólo el archivo compilado materializa `fuente.verificada:true`, incorporando la evidencia registrada por el revisor. De este modo, una selección manual equivocada no transforma por sí sola una cita orientativa en una fuente formalmente validada.
+Sólo la salida compilada materializa `fuente.verificada:true` con la trazabilidad registrada por el revisor. Los bancos de borrador permanecen con `false`.
 
-El compilador informa además los temas sin ninguna pregunta de producción y los temas que aún no alcanzan su cupo de cobertura. Por diseño puede generar un banco parcial durante la revisión; no debe reemplazar el banco de entrenamiento hasta que exista volumen suficiente.
+El compilador puede generar un banco parcial. No debe reemplazar el banco de entrenamiento mientras no exista volumen/cobertura suficientes para el uso previsto.
 
-## Datos de calibración
+## 9. Prueba del gate
 
-Por pregunta se registran localmente:
+Como el banco real está actualmente libre de alertas, la prueba del compilador utiliza una pregunta defectuosa **sintética** para comprobar que el gate sigue rechazando riesgo editorial. No se debe reintroducir una pregunta defectuosa real con fines de testing.
 
-- exposiciones;
-- respuestas;
-- correctas;
-- omisiones;
-- distribución de selección entre las cuatro alternativas originales;
-- porcentaje de acierto;
-- tiempo medio de respuesta.
+## 10. Datos y persistencia
 
-La finalidad es detectar preguntas demasiado fáciles, demasiado difíciles, ambiguas o con distractores inoperantes. La métrica no reemplaza la revisión jurídica.
+`revision.html` guarda localmente la revisión y las métricas en `localStorage`. Permite exportar:
 
-## Migración desde la revisión simple v1
+- `revision-pf93.json`;
+- `metricas-revision-pf93.csv`.
 
-La versión anterior sólo permitía Aprobar / Corregir / Rechazar. Al migrar:
+Los datos locales no modifican el repositorio. Para incorporarlos a un artefacto productivo se utiliza el compilador y se revisa el diff resultante.
 
-- `corregir` pasa a `corregir_editorial`;
-- `rechazada` pasa a `retirada`;
-- una antigua `aprobada` **no** pasa a aprobación jurídica, porque aquella decisión no acreditaba fuente verificada ni los controles separados. Se conserva como `revision_humana` con nota de migración.
+## 11. Migración desde la revisión simple anterior
 
-Esta regla evita elevar automáticamente preguntas a un estándar que la interfaz anterior no podía demostrar.
+Una decisión antigua no se eleva automáticamente al nuevo estándar:
 
-## Orden recomendado de revisión
+- `corregir` → `corregir_editorial`;
+- `rechazada` → `retirada`;
+- antigua `aprobada` → `revision_humana` con nota de migración.
 
-1. Ejecutar/consultar `triaje.html` y corregir primero riesgo alto y enunciados metajurídicos.
-2. Bloque común DCO + DAD + DPO (84 preguntas), priorizando las 28 que están limpias de alertas automáticas para revisión jurídica directa y las restantes por riesgo editorial.
-3. Especialidad que utilizará efectivamente el postulante.
-4. Restantes especialidades.
-5. Calibración de las preguntas jurídicamente aprobadas.
-6. Compilación de producción y comprobación de cobertura resultante.
+La razón es que el control anterior no acreditaba por separado fuente, contenido, distractores y calibración.
 
-## Exportaciones
+## 12. Uso del simulador según pool
 
-`revision.html` permite exportar:
+- **Todo el banco en revisión:** entrenamiento y control interno; puede incluir contenido jurídicamente no verificado.
+- **Aprobadas jurídicamente o superiores:** práctica con contenido que ya superó revisión jurídica/editorial.
+- **Sólo aprobadas para producción:** subconjunto que además supera el gate de calibración/compilación.
 
-- `revision-pf93.json`: revisión completa, métricas y versión del blueprint;
-- `metricas-revision-pf93.csv`: una fila por pregunta con estado, controles, métricas y gate de producción.
+La simulación de 90 usa una ponderación proporcional interna basada en los cupos de confección y no se presenta como distribución oficial publicada del examen.
 
-`triaje.html` exporta `triaje-editorial-pf93.csv` con los registros filtrados por riesgo.
+## 13. Regla de retorno
 
-Los datos de revisión se guardan en `localStorage`; no modifican por sí solos los archivos del repositorio. Para consolidarlos en un banco de producción se usa el compilador estricto y posteriormente se revisa el diff antes de cualquier integración.
+Cualquier cambio posterior puede devolver una pregunta a una etapa anterior:
 
-## Criterio de uso del simulador
+- reforma legal → `verificar_juridicamente`;
+- nueva jurisprudencia relevante → `verificar_juridicamente`;
+- ambigüedad detectada por usuarios → `corregir_editorial` o `verificar_juridicamente`;
+- mal comportamiento empírico → `calibracion` o corrección;
+- imposibilidad de sostener una única clave → `retirada`.
 
-- **Todo el banco en revisión:** útil para control editorial y pruebas internas.
-- **Aprobadas jurídicamente o superiores:** práctica con contenido que ya superó el control jurídico-editorial, aunque pueda faltar calibración.
-- **Sólo aprobadas para producción:** modo destinado al producto formal una vez que exista volumen suficiente.
-
-La simulación de 90 preguntas continúa usando una ponderación de entrenamiento basada en los cupos de confección de la convocatoria. Esa ponderación no se presenta como distribución oficial publicada del examen real.
+La promoción nunca es irreversible si cambian los fundamentos que la justificaron.
