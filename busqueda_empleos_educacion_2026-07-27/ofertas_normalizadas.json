@@ -1,0 +1,3498 @@
+{
+  "run_date": "2026-07-27",
+  "run_timestamp_santiago": "2026-07-27T12:30:00-04:00",
+  "schema_version": "1.0",
+  "cv_available": false,
+  "fit_status": "PROVISIONAL - no hay CV adjunto en el entorno",
+  "network_status": {
+    "websearch": "operativo",
+    "webfetch": "bloqueado - gateway responde 403 a CONNECT para todo host externo",
+    "consecuencia": "ninguna oferta puede alcanzar verified_active en esta corrida"
+  },
+  "totals": {
+    "raw_findings": 47,
+    "unique_after_dedup": 41,
+    "duplicates_merged": 6,
+    "verified_active": 0,
+    "probable": 2,
+    "unverifiable": 32,
+    "expired": 7
+  },
+  "records": [
+    {
+      "title": "Ranking: Educadora de Párvulos, varias comunas, Región del Bio Bío",
+      "employer": "JUNJI (Junta Nacional de Jardines Infantiles), Dirección Regional Biobío",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "Varias comunas Región del Biobío (No informado cuáles específicamente)",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://junji.myfront.cl/oferta-de-empleo/6835/ranking-educadora-de-parvulos-varias-comunas-region-del-bio-bio-2/",
+      "official_url": "https://junji.myfront.cl/oferta-de-empleo/6835/ranking-educadora-de-parvulos-varias-comunas-region-del-bio-bio-2/",
+      "apply_url": "No informado",
+      "requisition_id": "6835",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página (WebFetch devolvió 403 en todo el dominio junji.myfront.cl). Snippet de búsqueda describe: 'A ranking/database for replacement positions to cover vacancies in Childhood Education Centers in the Biobío region... Candidates must have a professional degree as Educadora de Párvulos from a state university'. No se observó fecha de cierre ni confirmación de comunas específicas.",
+      "functions": [
+        "INFERENCIA: liderar procesos de aprendizaje y bienestar integral de párvulos, según descripción estándar del cargo en JUNJI"
+      ],
+      "mandatory_requirements": [
+        "Título profesional de Educadora de Párvulos de universidad del Estado o reconocida por éste"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado (ranking/base de reemplazos, no vacante única)",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "comunas específicas cubiertas"
+      ],
+      "warnings": [
+        "Es un 'ranking' (banco de reemplazos), no una vacante puntual; el mecanismo de postulación y las comunas exactas cubiertas no pudieron confirmarse por bloqueo de WebFetch."
+      ],
+      "_agent": "A",
+      "dedup_group": "G01",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://junji.myfront.cl/oferta-de-empleo/6835/ranking-educadora-de-parvulos-varias-comunas-region-del-bio-bio-2/",
+      "liveness_por_agente": {
+        "A": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://junji.myfront.cl/oferta-de-empleo/6835/ranking-educadora-de-parvulos-varias-comunas-region-del-bio-bio-2/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "experiencia_funcional": 0.8,
+          "transferible": 0.25,
+          "ubicacion": 0.2
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "Funciones de aula/parvularia. Anos exactos de experiencia en aula NO constan en el dossier (sin CV).",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna/zona no confirmada dentro de las 7 autorizadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 74.7
+      }
+    },
+    {
+      "title": "Encargada de Jardín Infantil UBB Collao, comuna de Concepción",
+      "employer": "JUNJI, Región del Biobío",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://junji.myfront.cl/oferta-de-empleo/3899/encargada-de-jardin-infantil-ubb-collao-comuna-de-concepcion-region-del-bio-bio/",
+      "official_url": "https://junji.myfront.cl/oferta-de-empleo/3899/encargada-de-jardin-infantil-ubb-collao-comuna-de-concepcion-region-del-bio-bio/",
+      "apply_url": "No informado",
+      "requisition_id": "3899",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Título de la ficha localizado por buscador: 'Encargada de Jardín Infantil UBB Collao, comuna de Concepción - Región del Bio - Bío'. No se pudo abrir la página (403 en todo junji.myfront.cl) para confirmar vigencia, fecha ni si es proceso externo o interno.",
+      "functions": [
+        "INFERENCIA: dirección/coordinación de jardín infantil (cargo 'Encargada')"
+      ],
+      "mandatory_requirements": [],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "requisitos",
+        "contract",
+        "hours",
+        "salary"
+      ],
+      "warnings": [
+        "Existe una ficha paralela titulada 'Proceso Interno: Encargada Jardín Infantil UBB Collao' (id 3802) para el mismo jardín; no se pudo determinar si la ficha 3899 es la versión abierta a público externo o si ambas ya están cerradas."
+      ],
+      "_agent": "A",
+      "dedup_group": "G02",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://junji.myfront.cl/oferta-de-empleo/3899/encargada-de-jardin-infantil-ubb-collao-comuna-de-concepcion-region-del-bio-bio/",
+      "liveness_por_agente": {
+        "A": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://junji.myfront.cl/oferta-de-empleo/3899/encargada-de-jardin-infantil-ubb-collao-comuna-de-concepcion-region-del-bio-bio/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "experiencia_funcional": 0.8,
+          "transferible": 0.85,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "Funciones de aula/parvularia. Anos exactos de experiencia en aula NO constan en el dossier (sin CV).",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 90.9
+      }
+    },
+    {
+      "title": "Traslado: Educadora de Párvulos, JI Magallanes, comuna Concepción",
+      "employer": "JUNJI, Región del Biobío",
+      "category": "F1",
+      "relevance_type": "adyacente",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://junji.myfront.cl/oferta-de-empleo/8292/traslado-educadora-de-parvulos-ji-magallanes-comuna-concepcion-region-del-biobio/",
+      "official_url": "https://junji.myfront.cl/oferta-de-empleo/8292/traslado-educadora-de-parvulos-ji-magallanes-comuna-concepcion-region-del-biobio/",
+      "apply_url": "No informado",
+      "requisition_id": "8292",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Título localizado por buscador: 'Traslado: Educadora de Párvulos, JI Magallanes, comuna Concepción; Región del Biobio'. Página no abierta (403).",
+      "functions": [],
+      "mandatory_requirements": [],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "todos los demás"
+      ],
+      "warnings": [
+        "'Traslado' es habitualmente un proceso de movilidad interna solo para funcionarias/os ya contratadas por JUNJI; muy probablemente NO aplica a postulantes externas. Se incluye por transparencia, pero su relevancia práctica para la candidata es baja/nula salvo indicación en contrario."
+      ],
+      "_agent": "A",
+      "dedup_group": "G03",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://junji.myfront.cl/oferta-de-empleo/8292/traslado-educadora-de-parvulos-ji-magallanes-comuna-concepcion-region-del-biobio/",
+      "liveness_por_agente": {
+        "A": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://junji.myfront.cl/oferta-de-empleo/8292/traslado-educadora-de-parvulos-ji-magallanes-comuna-concepcion-region-del-biobio/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 40.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Reemplazo Educadora Diferencial, Programa Atención Temprana, Concepción",
+      "employer": "JUNJI, Región del Biobío",
+      "category": "F1",
+      "relevance_type": "adyacente",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://junji.myfront.cl/oferta-de-empleo/12280/reemplazo-educadora-diferencial-programa-atencion-temprana-concepcion-region-del-biobio/",
+      "official_url": "https://junji.myfront.cl/oferta-de-empleo/12280/reemplazo-educadora-diferencial-programa-atencion-temprana-concepcion-region-del-biobio/",
+      "apply_url": "No informado",
+      "requisition_id": "12280",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Título localizado por buscador; página no abierta (403 en junji.myfront.cl).",
+      "functions": [],
+      "mandatory_requirements": [
+        "INFERENCIA: título de Educadora Diferencial (no Educadora de Párvulos genérica); requisito posiblemente distinto al perfil de la candidata"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "requisitos exactos"
+      ],
+      "warnings": [
+        "El cargo es específicamente 'Educadora Diferencial', que podría exigir mención en educación especial/diferencial distinta a la formación base de educadora de párvulos; ajuste (fit) queda como PROVISIONAL dado que no hay CV disponible en este entorno."
+      ],
+      "_agent": "A",
+      "dedup_group": "G04",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://junji.myfront.cl/oferta-de-empleo/12280/reemplazo-educadora-diferencial-programa-atencion-temprana-concepcion-region-del-biobio/",
+      "liveness_por_agente": {
+        "A": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://junji.myfront.cl/oferta-de-empleo/12280/reemplazo-educadora-diferencial-programa-atencion-temprana-concepcion-region-del-biobio/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 55.0,
+        "ajuste_pct": 79.5
+      }
+    },
+    {
+      "title": "Base de datos 2025, Educadoras de Párvulos, Provincia de Concepción, Región del Biobío",
+      "employer": "Fundación Integra",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "Provincia de Concepción (incluye potencialmente Concepción, Chiguayante, Hualqui, Talcahuano, Hualpén, San Pedro de la Paz, Penco)",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://login.airavirtual.com/postula/j3ZkHqmHSmAwEdJ4I1Ab",
+      "official_url": "https://login.airavirtual.com/postula/j3ZkHqmHSmAwEdJ4I1Ab",
+      "apply_url": "https://login.airavirtual.com/postula/j3ZkHqmHSmAwEdJ4I1Ab",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Snippet de búsqueda: 'Fundación Integra is seeking to hire Educators of Preschoolers with working hours from 8:30 to 17:30 hours, for various communes in the Concepción Province, Biobío Region... appears to be an open database for future replacement and permanent positions.' No se pudo abrir la página (login.airavirtual.com no fue probado directamente por WebFetch pero el dominio raíz integra.cl sí devolvió 403; se asume mismo bloqueo sistémico).",
+      "functions": [
+        "INFERENCIA: liderar procesos pedagógicos de niñas y niños, coordinación con equipo, implementación de ambientes de aprendizaje (según descripción estándar Integra)"
+      ],
+      "mandatory_requirements": [],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "08:30 a 17:30 (según snippet)",
+      "salary": "No informado",
+      "vacancies": "No informado (base de datos, no vacante única)",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "requisition_id",
+        "contract",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "El aviso está rotulado 'Base de datos 2025' pese a que la fecha de ejecución es 2026-07-27; podría tratarse de un ciclo ya reemplazado por una versión 2026 no indexada, o seguir vigente como banco continuo. Requiere verificación directa en integra.cl/trabaja-con-nosotros que no pudo realizarse por bloqueo de WebFetch."
+      ],
+      "_agent": "A",
+      "dedup_group": "G05",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://login.airavirtual.com/postula/j3ZkHqmHSmAwEdJ4I1Ab",
+      "liveness_por_agente": {
+        "A": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://login.airavirtual.com/postula/j3ZkHqmHSmAwEdJ4I1Ab",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "experiencia_funcional": 0.8,
+          "transferible": 0.85,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "Funciones de aula/parvularia. Anos exactos de experiencia en aula NO constan en el dossier (sin CV).",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 90.9
+      }
+    },
+    {
+      "title": "Base de Datos Reemplazos Asistente de Extensión Horaria para Jardines Infantiles de Concepción",
+      "employer": "Fundación Integra",
+      "category": "F1",
+      "relevance_type": "parcialmente_transferible",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://login.airavirtual.com/postula/g03WhUn2RQzhvjlviVCc",
+      "official_url": "https://login.airavirtual.com/postula/g03WhUn2RQzhvjlviVCc",
+      "apply_url": "https://login.airavirtual.com/postula/g03WhUn2RQzhvjlviVCc",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Título localizado por buscador; página no abierta (bloqueo sistémico de WebFetch).",
+      "functions": [],
+      "mandatory_requirements": [],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "casi todos los campos, solo se cuenta con el título"
+      ],
+      "warnings": [
+        "Cargo de 'Asistente de Extensión Horaria', no es rol de educadora de párvulos; se incluye como adyacente de baja prioridad dentro de F1."
+      ],
+      "_agent": "A",
+      "dedup_group": "G06",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://login.airavirtual.com/postula/g03WhUn2RQzhvjlviVCc",
+      "liveness_por_agente": {
+        "A": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://login.airavirtual.com/postula/g03WhUn2RQzhvjlviVCc",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 5.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Evaluador(a) de la Agencia de Calidad de la Educación",
+      "employer": "Agencia de Calidad de la Educación",
+      "category": "F4",
+      "relevance_type": "nucleo",
+      "commune": "No informado",
+      "work_mode": "No informado",
+      "remote_from_chile": false,
+      "source_type": "portal_estatal",
+      "discovery_url": "https://www.empleospublicos.cl/pub/convocatorias/avisotrabajoficha.aspx?i=89253",
+      "official_url": "https://www.empleospublicos.cl/pub/convocatorias/avisotrabajoficha.aspx?i=89253",
+      "apply_url": "No informado",
+      "requisition_id": "89253",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Snippet de búsqueda describe el cargo en detalle: 'conducting evaluations and guidance of educational establishments and their sponsors through evaluation visits... interacts directly with educational units... works with peers, integrating work panels composed of three people under the direction of an evaluation coordinator... requires at least 5 years of work experience'. No se pudo abrir la ficha (403 en empleospublicos.cl) para confirmar fecha de cierre ni estado.",
+      "functions": [
+        "Evaluación y orientación de establecimientos educacionales y sus sostenedores mediante visitas evaluativas",
+        "Interacción con sostenedores, directores, docentes, estudiantes y apoderados",
+        "Trabajo en paneles de 3 evaluadores bajo coordinación de un/a coordinador/a de evaluación"
+      ],
+      "mandatory_requirements": [
+        "Al menos 5 años de experiencia laboral en funciones afines"
+      ],
+      "desirable_requirements": [
+        "Formación en Liderazgo, Psicología Educacional, Gestión Socioemocional, Convivencia Escolar y Evaluación Educativa"
+      ],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "commune",
+        "work_mode",
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "Alto ajuste temático con la experiencia declarada de la candidata (evaluadora en procesos de evaluación docente), pero el ajuste (fit) es PROVISIONAL por ausencia de CV verificado en este entorno. Vigencia no confirmable por bloqueo de WebFetch."
+      ],
+      "_agent": "A",
+      "dedup_group": "G07",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.empleospublicos.cl/pub/convocatorias/avisotrabajoficha.aspx?i=89253",
+      "liveness_por_agente": {
+        "A": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.empleospublicos.cl/pub/convocatorias/avisotrabajoficha.aspx?i=89253",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.6,
+          "experiencia_funcional": 0.9,
+          "transferible": 1.0
+        },
+        "notas": {
+          "formacion": "Area educativa afin; titulo exacto exigido no confirmado en la evidencia.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Evaluacion + coordinacion: coincide con evaluadora, coordinadora y EDS.",
+          "ubicacion": "NO EVALUABLE: comuna y modalidad no informadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 75.0,
+        "ajuste_pct": 78.0
+      }
+    },
+    {
+      "title": "Evaluadores/as de la Agencia de Calidad de la Educación",
+      "employer": "Agencia de Calidad de la Educación (Chile)",
+      "category": "F4",
+      "relevance_type": "nucleo",
+      "commune": "No informado",
+      "work_mode": "No informado",
+      "remote_from_chile": false,
+      "source_type": "portal_estatal",
+      "discovery_url": "https://www.empleospublicos.cl/pub/convocatorias/convFicha.aspx?i=23995&c=0&j=0&tipo=avisotrabajoficha",
+      "official_url": "https://www.empleospublicos.cl/pub/convocatorias/convFicha.aspx?i=23995&c=0&j=0&tipo=avisotrabajoficha",
+      "apply_url": "No informado",
+      "requisition_id": "23995",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente. Según WebSearch, la ficha describe un proceso de evaluadores/as de la Agencia de Calidad con etapas sucesivas y excluyentes: 1) Evaluación Curricular, 2) Evaluación Cognitiva, 3) Prueba Técnica, 4) Entrevista Psicolaboral y Juicio de Experto, y 5) Entrevista de Comité Final. No se obtuvo fecha de publicación ni de cierre.",
+      "functions": [
+        "Evaluación en el marco de procesos de la Agencia de Calidad de la Educación"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "commune",
+        "work_mode",
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "mandatory_requirements",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "No confirmado si se trata de un cargo permanente/planta o de convocatorias periódicas para bancos de evaluadores externos.",
+        "Conflicto de liveness entre agentes {'A': 'expired', 'B': 'unverifiable'}; resuelto a 'unverifiable' de forma conservadora."
+      ],
+      "_agent": "B",
+      "dedup_group": "G08",
+      "found_by_agents": [
+        "A",
+        "B"
+      ],
+      "merged_from_count": 2,
+      "secondary_urls": [
+        "https://www.empleospublicos.cl/pub/convocatorias/avisotrabajoficha.aspx?i=23995"
+      ],
+      "primary_url": "https://www.empleospublicos.cl/pub/convocatorias/convFicha.aspx?i=23995&c=0&j=0&tipo=avisotrabajoficha",
+      "liveness_por_agente": {
+        "A": "expired",
+        "B": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.empleospublicos.cl/pub/convocatorias/convFicha.aspx?i=23995&c=0&j=0&tipo=avisotrabajoficha",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.9,
+          "transferible": 0.85
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "NO EVALUABLE: comuna y modalidad no informadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 40.0,
+        "ajuste_pct": 88.1
+      }
+    },
+    {
+      "title": "Analista de Evaluación Docente (contrata, grado 12 E.U.S.)",
+      "employer": "Agencia de Calidad de la Educación",
+      "category": "F4",
+      "relevance_type": "nucleo",
+      "commune": "Santiago (Región Metropolitana)",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "http://archivos.agenciaeducacion.cl.s3.amazonaws.com/trabaja-con-nosotros/REX+331+ANALISTA+EVALUACION+DOCENTE.pdf",
+      "official_url": "http://archivos.agenciaeducacion.cl.s3.amazonaws.com/trabaja-con-nosotros/REX+331+ANALISTA+EVALUACION+DOCENTE.pdf",
+      "apply_url": "https://www.empleospublicos.cl",
+      "requisition_id": "Resolución Exenta N° 331 de 2023",
+      "publication_date": "2023-03-23",
+      "deadline": "2023 (7 días hábiles desde el día hábil siguiente a la aprobación de la resolución)",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "expired",
+      "liveness_evidence": "FUENTE PRIMARIA ABIERTA Y LEÍDA POR EL AUDITOR (HTTP 200, 2026-07-27). El documento es la 'RESOLUCIÓN EXENTA N° 331, SANTIAGO, 23 de Marzo de 2023'. Cita textual del cronograma: 'Difusión y Plazo de Postulación en www.empleospublicos.cl 7 días hábiles desde el día hábil siguiente de aprobada la resolución'. Con resolución de 23-03-2023, el plazo venció en abril de 2023, más de tres años antes de la fecha de esta corrida (2026-07-27). CERRADA.",
+      "functions": [
+        "Coordinar operativamente los procesos logísticos de la Evaluación de Conocimientos Específicos y Pedagógicos (ECEP)",
+        "Coordinar y supervisar la habilitación de la plataforma docente",
+        "Coordinar el proceso logístico del ECEP (imprenta, aplicación, distribución, sedes)",
+        "Entregar asesoría técnica asociada al área de especialidad",
+        "Elaborar bases técnicas de licitación",
+        "Generar respuestas ante solicitudes de información de las y los docentes",
+        "Gestionar materias de ciberseguridad y confidencialidad de la información"
+      ],
+      "mandatory_requirements": [
+        "Título profesional de carrera de al menos 10 semestres + experiencia profesional no inferior a 1 año (sector público o privado); O BIEN",
+        "Título profesional de carrera de al menos 8 semestres + experiencia profesional no inferior a 2 años (sector público o privado)",
+        "El cómputo de la experiencia se realiza desde obtenido el título profesional; no se considera práctica profesional ni pasantías"
+      ],
+      "desirable_requirements": [
+        "Puntaje preferente: Ingeniero(a) Civil, Ingeniero(a) Logístico, Ingeniero(a) Industrial, PEDAGOGO, Administrador(a) Público o carrera afín",
+        "Deseable postítulo y/o curso en: Operación y Logística, Control de Gestión, Control de Proyectos, Administración de Contratos",
+        "Conocimiento de normativa pública: estatuto administrativo, bases generales de la administración del Estado, procedimientos administrativos, probidad administrativa, ley de compras públicas",
+        "Conocimiento en normativa de educación: Ley General de Educación, Sistema de Aseguramiento de la Calidad, Sistema de Desarrollo Profesional Docente",
+        "Experiencia profesional de al menos 2 años en área de logística y operaciones",
+        "Deseable 1 año de experiencia en el sector público"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "Copia de Cédula de Identidad legible",
+        "Copia de certificado que acredite nivel educacional requerido por ley",
+        "CV en formato libre detallando cargo, funciones y fecha (mes y año) de cada experiencia",
+        "Todas las especializaciones/capacitaciones deben quedar expresamente declaradas en el currículum (nombre de la actividad, número de horas, institución, período)"
+      ],
+      "contract": "Contrata, grado 12 E.U.S., estamento profesional",
+      "hours": "44 horas semanales, jornada completa",
+      "salary": "Renta bruta promedio mensualizada $2.123.255 (sin bonos $1.733.419; con bonos $2.902.927)",
+      "vacancies": "1",
+      "unknown_fields": [
+        "commune (probablemente Santiago, sede de la Agencia; fuera de las 7 comunas autorizadas)",
+        "work_mode",
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "mandatory_requirements",
+        "contract",
+        "hours",
+        "vacancies"
+      ],
+      "warnings": [
+        "FUERA DE LA ZONA PRESENCIAL AUTORIZADA: ciudad de desempeño Santiago, modalidad presencial. No cumple el filtro de las 7 comunas del Gran Concepción.",
+        "CONVOCATORIA CERRADA desde 2023. Se conserva únicamente como perfil de referencia documentado para un cargo del tipo 'Analista de Evaluación Docente'.",
+        "Postulación exclusivamente por el Portal de Empleos Públicos; no se reciben postulaciones por correo."
+      ],
+      "_agent": "B",
+      "dedup_group": "G09",
+      "found_by_agents": [
+        "A",
+        "B"
+      ],
+      "merged_from_count": 2,
+      "secondary_urls": [],
+      "primary_url": "http://archivos.agenciaeducacion.cl.s3.amazonaws.com/trabaja-con-nosotros/REX+331+ANALISTA+EVALUACION+DOCENTE.pdf",
+      "liveness_por_agente": {
+        "A": "unverifiable",
+        "B": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "http://archivos.agenciaeducacion.cl.s3.amazonaws.com/trabaja-con-nosotros/REX+331+ANALISTA+EVALUACION+DOCENTE.pdf",
+        "http_code": "200",
+        "result": "reabierta"
+      },
+      "scoring_note_exclusion": "EXCLUIDA por ubicación (Santiago presencial) y por plazo vencido. No se puntúa para ranking; se documenta como perfil de referencia.",
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.6,
+          "experiencia_funcional": 0.9,
+          "transferible": 0.85,
+          "ubicacion": 0.2
+        },
+        "notas": {
+          "formacion": "Area educativa afin; titulo exacto exigido no confirmado en la evidencia.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "Comuna/zona no confirmada dentro de las 7 autorizadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 71.6
+      }
+    },
+    {
+      "title": "Concurso Director/a para 6 establecimientos (Chiguayante, Florida y Hualqui)",
+      "employer": "Servicio Local de Educación Pública Andalién Sur",
+      "category": "F2",
+      "relevance_type": "adyacente",
+      "commune": "Chiguayante, Hualqui (y Florida, fuera de las 7 comunas autorizadas)",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "portal_estatal",
+      "discovery_url": "https://andaliensur.gob.cl/posts/atencion",
+      "official_url": "https://andaliensur.gob.cl/trabajemos",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "2025-09-30",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "expired",
+      "liveness_evidence": "Snippet de búsqueda: 'There is a public competition convocation to provide the Director/a position in 6 establishments belonging to the municipalities of Chiguayante, Florida and Hualqui, with the reception of documents extending until 23:59 hours on September 30, 2025.' El plazo (30-09-2025) es anterior a la fecha de corte 2026-07-27, por lo tanto vencido.",
+      "functions": [
+        "Dirección de establecimiento educacional"
+      ],
+      "mandatory_requirements": [],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "6 establecimientos",
+      "unknown_fields": [
+        "publication_date",
+        "requisition_id",
+        "apply_url",
+        "contract",
+        "hours",
+        "salary"
+      ],
+      "warnings": [
+        "Cargo de Director/a de establecimiento típicamente exige credenciales de Alta Dirección Pública / acreditación directiva no confirmables en el perfil de la candidata (fit PROVISIONAL). Se incluye pese a estar vencido porque el coordinador puede necesitar el antecedente de ciclo de concursos SLEP."
+      ],
+      "_agent": "A",
+      "dedup_group": "G10",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [
+        "https://andaliensur.gob.cl/posts/atencion"
+      ],
+      "primary_url": "https://andaliensur.gob.cl/trabajemos",
+      "liveness_por_agente": {
+        "A": "expired"
+      },
+      "audit_reopen": {
+        "url": "https://andaliensur.gob.cl/trabajemos",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.9,
+          "transferible": 0.85,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 45.0,
+        "ajuste_pct": 89.4
+      }
+    },
+    {
+      "title": "Concurso Alta Dirección Pública 2025: Directores/as",
+      "employer": "Servicio Local de Educación Pública Andalién Costa",
+      "category": "F2",
+      "relevance_type": "adyacente",
+      "commune": "San Pedro de la Paz (y Coronel, Lota, Santa Juana, fuera de las 7 comunas)",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "portal_estatal",
+      "discovery_url": "https://slepandaliencosta.gob.cl/slep-andalien-costa/%F0%9F%93%A2-concurso-alta-direccion-publica-2025-directores-as/",
+      "official_url": "https://adp.serviciocivil.cl/concursos-spl/opencms/permalink/96d2358a-6dff-11ed-8fef-6755d96a8f20",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "expired",
+      "liveness_evidence": "Snippet de búsqueda de una nota posterior del mismo sitio: 'Nuevos liderazgos: SLEP Andalién Costa designa directores por Alta Dirección Pública' — el uso de 'designa' (pasado) indica que el proceso ya concluyó y los cargos fueron asignados.",
+      "functions": [
+        "Dirección de establecimiento educacional"
+      ],
+      "mandatory_requirements": [],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "prácticamente todos los campos operativos"
+      ],
+      "warnings": [],
+      "_agent": "A",
+      "dedup_group": "G11",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [
+        "https://slepandaliencosta.gob.cl/slep-andalien-costa/%F0%9F%93%A2-concurso-alta-direccion-publica-2025-directores-as/"
+      ],
+      "primary_url": "https://adp.serviciocivil.cl/concursos-spl/opencms/permalink/96d2358a-6dff-11ed-8fef-6755d96a8f20",
+      "liveness_por_agente": {
+        "A": "expired"
+      },
+      "audit_reopen": {
+        "url": "https://adp.serviciocivil.cl/concursos-spl/opencms/permalink/96d2358a-6dff-11ed-8fef-6755d96a8f20",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.9,
+          "transferible": 0.85,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 45.0,
+        "ajuste_pct": 89.4
+      }
+    },
+    {
+      "title": "Plataforma de postulaciones para reemplazos y contratas",
+      "employer": "Servicio Local de Educación Pública Andalién Costa",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "San Pedro de la Paz (y Coronel, Lota, Santa Juana)",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "portal_estatal",
+      "discovery_url": "https://slepandaliencosta.gob.cl/director-ejecutivo-slep-andalien-costa/slep-andalien-costa-habilita-plataforma-de-postulaciones-para-reemplazos-y-contratas/",
+      "official_url": "https://slepandaliencosta.gob.cl/trabaja-con-nosotros/",
+      "apply_url": "https://slepandaliencosta.gob.cl/trabaja-con-nosotros/",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "probable",
+      "liveness_evidence": "Snippet: 'SLEP Andalién Costa ha habilitado una plataforma de postulaciones para reemplazos y contratas, una herramienta digital que permite a los interesados registrar sus antecedentes de manera directa, eficiente y transparente.' Es un mecanismo permanente (no una vacante puntual con plazo), lo que sugiere continuidad, pero no se pudo abrir la página para confirmar que siga activa hoy.",
+      "functions": [
+        "Registro de antecedentes para procesos de reemplazo y contrata docente/asistente de la educación"
+      ],
+      "mandatory_requirements": [],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "Reemplazo / contrata",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado (banco continuo)",
+      "unknown_fields": [
+        "requisition_id",
+        "publication_date",
+        "deadline",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "Es un canal de postulación general, no una oferta puntual; útil para que la candidata registre antecedentes de cara a futuros reemplazos de educadora de párvulos o UTP en San Pedro de la Paz."
+      ],
+      "_agent": "A",
+      "dedup_group": "G12",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [
+        "https://slepandaliencosta.gob.cl/director-ejecutivo-slep-andalien-costa/slep-andalien-costa-habilita-plataforma-de-postulaciones-para-reemplazos-y-contratas/"
+      ],
+      "primary_url": "https://slepandaliencosta.gob.cl/trabaja-con-nosotros/",
+      "liveness_por_agente": {
+        "A": "probable"
+      },
+      "audit_reopen": {
+        "url": "https://slepandaliencosta.gob.cl/trabaja-con-nosotros/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.3,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones fuera del ambito educativo declarado.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 45.0,
+        "ajuste_pct": 36.1
+      }
+    },
+    {
+      "title": "Proceso de postulación a Evaluador/a Par (última convocatoria localizada: 2023)",
+      "employer": "CPEIP (Ministerio de Educación) / DocenteMás",
+      "category": "F4",
+      "relevance_type": "nucleo",
+      "commune": "Nacional (aplica en la medida que la candidata ejerza en un establecimiento de la zona)",
+      "work_mode": "No informado",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://www.cpeip.cl/evaluador-par-2023/",
+      "official_url": "https://www.cpeip.cl/tag/evaluador-par/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:45:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Snippet: 'A partir del 8 de mayo y hasta el 2 de junio, se inicia el proceso de postulación para ejercer el rol de Evaluador/a Par en el marco de la Evaluación del Desempeño Profesional Docente 2023.' No se encontró convocatoria 2026 en las búsquedas realizadas (se halló portafolio docente 2026 con periodo 8 de julio a 10 de noviembre de 2026, pero eso es el proceso de evaluación DEL docente, no la convocatoria a evaluadores).",
+      "functions": [
+        "Implementar entrevista de evaluación por pares entre docentes"
+      ],
+      "mandatory_requirements": [
+        "Ser docente o educador/a de aula en ejercicio en establecimiento municipal y/o SLEP, con al menos 5 años de experiencia",
+        "Pertenecer al mismo nivel escolar, sector de currículo y modalidad del docente evaluado",
+        "Sin sumario administrativo en los últimos 4 años",
+        "Nivel Destacado o Competente en última Evaluación Docente"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "convocatoria 2026 específica (no localizada)",
+        "publication_date",
+        "deadline",
+        "apply_url"
+      ],
+      "warnings": [
+        "Requisito mandatorio de ser docente de aula EN EJERCICIO en establecimiento municipal/SLEP; no hay CV disponible en este entorno para confirmar si la candidata cumple esta condición hoy. Fit PROVISIONAL. Además no se confirmó si existe ciclo 2026 de esta convocatoria."
+      ],
+      "_agent": "A",
+      "dedup_group": "G13",
+      "found_by_agents": [
+        "A"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [
+        "https://www.cpeip.cl/evaluador-par-2023/"
+      ],
+      "primary_url": "https://www.cpeip.cl/tag/evaluador-par/",
+      "liveness_por_agente": {
+        "A": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.cpeip.cl/tag/evaluador-par/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.6,
+          "experiencia_funcional": 0.9,
+          "transferible": 1.0,
+          "ubicacion": 0.2
+        },
+        "notas": {
+          "formacion": "Area educativa afin; titulo exacto exigido no confirmado en la evidencia.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Evaluacion + coordinacion: coincide con evaluadora, coordinadora y EDS.",
+          "ubicacion": "Comuna/zona no confirmada dentro de las 7 autorizadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 74.4
+      }
+    },
+    {
+      "title": "Académicos(as) Facultad de Educación y Ciencias Sociales (convocatoria de 80 posiciones, incluye Concepción)",
+      "employer": "Universidad Andrés Bello (UNAB)",
+      "category": "F3",
+      "relevance_type": "nucleo",
+      "commune": "No informado",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://noticias.unab.cl/universidad-andres-bello-anuncia-la-apertura-de-80-nuevas-posiciones-academicas/",
+      "official_url": "https://noticias.unab.cl/universidad-andres-bello-anuncia-la-apertura-de-80-nuevas-posiciones-academicas/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente (HTTP 403 en todo host, ver tooling_incident); no se pudo abrir la nota oficial. Según fragmento recuperado por WebSearch: 'Universidad Andrés Bello anuncia la apertura de 80 nuevas posiciones académicas' para las facultades de Ciencias de la Vida, Ingeniería, Economía y Negocios, y Educación y Ciencias Sociales, en sus 3 sedes (Santiago, Viña del Mar y Concepción); para Educación se piden títulos en educación parvularia, básica, especial, psicología, trabajo social y educación física, grado de magíster (obligatorio) y doctorado (obligatorio), 3 años de docencia universitaria. No se pudo confirmar si la convocatoria sigue abierta ni la sede exacta asignada a cada cupo.",
+      "functions": [
+        "INFERENCIA: docencia universitaria en carreras de pedagogía/educación",
+        "INFERENCIA: investigación y acompañamiento de acreditación"
+      ],
+      "mandatory_requirements": [
+        "Título profesional en área de educación (parvularia, básica, especial u otras afines según nota)",
+        "Grado de magíster (obligatorio según nota)",
+        "Doctorado (obligatorio según nota)",
+        "3 años de experiencia en docencia universitaria"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "80 (a nivel nacional, entre 4 facultades y 3 sedes; no se especifica cuántas corresponden a Concepción)",
+      "unknown_fields": [
+        "commune",
+        "work_mode exacto (INFERENCIA presencial por ser cargo académico de facultad)",
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "requisition_id",
+        "contract",
+        "hours",
+        "salary"
+      ],
+      "warnings": [
+        "El requisito de doctorado 'obligatorio' junto con magíster también 'obligatorio' resulta inusual (redundante); podría ser imprecisión del fragmento indexado, no verificado en la fuente original.",
+        "No se confirmó que la sede Concepción tenga cupos vigentes específicamente para Educación Parvularia."
+      ],
+      "_agent": "B",
+      "dedup_group": "G14",
+      "found_by_agents": [
+        "B"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://noticias.unab.cl/universidad-andres-bello-anuncia-la-apertura-de-80-nuevas-posiciones-academicas/",
+      "liveness_por_agente": {
+        "B": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://noticias.unab.cl/universidad-andres-bello-anuncia-la-apertura-de-80-nuevas-posiciones-academicas/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "experiencia_funcional": 0.8,
+          "transferible": 0.25
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "Funciones de aula/parvularia. Anos exactos de experiencia en aula NO constan en el dossier (sin CV).",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "NO EVALUABLE: comuna y modalidad no informadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 75.0,
+        "ajuste_pct": 78.3
+      }
+    },
+    {
+      "title": "Corrector/a o Supervisor/a en el Estudio de Grabaciones Autogestionadas (Evaluación Docente)",
+      "employer": "MIDE UC - Centro de Medición, Pontificia Universidad Católica de Chile",
+      "category": "F4",
+      "relevance_type": "nucleo",
+      "commune": "Remoto",
+      "work_mode": "remoto",
+      "remote_from_chile": true,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://mideuc.cl/postule-aqui-a-corrector-a-o-supervisor/",
+      "official_url": "https://mideuc.cl/postule-aqui-a-corrector-a-o-supervisor/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente (HTTP 403 en todo host); no se pudo abrir la página específica ni confirmar su vigencia actual. Según fragmento de WebSearch: la página ofrece postulación a 'corrector/a o supervisor/a' en el 'estudio de grabaciones autogestionadas', con requisitos que incluyen copia de cédula de identidad y título profesional o certificado de autorización del MINEDUC para profesionales de la docencia. Coincide con la modalidad de estudio de clases grabadas del proceso de Evaluación Docente/Portafolio que administra MIDE UC en convenio.",
+      "functions": [
+        "INFERENCIA: corrección/supervisión de grabaciones de clases autogestionadas como parte del proceso de Evaluación Docente"
+      ],
+      "mandatory_requirements": [
+        "Copia de cédula de identidad",
+        "Título profesional docente o certificado de autorización del MINEDUC para ejercer la docencia"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "Cédula de identidad",
+        "Título profesional o certificado MINEDUC"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "requisition_id",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "functions detalladas"
+      ],
+      "warnings": [
+        "INFERENCIA de modalidad remota basada en la naturaleza de 'grabaciones autogestionadas' (evaluación de video ya grabado); no verificado en página oficial por bloqueo de herramienta."
+      ],
+      "_agent": "B",
+      "dedup_group": "G15",
+      "found_by_agents": [
+        "B"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://mideuc.cl/postule-aqui-a-corrector-a-o-supervisor/",
+      "liveness_por_agente": {
+        "B": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://mideuc.cl/postule-aqui-a-corrector-a-o-supervisor/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.6,
+          "experiencia_funcional": 0.9,
+          "transferible": 0.85,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Area educativa afin; titulo exacto exigido no confirmado en la evidencia.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "Remoto; se exige realizable desde Chile.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 76.6
+      }
+    },
+    {
+      "title": "Evaluador/a de Pruebas de Primer y Segundo Ciclo (PLAEP)",
+      "employer": "MIDE UC - Centro de Medición, Pontificia Universidad Católica de Chile",
+      "category": "F4",
+      "relevance_type": "nucleo",
+      "commune": "No informado",
+      "work_mode": "No informado",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://mideuc.cl/oferta-laboral-evaluador-a-de-pruebas-plaep/",
+      "official_url": "https://mideuc.cl/oferta-laboral-evaluador-a-de-pruebas-plaep/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente (HTTP 403); no se pudo abrir la página. Título indexado por buscador: 'Oferta laboral: Evaluador/a de pruebas de primer y segundo ciclo - MideUC' (PLAEP: Prueba Latinoamericana de Evaluación de Primera Infancia, instrumento vinculado a educación parvularia). No se pudo obtener el cuerpo de la oferta ni fechas.",
+      "functions": [
+        "INFERENCIA: aplicación y/o evaluación de instrumentos PLAEP en primera infancia (posible relación directa con perfil de educadora de párvulos)"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "commune",
+        "work_mode",
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "requisition_id",
+        "mandatory_requirements",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "Alta relevancia potencial por vincular evaluación de instrumentos con primera infancia/parvularia, pero contenido no verificado por bloqueo de WebFetch; tratar como PROVISIONAL hasta verificación humana directa."
+      ],
+      "_agent": "B",
+      "dedup_group": "G16",
+      "found_by_agents": [
+        "B"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://mideuc.cl/oferta-laboral-evaluador-a-de-pruebas-plaep/",
+      "liveness_por_agente": {
+        "B": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://mideuc.cl/oferta-laboral-evaluador-a-de-pruebas-plaep/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "experiencia_funcional": 0.8,
+          "transferible": 0.85
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "Funciones de aula/parvularia. Anos exactos de experiencia en aula NO constan en el dossier (sin CV).",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "NO EVALUABLE: comuna y modalidad no informadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 75.0,
+        "ajuste_pct": 90.3
+      }
+    },
+    {
+      "title": "Docentes de Educación Básica y Media para Construcción de Preguntas",
+      "employer": "MIDE UC - Centro de Medición, Pontificia Universidad Católica de Chile",
+      "category": "F4",
+      "relevance_type": "adyacente",
+      "commune": "No informado",
+      "work_mode": "No informado",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://mideuc.cl/oferta-laboral-docentes-de-educacion-basica-y-media-para-construccion-de-preguntas/",
+      "official_url": "https://mideuc.cl/oferta-laboral-docentes-de-educacion-basica-y-media-para-construccion-de-preguntas/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "2026-07-06",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "expired",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente; clasificación basada exclusivamente en aritmética de fecha reportada por WebSearch: 'MIDE UC ha publicado una oferta de trabajo para docentes de educación básica y media para construcción de preguntas, con un plazo de postulación hasta el 6 de julio de 2026'. Hoy es 2026-07-27, es decir 21 días después del plazo indicado -> vencida.",
+      "functions": [
+        "Construcción de preguntas/ítems de evaluación para educación básica y media"
+      ],
+      "mandatory_requirements": [
+        "Ser docente de educación básica o media (según título)"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "commune",
+        "work_mode",
+        "publication_date",
+        "apply_url",
+        "requisition_id",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "Cargo es para educación básica/media, no parvularia explícitamente; se incluye como adyacente por pertenecer a la misma línea de construcción de instrumentos de evaluación de MIDE UC."
+      ],
+      "_agent": "B",
+      "dedup_group": "G17",
+      "found_by_agents": [
+        "B"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://mideuc.cl/oferta-laboral-docentes-de-educacion-basica-y-media-para-construccion-de-preguntas/",
+      "liveness_por_agente": {
+        "B": "expired"
+      },
+      "audit_reopen": {
+        "url": "https://mideuc.cl/oferta-laboral-docentes-de-educacion-basica-y-media-para-construccion-de-preguntas/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.6,
+          "experiencia_funcional": 0.9,
+          "transferible": 0.85
+        },
+        "notas": {
+          "formacion": "Area educativa afin; titulo exacto exigido no confirmado en la evidencia.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "NO EVALUABLE: comuna y modalidad no informadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 75.0,
+        "ajuste_pct": 75.0
+      }
+    },
+    {
+      "title": "Llamado a concurso: validación de instrumento de Evaluación (proceso de validación cuantitativa)",
+      "employer": "Universidad de Concepción - Facultad de Educación",
+      "category": "F4",
+      "relevance_type": "nucleo",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://educacion.udec.cl/proyectollamadoconcurso/",
+      "official_url": "https://educacion.udec.cl/proyectollamadoconcurso/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente; no se pudo abrir la página. Título indexado tal cual por el buscador: 'Llamado a concurso validación Proyecto construcción de instrumento de Evaluación Proceso de validación cuantitativa – Facultad de Educación'. Sin más contenido disponible.",
+      "functions": [
+        "INFERENCIA: participación en la validación cuantitativa de un instrumento de evaluación (proyecto de investigación de la Facultad de Educación UdeC)"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "work_mode (INFERENCIA presencial por ser convocatoria de facultad local)",
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "requisition_id",
+        "mandatory_requirements",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "No se pudo determinar si se trata de una convocatoria a jueces expertos, personal de apoyo o cargo remunerado; podría no constituir una oferta de empleo formal sino una convocatoria de colaboración académica puntual."
+      ],
+      "_agent": "B",
+      "dedup_group": "G18",
+      "found_by_agents": [
+        "B"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://educacion.udec.cl/proyectollamadoconcurso/",
+      "liveness_por_agente": {
+        "B": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://educacion.udec.cl/proyectollamadoconcurso/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.9,
+          "transferible": 0.85,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 45.0,
+        "ajuste_pct": 89.4
+      }
+    },
+    {
+      "title": "Llamado a concursos profesionales de apoyo al Plan de Estudios",
+      "employer": "Universidad de Concepción - Facultad de Educación",
+      "category": "F2",
+      "relevance_type": "nucleo",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://educacion.udec.cl/llamado-a-concursos/",
+      "official_url": "https://educacion.udec.cl/llamado-a-concursos/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente; página no abierta. Título indexado: 'Facultad de Educación – Universidad de Concepción | Llamado a concursos profesionales apoyo Plan de Estudios'.",
+      "functions": [
+        "INFERENCIA: apoyo profesional a la gestión curricular del Plan de Estudios de carreras de la Facultad de Educación"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "work_mode (INFERENCIA)",
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "requisition_id",
+        "mandatory_requirements",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "No se pudo confirmar si el/los cargo(s) corresponden a carreras que incluyan Educación Parvularia."
+      ],
+      "_agent": "B",
+      "dedup_group": "G19",
+      "found_by_agents": [
+        "B"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://educacion.udec.cl/llamado-a-concursos/",
+      "liveness_por_agente": {
+        "B": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://educacion.udec.cl/llamado-a-concursos/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.9,
+          "transferible": 0.85,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 45.0,
+        "ajuste_pct": 89.4
+      }
+    },
+    {
+      "title": "Llamado a concurso (código 3011-2, cargo no especificado en el fragmento indexado)",
+      "employer": "Universidad de Concepción - Facultad de Educación",
+      "category": "F3",
+      "relevance_type": "adyacente",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://educacion.udec.cl/llamado3011-2",
+      "official_url": "https://educacion.udec.cl/llamado3011-2",
+      "apply_url": "No informado",
+      "requisition_id": "3011-2",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente; solo se indexó el título genérico 'Llamado a concurso – Facultad de Educación' sin detalle de cargo. Se incluye como candidato pendiente de verificación humana directa por pertenecer al dominio oficial de la Facultad de Educación UdeC.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "title exacto",
+        "functions",
+        "mandatory_requirements",
+        "publication_date",
+        "deadline",
+        "apply_url",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "Registro de muy baja certeza: no se pudo determinar el cargo real detrás del código 3011-2. Se recomienda verificación manual directa antes de cualquier uso."
+      ],
+      "_agent": "B",
+      "dedup_group": "G20",
+      "found_by_agents": [
+        "B"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://educacion.udec.cl/llamado3011-2",
+      "liveness_por_agente": {
+        "B": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://educacion.udec.cl/llamado3011-2",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 5.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Profesores/as Academia 2026 (Química, Biología, Física, Historia, Lenguaje y Literatura, Matemática) - Sede Biobío/Concepción",
+      "employer": "Preuniversitario Pontificia Universidad Católica (Preuniversitario UC)",
+      "category": "F3",
+      "relevance_type": "adyacente",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://cl.trabajo.org/oferta-2254-778e4575cf36f9746a082051edbadf52",
+      "official_url": "No informado",
+      "apply_url": "docentes.preuuc@uc.cl",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "2025-10-30",
+      "checked_at": "2026-07-27T15:40:00-04:00",
+      "liveness": "expired",
+      "liveness_evidence": "WebFetch bloqueado sistémicamente; clasificación por aritmética de fecha según WebSearch: 'interesados deben enviar sus antecedentes a docentes.preuuc@uc.cl antes del 30 de octubre de 2025' para el ciclo de Programas Académicos 2026, sede Biobío en Concepción. Hoy 2026-07-27 es muy posterior al plazo -> vencida.",
+      "functions": [
+        "Docencia de preparación preuniversitaria en las asignaturas indicadas"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "Antecedentes/CV (enviar por correo)"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "mandatory_requirements",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "requisition_id"
+      ],
+      "warnings": [
+        "No corresponde a educación parvularia ni evaluación docente; se incluye por ajustarse al término de búsqueda 'tutor académico/profesor por horas' exigido y por estar en comuna autorizada (Concepción), pero la relevancia real para el perfil es baja (adyacente) y además está vencida."
+      ],
+      "_agent": "B",
+      "dedup_group": "G21",
+      "found_by_agents": [
+        "B"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [
+        "docentes.preuuc@uc.cl"
+      ],
+      "primary_url": "https://cl.trabajo.org/oferta-2254-778e4575cf36f9746a082051edbadf52",
+      "liveness_por_agente": {
+        "B": "expired"
+      },
+      "audit_reopen": {
+        "url": "https://cl.trabajo.org/oferta-2254-778e4575cf36f9746a082051edbadf52",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.3,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones fuera del ambito educativo declarado.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 45.0,
+        "ajuste_pct": 36.1
+      }
+    },
+    {
+      "title": "Reemplazo Educadora de Párvulos",
+      "employer": "No informado",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "agregador",
+      "discovery_url": "https://www.chiletrabajos.cl/trabajo/3627848",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página (WebFetch devolvió HTTP 403 en esta URL y en un dominio de control neutro, confirmando bloqueo sistémico de la herramienta). Único dato disponible es el título de snippet de buscador: 'Reemplazo Educadora de Párvulos - Concepción - Concepción | Chiletrabajos'. No se pudo confirmar empleador, plazo ni estado de cierre.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "employer",
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "functions",
+        "mandatory_requirements",
+        "official_url",
+        "apply_url"
+      ],
+      "warnings": [
+        "Bloqueo sistémico de la herramienta WebFetch impidió verificación directa",
+        "Fuente es agregador, no empleador oficial; no se identificó official_url"
+      ],
+      "_agent": "C",
+      "dedup_group": "G22",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.chiletrabajos.cl/trabajo/3627848",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.chiletrabajos.cl/trabajo/3627848",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 40.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Educadora de Párvulos",
+      "employer": "No informado",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "agregador",
+      "discovery_url": "https://www.chiletrabajos.cl/trabajo/educadora-de-parvulos-concepcion-3181424",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página específica (WebFetch: HTTP 403 sistémico). Snippet de buscador indica título general 'Educadora de Párvulos - Concepción - Concepción | Chiletrabajos', sin más contenido verificado.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "employer",
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "functions",
+        "mandatory_requirements"
+      ],
+      "warnings": [
+        "Bloqueo sistémico de WebFetch impidió verificación directa",
+        "Posible duplicado o similar a otros avisos de Educadora de Párvulos en Chiletrabajos (URLs 3627848 y 3820517); no se pudo confirmar si son ofertas distintas"
+      ],
+      "_agent": "C",
+      "dedup_group": "G23",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.chiletrabajos.cl/trabajo/educadora-de-parvulos-concepcion-3181424",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.chiletrabajos.cl/trabajo/educadora-de-parvulos-concepcion-3181424",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 40.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Educadora de Párvulos (jardín infantil / sala cuna)",
+      "employer": "No informado",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "agregador",
+      "discovery_url": "https://www.chiletrabajos.cl/trabajo/educadora-de-parvulos-3820517",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página específica (WebFetch: HTTP 403 sistémico). Solo se dispone del título de snippet 'educadora de parvulos - Concepción | Chiletrabajos'.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "employer",
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "functions",
+        "mandatory_requirements"
+      ],
+      "warnings": [
+        "Bloqueo sistémico de WebFetch impidió verificación directa",
+        "Posible duplicado de otros avisos similares en el mismo portal"
+      ],
+      "_agent": "C",
+      "dedup_group": "G24",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.chiletrabajos.cl/trabajo/educadora-de-parvulos-3820517",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.chiletrabajos.cl/trabajo/educadora-de-parvulos-3820517",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 40.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Educadora de Párvulos Jardín Infantil y Sala Cuna Alborada",
+      "employer": "Jardín Infantil y Sala Cuna Alborada",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "No informado",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "portal_generalista",
+      "discovery_url": "https://www.laborum.cl/empleos/educadora-de-parvulos-jardin-infantil-y-sala-cuna-jardin-infantil-y-sala-cuna-alborada-1117037779.html",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página (WebFetch: HTTP 403 sistémico). Detectado mediante búsqueda orientada a Talcahuano, pero el snippet no confirma explícitamente la comuna del establecimiento; se marca 'No informado' para no inferir.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "commune",
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "functions",
+        "mandatory_requirements"
+      ],
+      "warnings": [
+        "Comuna no confirmada pese a que la búsqueda apuntaba a Talcahuano; INFERENCIA débil, no incluida como dato",
+        "Bloqueo sistémico de WebFetch impidió verificación directa"
+      ],
+      "_agent": "C",
+      "dedup_group": "G25",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.laborum.cl/empleos/educadora-de-parvulos-jardin-infantil-y-sala-cuna-jardin-infantil-y-sala-cuna-alborada-1117037779.html",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.laborum.cl/empleos/educadora-de-parvulos-jardin-infantil-y-sala-cuna-jardin-infantil-y-sala-cuna-alborada-1117037779.html",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "NO EVALUABLE: comuna y modalidad no informadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 35.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Técnico en Educación Parvularia (jardín infantil particular)",
+      "employer": "No informado",
+      "category": "F1",
+      "relevance_type": "adyacente",
+      "commune": "San Pedro de la Paz",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "agregador",
+      "discovery_url": "https://empleo.mitula.cl/empleo/educacion-parvularia-san-pedro-paz",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página del agregador (WebFetch: HTTP 403 sistémico). Snippet describe: 'técnico en educación parvularia... jardín infantil particular... contrato a plazo fijo, jornada completa de 44 horas semanales, con un sueldo líquido de $550.000'. Cita de resumen de buscador, no verificada en la fuente primaria.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "plazo fijo (según snippet, no verificado)",
+      "hours": "44 horas semanales (según snippet, no verificado)",
+      "salary": "$550.000 líquido (según snippet, no verificado)",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "employer",
+        "publication_date",
+        "deadline",
+        "functions",
+        "mandatory_requirements"
+      ],
+      "warnings": [
+        "Cargo de técnico, no de educadora titulada: relevance_type marcado como adyacente",
+        "Datos de contrato/jornada/sueldo provienen de resumen de buscador (IA de WebSearch), no de la página fuente; posible imprecisión",
+        "Bloqueo sistémico de WebFetch impidió verificación directa"
+      ],
+      "_agent": "C",
+      "dedup_group": "G26",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://empleo.mitula.cl/empleo/educacion-parvularia-san-pedro-paz",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://empleo.mitula.cl/empleo/educacion-parvularia-san-pedro-paz",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 40.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Educadora de Párvulos (nivel medio y sala cuna, sector Lomas Coloradas)",
+      "employer": "No informado",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "San Pedro de la Paz",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "agregador",
+      "discovery_url": "https://empleo.mitula.cl/empleo/educadora-parvulos-san-pedro-paz/empleo/educadora-parvulos-san-pedro-paz",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página (WebFetch: HTTP 403 sistémico). Snippet: 'educadora de párvulos para nivel medio y sala cuna en un centro educativo ubicado en el sector Lomas Coloradas de San Pedro de la Paz, requiriendo un mínimo de un año de experiencia en ese nivel', jornada 'lunes a viernes de 8:30 a 17:30'.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "1 año de experiencia en nivel medio/sala cuna (según snippet, no verificado)"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "lunes a viernes 8:30 a 17:30 (según snippet, no verificado)",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "employer",
+        "publication_date",
+        "deadline",
+        "contract",
+        "salary",
+        "vacancies",
+        "functions"
+      ],
+      "warnings": [
+        "Datos de jornada/requisitos provienen de resumen de buscador, no de la página fuente",
+        "Bloqueo sistémico de WebFetch impidió verificación directa"
+      ],
+      "_agent": "C",
+      "dedup_group": "G27",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://empleo.mitula.cl/empleo/educadora-parvulos-san-pedro-paz/empleo/educadora-parvulos-san-pedro-paz",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://empleo.mitula.cl/empleo/educadora-parvulos-san-pedro-paz/empleo/educadora-parvulos-san-pedro-paz",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 55.0,
+        "ajuste_pct": 79.5
+      }
+    },
+    {
+      "title": "Reemplazo Educadora de Párvulos - Sala Cuna Aitué (aprox. 1 mes)",
+      "employer": "Fundación Integra (S.C. Aitué)",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "San Pedro de la Paz",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "agregador",
+      "discovery_url": "https://salascuna.cl/sala/sc-aitue-san-pedro-de-la-paz/",
+      "official_url": "https://www.integra.cl/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página fuente (WebFetch: HTTP 403 sistémico). Snippet: 'Sala Cuna Aitue... tuvo una posición de reemplazo disponible por un mes con el objetivo de colaborar con la educadora de extensión'. S.C. Aitué es operada por Fundación Integra según ficha de SalasCuna.cl (Av. Costanera 3055, San Pedro de la Paz).",
+      "functions": [
+        "Colaborar con la educadora de extensión (según snippet, no verificado)"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "reemplazo aprox. 1 mes (según snippet, no verificado)",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "mandatory_requirements",
+        "hours",
+        "salary",
+        "vacancies",
+        "apply_url"
+      ],
+      "warnings": [
+        "Fundación Integra es una fundación privada sin fines de lucro pero con financiamiento y coordinación estatal (red asimilable a JUNJI); posible traslape de alcance con el agente de sector público/semipúblico — se incluye aquí solo por haberse detectado a través de búsqueda generalista/portal privado, con esta advertencia explícita",
+        "Bloqueo sistémico de WebFetch impidió verificación directa"
+      ],
+      "_agent": "C",
+      "dedup_group": "G28",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [
+        "https://salascuna.cl/sala/sc-aitue-san-pedro-de-la-paz/"
+      ],
+      "primary_url": "https://www.integra.cl/",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.integra.cl/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "experiencia_funcional": 0.8,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "Funciones de aula/parvularia. Anos exactos de experiencia en aula NO constan en el dossier (sin CV).",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 79.7
+      }
+    },
+    {
+      "title": "Educadora de Párvulos",
+      "employer": "Corporación Educacional (nombre exacto no confirmado)",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "San Pedro de la Paz",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "agregador",
+      "discovery_url": "https://cl.trabajosdiarios.com/trabajo/2223870/educadora-de-parvulos-en-biobio",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página (WebFetch: HTTP 403 sistémico). Título de snippet: 'Educadora de Parvulos en CORPORACION EDUCACIONAL - SAN PEDRO DE LA PAZ | Trabajos Diarios'. Nombre completo de la corporación no confirmado.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "employer (nombre completo)",
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "functions",
+        "mandatory_requirements"
+      ],
+      "warnings": [
+        "Bloqueo sistémico de WebFetch impidió verificación directa",
+        "Portal 'Trabajos Diarios' es un agregador poco conocido; verificar reputación antes de postular"
+      ],
+      "_agent": "C",
+      "dedup_group": "G29",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://cl.trabajosdiarios.com/trabajo/2223870/educadora-de-parvulos-en-biobio",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://cl.trabajosdiarios.com/trabajo/2223870/educadora-de-parvulos-en-biobio",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "NO EVALUABLE: sin funciones ni requisitos publicados.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 40.0,
+        "ajuste_pct": 100.0
+      }
+    },
+    {
+      "title": "Educadora de Párvulos (y Lenguaje y Comunicación) - red de colegios",
+      "employer": "Fundaciones Educacionales Colegios del Arzobispado de la Ssma. Concepción (Fundación Educacional Cristo Rey / Fundación Educacional La Asunción)",
+      "category": "F1",
+      "relevance_type": "nucleo",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://cl.trabajo.org/oferta-2254-1641c17a22b21ce1fa37677fde824c3d",
+      "official_url": "https://www.colegiosarzobispado.cl/trabaja-con-nosotros/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir directamente ni el agregador ni la página oficial (WebFetch: HTTP 403 sistémico). Información obtenida de un resumen de WebSearch sobre la página oficial: 'Educadora Parvulos and Lenguaje y Comunicación teachers requiring pedagogy degree and at least 1 year of teaching experience' y que la red invita a 'completar un formulario con antecedentes y documentos para ser considerados en futuros procesos de selección'. No se pudo determinar si corresponde a una vacante puntual con plazo o a un formulario general de postulación espontánea (banco de datos), lo cual es una diferencia crítica de vigencia.",
+      "functions": [
+        "No informado"
+      ],
+      "mandatory_requirements": [
+        "Título de pedagogía/educación parvularia (según resumen, no verificado literalmente)"
+      ],
+      "desirable_requirements": [
+        "Al menos 1 año de experiencia docente (según resumen, no verificado literalmente)"
+      ],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "functions",
+        "apply_url"
+      ],
+      "warnings": [
+        "No se pudo distinguir si es vacante específica vigente o formulario general de postulación espontánea (banco de candidatos) — riesgo de sobreestimar vigencia",
+        "Datos de requisitos provienen de un resumen de WebSearch sobre contenido de terceros, no de lectura directa de la fuente",
+        "Bloqueo sistémico de WebFetch impidió verificación directa",
+        "Contacto de referencia (no verificado): teléfono +56 41 2251413 / +56 41 2217431, email contacto@colegiosarzobispado.cl, dirección Las Heras 681, Concepción — dato de snippet, no confirmado en fuente primaria"
+      ],
+      "_agent": "C",
+      "dedup_group": "G30",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 2,
+      "secondary_urls": [
+        "https://cl.trabajo.org/oferta-2254-1641c17a22b21ce1fa37677fde824c3d",
+        "https://cl.trabajo.org/oferta-2254-9346ea551049f4e622672a1285afef15"
+      ],
+      "primary_url": "https://www.colegiosarzobispado.cl/trabaja-con-nosotros/",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.colegiosarzobispado.cl/trabaja-con-nosotros/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 1.0,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Perfil canonico declara educadora de parvulos; la oferta pide ese titulo o area.",
+          "experiencia_funcional": "NO EVALUABLE: la oferta no detalla funciones.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 55.0,
+        "ajuste_pct": 79.5
+      }
+    },
+    {
+      "title": "Diseñador Instruccional para Cursos Virtuales",
+      "employer": "Ingeniería Greywater SpA",
+      "category": "F4",
+      "relevance_type": "nucleo",
+      "commune": "No informado",
+      "work_mode": "No informado",
+      "remote_from_chile": "No informado",
+      "source_type": "portal_generalista",
+      "discovery_url": "https://www.getonbrd.com/jobs/education-coaching/disenador-instruccional-para-cursos-virtuales-ingenieria-greywater-spa-santiago",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página (WebFetch: HTTP 403 sistémico). Resumen de WebSearch describe: creación de material didáctico de apoyo, diseño de la estructura metodológica de módulos de curso, desarrollo de evaluaciones diagnósticas/formativas/finales; 'iniciativa enmarcada en un proceso de licitación de la Comisión Nacional de Riego (CNR)'; requiere experiencia en diseño instruccional para adultos y LMS (preferentemente Moodle). El slug de la URL indica 'santiago', lo que sugiere posible sede en Santiago (fuera de zona autorizada) aunque el cargo es de 'cursos virtuales'; no se pudo confirmar si es 100% remoto ni si es realizable desde la Región del Biobío.",
+      "functions": [
+        "Diseño de material didáctico y estructura metodológica de cursos (según resumen, no verificado)",
+        "Elaboración de evaluaciones diagnósticas, formativas y finales (según resumen, no verificado)"
+      ],
+      "mandatory_requirements": [
+        "Experiencia en diseño instruccional para adultos (según resumen, no verificado)",
+        "Conocimiento de LMS, preferentemente Moodle (según resumen, no verificado)"
+      ],
+      "desirable_requirements": [],
+      "skills": [
+        "Diseño instruccional",
+        "LMS/Moodle"
+      ],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "commune",
+        "work_mode",
+        "remote_from_chile",
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "vacancies",
+        "apply_url"
+      ],
+      "warnings": [
+        "No se pudo confirmar si el trabajo es remoto o presencial en Santiago (fuera de zona autorizada si es presencial); si es remoto, no se pudo confirmar remote_from_chile",
+        "Bloqueo sistémico de WebFetch impidió verificación directa"
+      ],
+      "_agent": "C",
+      "dedup_group": "G31",
+      "found_by_agents": [
+        "C"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.getonbrd.com/jobs/education-coaching/disenador-instruccional-para-cursos-virtuales-ingenieria-greywater-spa-santiago",
+      "liveness_por_agente": {
+        "C": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.getonbrd.com/jobs/education-coaching/disenador-instruccional-para-cursos-virtuales-ingenieria-greywater-spa-santiago",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.6,
+          "experiencia_funcional": 0.9,
+          "competencias": 0.5,
+          "transferible": 0.85
+        },
+        "notas": {
+          "formacion": "Area educativa afin; titulo exacto exigido no confirmado en la evidencia.",
+          "experiencia_funcional": "Funciones de evaluacion/coordinacion, coincidentes con experiencia declarada.",
+          "competencias": "Competencias listadas por la oferta, pero sin CV no hay evidencia documental del lado de la candidata. Puntaje conservador.",
+          "transferible": "Coincide parcialmente con experiencia en evaluacion/coordinacion declarada.",
+          "ubicacion": "NO EVALUABLE: comuna y modalidad no informadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 90.0,
+        "ajuste_pct": 70.8
+      }
+    },
+    {
+      "title": "Cajero-Reponedor",
+      "employer": "Librería Giorgio",
+      "category": "F5",
+      "relevance_type": "venta_general",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": false,
+      "source_type": "agregador",
+      "discovery_url": "https://www.chiletrabajos.cl/trabajo/cajero-reponedor-concepcion-2196291",
+      "official_url": "https://www.libreriagiorgio.cl/index.php/Inicio/Trabaje_con_nosotros",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T17:30:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "No se pudo abrir la página (WebFetch: HTTP 403 sistémico). Resumen de WebSearch: 'personal para cumplir con funciones de Cajero-Reponedor en Librería Giorgio, Comuna de Concepción, jornada de 45 horas semanales (jornada 5x2), de preferencia con experiencia en el rubro retail, con disposición inmediata'. Beneficios mencionados: día de cumpleaños libre, afiliación a Mutual de Seguridad y caja de compensación, uniforme.",
+      "functions": [
+        "Atención de caja y reposición de mercadería (según resumen, no verificado)"
+      ],
+      "mandatory_requirements": [
+        "Experiencia en retail preferente (según resumen, no verificado)",
+        "Disponibilidad inmediata (según resumen, no verificado)"
+      ],
+      "desirable_requirements": [],
+      "skills": [],
+      "documents": [],
+      "contract": "No informado",
+      "hours": "45 horas semanales, 5x2 (según resumen, no verificado)",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "contract",
+        "salary",
+        "vacancies",
+        "apply_url"
+      ],
+      "warnings": [
+        "Cargo de venta general en librería (F5, relevance_type venta_general), sin componente pedagógico/especializado evidente",
+        "Bloqueo sistémico de WebFetch impidió verificación directa",
+        "Existe espejo del mismo aviso en concetrabajos.cl (https://www.concetrabajos.cl/trabajo/cajero-reponedor-2196291)"
+      ],
+      "_agent": "C",
+      "dedup_group": "G32",
+      "found_by_agents": [
+        "C",
+        "D"
+      ],
+      "merged_from_count": 4,
+      "secondary_urls": [
+        "https://www.chiletrabajos.cl/trabajo/cajero-reponedor-concepcion-2196291",
+        "https://www.chiletrabajos.cl/trabajo/cajero-y-reponedor-libreria-giorgio-san-pedro-de-la-paz-1939385",
+        "https://www.concetrabajos.cl/trabajo/cajero-y-reponedor-libreria-giorgio-san-pedro-de-la-paz-1939385"
+      ],
+      "primary_url": "https://www.libreriagiorgio.cl/index.php/Inicio/Trabaje_con_nosotros",
+      "liveness_por_agente": {
+        "C": "unverifiable",
+        "D": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.libreriagiorgio.cl/index.php/Inicio/Trabaje_con_nosotros",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.2,
+          "experiencia_funcional": 0.15,
+          "transferible": 0.1,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "El cargo no exige educacion parvularia; el titulo no aporta cumplimiento. Se puntua bajo por no ser el perfil buscado.",
+          "experiencia_funcional": "Funciones de venta/caja/reposicion. NO CONSTA experiencia comercial en el perfil canonico y no se le atribuye.",
+          "transferible": "La coordinacion o jefatura de local es COMERCIAL, no pedagogica. La experiencia en evaluacion y coordinacion educativa no transfiere aqui.",
+          "competencias": "NO EVALUABLE: sin CV y sin evidencia de competencias comerciales en el perfil canonico.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 21.6
+      }
+    },
+    {
+      "title": "Asistente de Jefatura de Local / Sub-jefe(a) de tienda",
+      "employer": "Librería Giorgio",
+      "category": "F5",
+      "relevance_type": "venta_general",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "agregador",
+      "discovery_url": "https://cl.jooble.org/trabajo-librer%C3%ADa-giorgio/Concepci%C3%B3n",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Síntesis de WebSearch: 'Assistant to the Head of Librerías Giorgio in Concepción and San Pedro de la Paz, requiring experience in administration, personnel management, inventories, and retail sales... Sub-Chief and assistant chief positions... salary of $700,000 monthly on a fixed-term contract with 44-hour weekly workdays.' No se abrió la ficha original.",
+      "functions": [
+        "Gestión de personal",
+        "Gestión de inventarios",
+        "Administración de local",
+        "Ventas retail"
+      ],
+      "mandatory_requirements": [
+        "Experiencia en administración, gestión de personal e inventarios",
+        "Disponibilidad inmediata y presencial"
+      ],
+      "desirable_requirements": [
+        "Residencia en Concepción o San Pedro de la Paz"
+      ],
+      "skills": [
+        "Gestión de equipos",
+        "Gestión de inventario"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "Plazo fijo (según síntesis de búsqueda)",
+      "hours": "44 horas semanales",
+      "salary": "$700.000 mensual aprox. (según síntesis de búsqueda; no confirmado en fuente primaria)",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "official_url",
+        "apply_url",
+        "documents",
+        "requisition_id"
+      ],
+      "warnings": [
+        "Cargo de administración/gestión retail, sin componente pedagógico; clasificado venta_general.",
+        "Cifra de sueldo proviene de síntesis de buscador, no de apertura directa de la ficha; tratar como referencial."
+      ],
+      "_agent": "D",
+      "dedup_group": "G33",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://cl.jooble.org/trabajo-librer%C3%ADa-giorgio/Concepci%C3%B3n",
+      "liveness_por_agente": {
+        "D": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://cl.jooble.org/trabajo-librer%C3%ADa-giorgio/Concepci%C3%B3n",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.2,
+          "experiencia_funcional": 0.15,
+          "transferible": 0.1,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "El cargo no exige educacion parvularia; el titulo no aporta cumplimiento. Se puntua bajo por no ser el perfil buscado.",
+          "experiencia_funcional": "Funciones de venta/caja/reposicion. NO CONSTA experiencia comercial en el perfil canonico y no se le atribuye.",
+          "transferible": "La coordinacion o jefatura de local es COMERCIAL, no pedagogica. La experiencia en evaluacion y coordinacion educativa no transfiere aqui.",
+          "competencias": "NO EVALUABLE: sin CV y sin evidencia de competencias comerciales en el perfil canonico.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 21.6
+      }
+    },
+    {
+      "title": "Vendedor/a en local comercial (librería)",
+      "employer": "Comercial Espiral Limitada (librería, Galería Alessandri, Aníbal Pinto 450, local 90)",
+      "category": "F5",
+      "relevance_type": "venta_general",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "agregador",
+      "discovery_url": "https://cl.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-vendedora-en-local-comercial-libreria-horario-completo-en-concepcion-3b3ee47de6e90c7361373e686dcf3405",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Síntesis de WebSearch: 'sales clerk (vendedora) in a retail commercial space - specifically a bookstore with over 30 years of experience selling bookstore items, gifts, etc., located at Aníbal Pinto 450 (Galería Alessandri, Local 90) in Concepción.' Página bloqueada (computrabajo.com 403 vía WebFetch).",
+      "functions": [
+        "Atención de público",
+        "Venta de libros y artículos de librería/regalos",
+        "Reposición",
+        "Aseo del local"
+      ],
+      "mandatory_requirements": [
+        "Enseñanza media completa (según síntesis de otra ficha similar de la misma región)"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "Atención al cliente"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "Jornada completa; otra variante part-time miércoles y domingo, 20 horas, mencionada en la misma búsqueda",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "salary",
+        "requisition_id",
+        "official_url",
+        "apply_url",
+        "documents",
+        "desirable_requirements"
+      ],
+      "warnings": [
+        "Venta general de libros/regalos, sin componente pedagógico."
+      ],
+      "_agent": "D",
+      "dedup_group": "G34",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://cl.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-vendedora-en-local-comercial-libreria-horario-completo-en-concepcion-3b3ee47de6e90c7361373e686dcf3405",
+      "liveness_por_agente": {
+        "D": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://cl.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-vendedora-en-local-comercial-libreria-horario-completo-en-concepcion-3b3ee47de6e90c7361373e686dcf3405",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.2,
+          "experiencia_funcional": 0.15,
+          "transferible": 0.1,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "El cargo no exige educacion parvularia; el titulo no aporta cumplimiento. Se puntua bajo por no ser el perfil buscado.",
+          "experiencia_funcional": "Funciones de venta/caja/reposicion. NO CONSTA experiencia comercial en el perfil canonico y no se le atribuye.",
+          "transferible": "La coordinacion o jefatura de local es COMERCIAL, no pedagogica. La experiencia en evaluacion y coordinacion educativa no transfiere aqui.",
+          "competencias": "NO EVALUABLE: sin CV y sin evidencia de competencias comerciales en el perfil canonico.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno."
+        },
+        "cobertura_pct": 80.0,
+        "ajuste_pct": 21.6
+      }
+    },
+    {
+      "title": "Trabaja con nosotros (canal permanente de postulación, vendedor/a y jefatura local)",
+      "employer": "Feria Chilena del Libro",
+      "category": "F5",
+      "relevance_type": "venta_general",
+      "commune": "No informado",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://feriachilenadellibro.cl/trabaja-con-nosotros/",
+      "official_url": "https://feriachilenadellibro.cl/trabaja-con-nosotros/",
+      "apply_url": "personal@feriachilenadellibro.cl (correo, según síntesis de búsqueda)",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "probable",
+      "liveness_evidence": "Síntesis de WebSearch sobre la página oficial: 'recruiting vendors and local managers with requirements including immediate availability, full-time mall hours, applicants over 24 years old, and prior experience in bookstore and retail sales... send their updated resume in Word or PDF format to personal@feriachilenadellibro.cl'. Es un canal de reclutamiento permanente sin fecha de cierre ni req. específico por comuna; no se pudo abrir la página (403) para confirmar si hay vacante activa puntual para el Biobío.",
+      "functions": [
+        "Venta de libros",
+        "Atención de público",
+        "Eventual jefatura de tienda"
+      ],
+      "mandatory_requirements": [
+        "Mayor de 24 años",
+        "Experiencia previa en librería/retail",
+        "Disponibilidad full-time en horario de mall"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "Ventas",
+        "Atención al cliente"
+      ],
+      "documents": [
+        "Currículum en Word o PDF"
+      ],
+      "contract": "No informado",
+      "hours": "Full-time, horario de mall",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "commune",
+        "publication_date",
+        "deadline",
+        "requisition_id",
+        "salary",
+        "vacancies"
+      ],
+      "warnings": [
+        "No se confirmó vacante puntual para ninguna de las 7 comunas autorizadas; es un canal de postulación espontánea, no un cargo específico abierto.",
+        "No existe evidencia de sucursal propia de Feria Chilena del Libro en el Gran Concepción confirmada en esta sesión (no verificado por bloqueo de WebFetch)."
+      ],
+      "_agent": "D",
+      "dedup_group": "G35",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [
+        "personal@feriachilenadellibro.cl (correo, según síntesis de búsqueda)"
+      ],
+      "primary_url": "https://feriachilenadellibro.cl/trabaja-con-nosotros/",
+      "liveness_por_agente": {
+        "D": "probable"
+      },
+      "audit_reopen": {
+        "url": "https://feriachilenadellibro.cl/trabaja-con-nosotros/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.2,
+          "experiencia_funcional": 0.15,
+          "transferible": 0.1
+        },
+        "notas": {
+          "formacion": "El cargo no exige educacion parvularia; el titulo no aporta cumplimiento. Se puntua bajo por no ser el perfil buscado.",
+          "experiencia_funcional": "Funciones de venta/caja/reposicion. NO CONSTA experiencia comercial en el perfil canonico y no se le atribuye.",
+          "transferible": "La coordinacion o jefatura de local es COMERCIAL, no pedagogica. La experiencia en evaluacion y coordinacion educativa no transfiere aqui.",
+          "competencias": "NO EVALUABLE: sin CV y sin evidencia de competencias comerciales en el perfil canonico.",
+          "ubicacion": "NO EVALUABLE: comuna no confirmada dentro de las 7 autorizadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno."
+        },
+        "cobertura_pct": 75.0,
+        "ajuste_pct": 16.3
+      }
+    },
+    {
+      "title": "Trabaja con nosotros (canal permanente de postulación)",
+      "employer": "Librería Antártica",
+      "category": "F5",
+      "relevance_type": "venta_general",
+      "commune": "No informado",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://www.antartica.cl/trabaja-con-nosotros",
+      "official_url": "https://www.antartica.cl/trabaja-con-nosotros",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Síntesis de WebSearch: 'Librería Antártica has sucursales in Santiago, Temuco, Antofagasta, Concepción, Viña del Mar and online... visit their official employment page at antartica.cl/trabaja-con-nosotros'. Página bloqueada (403) para toda esta sesión; no se pudo confirmar vacante puntual en la sucursal de Concepción.",
+      "functions": [
+        "Venta de libros",
+        "Atención de público"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "commune",
+        "publication_date",
+        "deadline",
+        "requisition_id",
+        "salary",
+        "vacancies",
+        "apply_url",
+        "functions",
+        "mandatory_requirements"
+      ],
+      "warnings": [
+        "Antártica tiene sucursal confirmada en Concepción según fuentes secundarias, pero no se verificó vacante activa por bloqueo de la página oficial."
+      ],
+      "_agent": "D",
+      "dedup_group": "G36",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.antartica.cl/trabaja-con-nosotros",
+      "liveness_por_agente": {
+        "D": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.antartica.cl/trabaja-con-nosotros",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.2,
+          "experiencia_funcional": 0.15,
+          "transferible": 0.1
+        },
+        "notas": {
+          "formacion": "El cargo no exige educacion parvularia; el titulo no aporta cumplimiento. Se puntua bajo por no ser el perfil buscado.",
+          "experiencia_funcional": "Funciones de venta/caja/reposicion. NO CONSTA experiencia comercial en el perfil canonico y no se le atribuye.",
+          "transferible": "La coordinacion o jefatura de local es COMERCIAL, no pedagogica. La experiencia en evaluacion y coordinacion educativa no transfiere aqui.",
+          "competencias": "NO EVALUABLE: sin CV y sin evidencia de competencias comerciales en el perfil canonico.",
+          "ubicacion": "NO EVALUABLE: comuna no confirmada dentro de las 7 autorizadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno."
+        },
+        "cobertura_pct": 75.0,
+        "ajuste_pct": 16.3
+      }
+    },
+    {
+      "title": "Encargado/a de Biblioteca CRA (40 hrs)",
+      "employer": "Colegio no identificado con certeza (ficha agregador concetrabajos.cl, referencia cruzada menciona estándares CRA Mineduc; otra búsqueda asoció un perfil similar a 'Colegio Andrés Bello', sin confirmación)",
+      "category": "F5",
+      "relevance_type": "pedagogico_especializado",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "agregador",
+      "discovery_url": "https://www.concetrabajos.cl/trabajo/encargado-a-de-biblioteca-cra-40-hrs-3196667",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Síntesis de WebSearch: 'responsible for the management and proper attention to students, teachers, education assistants and parents, to promote reading, research and provide support... according to... standards for CRA school libraries set by the Ministry of Education... 40-hour per week position in Concepción, and immediate availability is required.' No se pudo abrir la ficha (403 confirmado vía curl+proxy).",
+      "functions": [
+        "Gestión de biblioteca CRA",
+        "Fomento lector",
+        "Apoyo al proceso de enseñanza-aprendizaje",
+        "Atención a estudiantes, docentes y apoderados"
+      ],
+      "mandatory_requirements": [
+        "Título de profesor, profesional de ciencias sociales, bibliotecario profesional o técnico, o similar",
+        "2 años de experiencia en cargo similar"
+      ],
+      "desirable_requirements": [
+        "Manejo de herramientas informáticas nivel medio",
+        "Conocimiento de software ABIES CRA",
+        "Cursos de bibliotecología"
+      ],
+      "skills": [
+        "Organización y planificación",
+        "Orientación al estudiante",
+        "Proactividad"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "40 horas semanales",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "employer (nombre exacto del colegio)",
+        "publication_date",
+        "deadline",
+        "salary",
+        "contract",
+        "official_url",
+        "apply_url",
+        "requisition_id"
+      ],
+      "warnings": [
+        "Nombre exacto del colegio empleador no confirmado por bloqueo de la página; se registra como pedagógico_especializado por función CRA/fomento lector explícita."
+      ],
+      "_agent": "D",
+      "dedup_group": "G37",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.concetrabajos.cl/trabajo/encargado-a-de-biblioteca-cra-40-hrs-3196667",
+      "liveness_por_agente": {
+        "D": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.concetrabajos.cl/trabajo/encargado-a-de-biblioteca-cra-40-hrs-3196667",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.3,
+          "experiencia_funcional": 0.3,
+          "competencias": 0.5,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Requisitos de titulo distintos o no alineados con educacion parvularia.",
+          "experiencia_funcional": "Funciones fuera del ambito educativo declarado.",
+          "competencias": "Competencias listadas por la oferta, pero sin CV no hay evidencia documental del lado de la candidata. Puntaje conservador.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 95.0,
+        "ajuste_pct": 36.1
+      }
+    },
+    {
+      "title": "Encargado/a Biblioteca CRA (publicado en grupo Facebook 'Bolsa de Trabajo Bibliotecas')",
+      "employer": "Colegio (nombre no confirmado en la síntesis disponible)",
+      "category": "F5",
+      "relevance_type": "pedagogico_especializado",
+      "commune": "No informado",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "agregador",
+      "discovery_url": "https://www.facebook.com/groups/bolsatrabajobiblio/posts/2014738612256996/",
+      "official_url": "No informado",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "WebSearch solo devolvió el título del post: 'Cargo: Encargado/a Biblioteca CRA Institución: Colegio...' sin más detalle recuperable (contenido de grupo cerrado de Facebook, requiere login). No se pudo determinar comuna ni confirmar que corresponda a alguna de las 7 comunas autorizadas.",
+      "functions": [
+        "Encargado/a de Biblioteca CRA (función asumida por título de cargo, no confirmada en detalle)"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "employer",
+        "commune",
+        "publication_date",
+        "deadline",
+        "contract",
+        "hours",
+        "salary",
+        "functions detallados",
+        "mandatory_requirements",
+        "desirable_requirements"
+      ],
+      "warnings": [
+        "Contenido de grupo de Facebook con acceso restringido/login; no se pudo verificar comuna. INFERENCIA: podría no corresponder a ninguna de las 7 comunas autorizadas; se registra igualmente por transparencia de cobertura."
+      ],
+      "_agent": "D",
+      "dedup_group": "G38",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://www.facebook.com/groups/bolsatrabajobiblio/posts/2014738612256996/",
+      "liveness_por_agente": {
+        "D": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://www.facebook.com/groups/bolsatrabajobiblio/posts/2014738612256996/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.3,
+          "transferible": 0.25
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones fuera del ambito educativo declarado.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "NO EVALUABLE: comuna y modalidad no informadas.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 40.0,
+        "ajuste_pct": 28.1
+      }
+    },
+    {
+      "title": "Mediador/a de Lectura (full time)",
+      "employer": "Biblioteca Viva Biobío (Mall Plaza Mirador Biobío)",
+      "category": "F5",
+      "relevance_type": "pedagogico_especializado",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://bibliotecaviva.cl/trabaja-con-nosotros-biobio-abre-vacantes/",
+      "official_url": "https://bibliotecaviva.cl/trabaja-con-nosotros-biobio-abre-vacantes/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "expired",
+      "liveness_evidence": "Primera síntesis de WebSearch describe la vacante en detalle ('full-time reading mediator... Mall Plaza Mirador Biobío... shifts Monday to Sunday 11:00 to 20:15'). Una búsqueda posterior sobre la misma URL indicó explícitamente: 'the search results containing job posting details are from 2017-2018, which are older postings' y 'the most recent relevant information found was from April 2026 regarding cultural programming activities' (sin mención de vacante vigente). Se clasifica expired por señal de antigüedad de la propia síntesis de búsqueda, aunque no se pudo abrir la página directamente (WebFetch bloqueado).",
+      "functions": [
+        "Atención de público en salas de lectura",
+        "Préstamo de material",
+        "Apoyo en informática",
+        "Apoyo a talleres y actividades de extensión"
+      ],
+      "mandatory_requirements": [
+        "Título universitario o técnico en educación, humanidades, bibliotecología, arte, gestión cultural o afín",
+        "Lector frecuente y entusiasta",
+        "Habilidades sociales y de trabajo en equipo",
+        "Disponibilidad de turnos de lunes a domingo 11:00-20:15"
+      ],
+      "desirable_requirements": [
+        "Manejo de Office e Internet"
+      ],
+      "skills": [
+        "Mediación lectora",
+        "Atención de público",
+        "Trabajo en equipo"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "Full time, turnos de lunes a domingo 11:00-20:15",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date exacta",
+        "deadline",
+        "salary",
+        "contract",
+        "requisition_id",
+        "apply_url",
+        "vacancies"
+      ],
+      "warnings": [
+        "Alta probabilidad de que sea una publicación histórica (2017-2018) reutilizada/indexada, no una vacante vigente en 2026.",
+        "No se pudo abrir la página directamente por bloqueo de WebFetch; clasificación basada en señal textual de antigüedad de la propia síntesis de búsqueda."
+      ],
+      "_agent": "D",
+      "dedup_group": "G39",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://bibliotecaviva.cl/trabaja-con-nosotros-biobio-abre-vacantes/",
+      "liveness_por_agente": {
+        "D": "expired"
+      },
+      "audit_reopen": {
+        "url": "https://bibliotecaviva.cl/trabaja-con-nosotros-biobio-abre-vacantes/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.3,
+          "experiencia_funcional": 0.3,
+          "competencias": 0.5,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Requisitos de titulo distintos o no alineados con educacion parvularia.",
+          "experiencia_funcional": "Funciones fuera del ambito educativo declarado.",
+          "competencias": "Competencias listadas por la oferta, pero sin CV no hay evidencia documental del lado de la candidata. Puntaje conservador.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 95.0,
+        "ajuste_pct": 36.1
+      }
+    },
+    {
+      "title": "Mediador/a de Lectura part time (20 horas semanales)",
+      "employer": "Biblioteca Viva Biobío",
+      "category": "F5",
+      "relevance_type": "pedagogico_especializado",
+      "commune": "Concepción",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://bibliotecaviva.cl/unete-al-equipo-de-biblioteca-viva-4/",
+      "official_url": "https://bibliotecaviva.cl/unete-al-equipo-de-biblioteca-viva-4/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "expired",
+      "liveness_evidence": "Síntesis de WebSearch: 'part-time reading mediator position for the Biblioteca Viva Biobío headquarters, with similar functions...' y en búsqueda posterior explícita: 'the information available in the search results refers to older recruitment periods from 2017'. Se clasifica expired por la misma razón que el hallazgo full time de la misma organización.",
+      "functions": [
+        "Atención de público en salas de lectura",
+        "Préstamo",
+        "Apoyo a talleres y extensión"
+      ],
+      "mandatory_requirements": [
+        "Título universitario o técnico en áreas afines a educación/humanidades/bibliotecología"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "Mediación lectora"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "20 horas semanales (part time)",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "salary",
+        "contract",
+        "requisition_id",
+        "apply_url",
+        "vacancies"
+      ],
+      "warnings": [
+        "Publicación con fuerte evidencia de antigüedad (circa 2017); no se pudo abrir la página por bloqueo de WebFetch."
+      ],
+      "_agent": "D",
+      "dedup_group": "G40",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://bibliotecaviva.cl/unete-al-equipo-de-biblioteca-viva-4/",
+      "liveness_por_agente": {
+        "D": "expired"
+      },
+      "audit_reopen": {
+        "url": "https://bibliotecaviva.cl/unete-al-equipo-de-biblioteca-viva-4/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "formacion": 0.3,
+          "experiencia_funcional": 0.3,
+          "competencias": 0.5,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "Requisitos de titulo distintos o no alineados con educacion parvularia.",
+          "experiencia_funcional": "Funciones fuera del ambito educativo declarado.",
+          "competencias": "Competencias listadas por la oferta, pero sin CV no hay evidencia documental del lado de la candidata. Puntaje conservador.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 95.0,
+        "ajuste_pct": 36.1
+      }
+    },
+    {
+      "title": "Mediador/a de Lectura",
+      "employer": "Biblioteca Viva Trébol",
+      "category": "F5",
+      "relevance_type": "pedagogico_especializado",
+      "commune": "Talcahuano",
+      "work_mode": "presencial",
+      "remote_from_chile": true,
+      "source_type": "oficial_empleador",
+      "discovery_url": "https://bibliotecaviva.cl/trabaja-con-nosotros-bv-trebol-busca-mediador-de-lectura/",
+      "official_url": "https://bibliotecaviva.cl/trabaja-con-nosotros-bv-trebol-busca-mediador-de-lectura/",
+      "apply_url": "No informado",
+      "requisition_id": "No informado",
+      "publication_date": "No informado",
+      "deadline": "No informado",
+      "checked_at": "2026-07-27T14:20:00-04:00",
+      "liveness": "unverifiable",
+      "liveness_evidence": "Solo se recuperó el título del post vía WebSearch: 'Trabaja con nosotros: BV Trébol busca mediador de lectura'. No se recuperó fecha ni detalle adicional; página no pudo abrirse (WebFetch bloqueado). Mall Plaza Trébol se ubica en la comuna de Talcahuano (dentro de las 7 comunas autorizadas), según información geográfica general, no confirmada en la ficha misma.",
+      "functions": [
+        "Mediación de lectura (función asumida por título de cargo)"
+      ],
+      "mandatory_requirements": [
+        "No informado"
+      ],
+      "desirable_requirements": [
+        "No informado"
+      ],
+      "skills": [
+        "No informado"
+      ],
+      "documents": [
+        "No informado"
+      ],
+      "contract": "No informado",
+      "hours": "No informado",
+      "salary": "No informado",
+      "vacancies": "No informado",
+      "unknown_fields": [
+        "publication_date",
+        "deadline",
+        "salary",
+        "contract",
+        "requisition_id",
+        "apply_url",
+        "vacancies",
+        "functions detallados",
+        "mandatory_requirements"
+      ],
+      "warnings": [
+        "Comuna (Talcahuano) es INFERENCIA a partir de la ubicación conocida de Mall Plaza Trébol, no confirmada dentro de la ficha misma.",
+        "Dada la pauta de las otras vacantes de Biblioteca Viva Biobío (fechadas ~2017), existe riesgo alto de que esta publicación también esté vencida."
+      ],
+      "_agent": "D",
+      "dedup_group": "G41",
+      "found_by_agents": [
+        "D"
+      ],
+      "merged_from_count": 1,
+      "secondary_urls": [],
+      "primary_url": "https://bibliotecaviva.cl/trabaja-con-nosotros-bv-trebol-busca-mediador-de-lectura/",
+      "liveness_por_agente": {
+        "D": "unverifiable"
+      },
+      "audit_reopen": {
+        "url": "https://bibliotecaviva.cl/trabaja-con-nosotros-bv-trebol-busca-mediador-de-lectura/",
+        "http_code": "000",
+        "result": "bloqueada_gateway_403"
+      },
+      "last_checked": "2026-07-27T12:30:00-04:00",
+      "first_seen": "2026-07-27",
+      "scoring": {
+        "criterios": {
+          "experiencia_funcional": 0.3,
+          "transferible": 0.25,
+          "ubicacion": 1.0
+        },
+        "notas": {
+          "formacion": "NO EVALUABLE: la oferta no expone requisitos obligatorios verificables.",
+          "experiencia_funcional": "Funciones fuera del ambito educativo declarado.",
+          "competencias": "NO EVALUABLE: sin CV adjunto y sin competencias explicitas en la oferta.",
+          "transferible": "Sin componente de evaluacion ni coordinacion identificable.",
+          "ubicacion": "Comuna dentro de la zona presencial autorizada.",
+          "documentacion": "NO EVALUABLE: no hay CV adjunto en el entorno; la disponibilidad documental no puede constatarse."
+        },
+        "cobertura_pct": 45.0,
+        "ajuste_pct": 36.1
+      }
+    }
+  ]
+}
